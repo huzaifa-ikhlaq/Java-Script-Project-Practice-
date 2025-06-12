@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-blue-600 flex justify-center items-center h-screen">
+
+    <div class="bg-white w-110 h-90 rounded-xl p-10">
+        <div class="flex  gap-x-5">
+            <input class="border-2  border-blue-500 rounded-sm w-full indent-3 text-lg font-medium" type="text" name=""
+                id="taskinput">
+            <button class="bg-blue-700 text-white font-semibold rounded-sm w-23 h-10" onclick="addTask()">Add</button>
+        </div>
+        <ul class="mt-13 h-50 overflow-y-scroll space-y-1  " id="tasklist"></ul>
+    </div>
+    <script>
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || []
+        tasks.forEach(task => addToDOM(task));
+
+        // making function addTask onclick btn.
+
+        function addTask() {
+            const input = document.querySelector('#taskinput')
+            const task = input.value
+            if (task) {
+                let newTask = { name: task, completed: false }
+                addToDOM(newTask)
+                saveTask(newTask)
+                input.value = '';
+            }
+        }
+
+        // making function to diplaytask on DOM 
+
+        function addToDOM(task) {
+
+            const li = document.createElement('li')
+            li.classList.add('bg-blue-200', 'rounded-md', 'px-2', 'py-2', 'flex', 'justify-between', 'items-center', 'relative')
+
+            // addText
+            const span = document.createElement('span')
+            span.textContent = task.name
+            span.classList.add('text-lg', 'font-medium');
+            // completed button
+            const completeBtn = document.createElement('button')
+            completeBtn.textContent = '✔'
+            completeBtn.classList.add('text-red-500', 'bg-green-700', 'p-1', 'rounded','absolute', 'right-12');
+            if (task.completed) {
+                completeBtn.classList.add('bg-white');
+                li.classList.add('bg-green-400')
+                li.classList.add('bg-green-400')
+                span.classList.add('text-white')
+            }
+
+            completeBtn.onclick = function () {
+                task.completed
+                completeBtn.classList.add('bg-white');
+                task.completed = !task.completed;
+                if (task.completed) {
+                    completeBtn.classList.add('bg-white');
+                    li.classList.add('bg-green-400');
+                    span.classList.add('text-white');
+                } else {
+                    completeBtn.classList.remove('bg-white');
+                    li.classList.remove('bg-green-400');
+                    span.classList.remove('text-white');
+                }
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+            }
+
+            // delete button
+            const deletebtn = document.createElement('button')
+            deletebtn.textContent = ' ✖'
+            deletebtn.classList.add('text-red-500', 'bg-red-700', 'p-1', 'rounded', );
+            deletebtn.onclick = function () {
+                li.remove()
+                const index = tasks.indexOf(task)
+                if (index > -1) {
+                    tasks.splice(index, 1)
+                    localStorage.setItem('tasks', JSON.stringify(tasks))
+                }
+            }
+            document.querySelector('#tasklist').appendChild(li)
+
+            li.appendChild(span)
+
+            li.appendChild(deletebtn)
+            li.appendChild(completeBtn)
+        }
+
+        // addTask in localStorage
+
+        function saveTask(task) {
+            tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+    </script>
+
+</body>
+
+</html>
