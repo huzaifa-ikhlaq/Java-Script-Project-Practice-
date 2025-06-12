@@ -192,6 +192,9 @@
   .relative {
     position: relative;
   }
+  .right-5 {
+    right: calc(var(--spacing) * 5);
+  }
   .right-10 {
     right: calc(var(--spacing) * 10);
   }

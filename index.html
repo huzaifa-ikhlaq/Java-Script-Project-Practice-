@@ -49,7 +49,7 @@
             // completed button
             const completeBtn = document.createElement('button')
             completeBtn.textContent = '✔'
-            completeBtn.classList.add('text-red-500', 'bg-green-700', 'p-1', 'rounded');
+            completeBtn.classList.add('text-red-500', 'bg-green-700', 'p-1', 'rounded','absolute', 'right-12');
             if (task.completed) {
                 completeBtn.classList.add('bg-white');
                 li.classList.add('bg-green-400')
@@ -60,17 +60,23 @@
             completeBtn.onclick = function () {
                 task.completed
                 completeBtn.classList.add('bg-white');
-                li.classList.add('bg-green-400')
-                li.classList.add('bg-green-400')
-                span.classList.add('text-white')
-                localStorage.setItem('tasks', JSON.stringify(tasks))
-                task.completed = !task.completed
+                task.completed = !task.completed;
+                if (task.completed) {
+                    completeBtn.classList.add('bg-white');
+                    li.classList.add('bg-green-400');
+                    span.classList.add('text-white');
+                } else {
+                    completeBtn.classList.remove('bg-white');
+                    li.classList.remove('bg-green-400');
+                    span.classList.remove('text-white');
+                }
+                localStorage.setItem('tasks', JSON.stringify(tasks));
             }
 
             // delete button
             const deletebtn = document.createElement('button')
             deletebtn.textContent = ' ✖'
-            deletebtn.classList.add('text-red-500', 'bg-red-700', 'p-1', 'rounded', 'absolute', 'right-12');
+            deletebtn.classList.add('text-red-500', 'bg-red-700', 'p-1', 'rounded', );
             deletebtn.onclick = function () {
                 li.remove()
                 const index = tasks.indexOf(task)
@@ -79,10 +85,12 @@
                     localStorage.setItem('tasks', JSON.stringify(tasks))
                 }
             }
+            document.querySelector('#tasklist').appendChild(li)
+
             li.appendChild(span)
+
             li.appendChild(deletebtn)
             li.appendChild(completeBtn)
-            document.querySelector('#tasklist').appendChild(li)
         }
 
         // addTask in localStorage
