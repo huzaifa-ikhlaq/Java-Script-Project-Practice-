@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-blue-600 flex justify-center items-center h-screen">
+
+    <div class="bg-white w-110 h-90 rounded-xl p-10">
+        <div class="flex  gap-x-5">
+            <input class="border-2 border-blue-500 rounded-sm w-full indent-3" type="text" name="" id="taskinput">
+            <button class="bg-blue-700 text-white font-semibold rounded-sm w-23 h-10" onclick="addTask()">Add</button>
+        </div>
+        <ul class="mt-13 h-50 overflow-y-scroll space-y-1 " id="tasklist"></ul>
+    </div>
+    <script>
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || []
+        tasks.forEach(task => addToDOM(task));
+
+        // making function addTask onclick btn
+
+        function addTask() {
+            const input = document.querySelector('#taskinput')
+            const task = input.value
+            if (task) {
+                addToDOM(task)
+                saveTask(task)
+                input.value = '';
+            }
+        }
+
+        // making function to diplaytask on DOM 
+
+        function addToDOM(task) {
+            const li = document.createElement('li')
+            li.classList.add('bg-blue-200', 'rounded-md', 'px-2', 'flex', 'justify-between', 'items-center')
+
+            // addText
+            const span = document.createElement('span')
+            span.textContent = task
+            // delete button
+            const deletebtn = document.createElement('button')
+            deletebtn.textContent = '✖'
+            deletebtn.classList.add('ml-2', 'text-red-500', 'rounded', 'px-2', 'py-1');
+            deletebtn.onclick = function () {
+                li.remove()
+                const index = tasks.indexOf(task)
+                if (index > -1) {
+                    tasks.splice(index, 1)
+                    localStorage.setItem('tasks', JSON.stringify(tasks))
+                }
+            }
+            li.appendChild(span)
+            li.appendChild(deletebtn)
+            document.querySelector('#tasklist').appendChild(li)
+        }
+
+        // addTask in localStorage
+
+        function saveTask(task) {
+            tasks.push(task); 
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+    </script>
+
+</body>
+
+</html>
