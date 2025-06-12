@@ -42,6 +42,15 @@
             // addText
             const span = document.createElement('span')
             span.textContent = task
+
+            // completed button
+            const completeBtn = document.createElement('button')
+            completeBtn.textContent = '✔'
+            completeBtn.onclick = function () {
+                li.classList.toggle('bg-green-400')
+                span.classList.toggle('text-white')
+            }
+
             // delete button
             const deletebtn = document.createElement('button')
             deletebtn.textContent = '✖'
@@ -56,13 +65,14 @@
             }
             li.appendChild(span)
             li.appendChild(deletebtn)
+            li.appendChild(completeBtn)
             document.querySelector('#tasklist').appendChild(li)
         }
 
         // addTask in localStorage
 
         function saveTask(task) {
-            tasks.push(task); 
+            tasks.push(task);
             localStorage.setItem('tasks', JSON.stringify(tasks));
         }
     </script>
