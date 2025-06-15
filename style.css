@@ -13,3 +13,15 @@
   --breakpoint-2xl: 90rem; /* 1440px */
   --breakpoint-3xl: 103.75rem; /* 1660px */
 }
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 20s linear infinite;
+}
