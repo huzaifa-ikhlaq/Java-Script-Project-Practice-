@@ -14,14 +14,22 @@
 }
 .custom-cursor {
   position: fixed;
-  width: 200px;
-  height: 200px;
-  background-color: red;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #b6aa97;
   pointer-events: none;
   z-index: 999999;
   border-radius: 999999px;
-  transform: translate(-50%, -50%);
+  transition: transform 0.13s ease, background-image 0.3s ease, opacity 0.13s ease;
 }
+
+.custom-cursor.image-mode {
+  background-image: url(img-2/hero-4-1.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
 @keyframes marquee-scroll {
   0% {
     transform: translateX(0);
