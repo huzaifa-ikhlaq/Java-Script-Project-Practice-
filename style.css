@@ -10,8 +10,17 @@
   --breakpoint-lg: 64rem; /* 1024px */
   --breakpoint-xl: 75rem; /* 1200px */
   --breakpoint-coxl: 81.25rem; /* 1300px */
-  --breakpoint-2xl: 90rem; /* 1440px */
-  --breakpoint-3xl: 103.75rem; /* 1660px */
+  --breakpoint-2xl: 87.5rem; /* 1400px */
+}
+.custom-cursor {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  pointer-events: none;
+  z-index: 999999;
+  border-radius: 999999px;
+  transform: translate(-50%, -50%);
 }
 @keyframes marquee-scroll {
   0% {
@@ -24,4 +33,7 @@
 
 .animate-marquee {
   animation: marquee-scroll 20s linear infinite;
+}
+.animate-marquee-2 {
+  animation: marquee-scroll 10s linear infinite;
 }
