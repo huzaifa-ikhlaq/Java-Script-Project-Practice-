@@ -335,6 +335,9 @@
   .ml-6 {
     margin-left: calc(var(--spacing) * 6);
   }
+  .ml-7 {
+    margin-left: calc(var(--spacing) * 7);
+  }
   .ml-7\.5 {
     margin-left: calc(var(--spacing) * 7.5);
   }
@@ -1801,7 +1804,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-20%);
+    transform: translateX(-50%);
   }
 }
 .animate-marquee {
