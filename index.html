@@ -916,6 +916,7 @@
 
         document.addEventListener("mousemove", function (e) {
             cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+            cursor.classList.add('overflow-hidden');
         });
 
         // section-1
