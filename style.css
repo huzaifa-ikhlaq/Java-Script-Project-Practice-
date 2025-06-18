@@ -15,7 +15,21 @@
   --breakpoint-2xl: 87.5rem; /* 1400px */
 }
 .font-popins {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.nav {
+  background: rgba(18, 19, 20, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 6px 0 rgba(39, 16, 6, 0.4);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+
+.dark .nav-2 {
+  background: hsla(0, 0%, 100%, 0.7);
+  box-shadow: 0 1px 3px 0 rgba(23, 23, 24, 0.12), 0 -1px 0 0 rgba(36, 62, 21, 0.14);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 .image-wrapper {
   transition: width 0.5s ease;
