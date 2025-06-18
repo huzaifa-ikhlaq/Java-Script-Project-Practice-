@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-family-italic-f: "Playfair Display", serif;
   --breakpoint-coxs: 23.4375rem; /* 375px */
@@ -11,6 +13,9 @@
   --breakpoint-xl: 75rem; /* 1200px */
   --breakpoint-coxl: 81.25rem; /* 1300px */
   --breakpoint-2xl: 87.5rem; /* 1400px */
+}
+.font-popins {
+    font-family: 'Poppins', sans-serif;
 }
 .image-wrapper {
   transition: width 0.5s ease;
@@ -33,7 +38,7 @@
   left: -13px;
   width: 30px;
   height: 30px;
-  border: 1px solid #b6aa97;
+  border: 1px solid #c9c2b7;
   pointer-events: none;
   z-index: 9999999999999;
   margin-bottom: 5px;
@@ -174,6 +179,22 @@
 .animate-marquee {
   animation: marquee-scroll 20s linear infinite;
 }
-.animate-marquee-2 {
-  animation: marquee-scroll 3s linear infinite;
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee-scroll 10s linear infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #eb5939;
+  border-radius: 10px;
+  border: 2px solid #1a1a1a;
 }

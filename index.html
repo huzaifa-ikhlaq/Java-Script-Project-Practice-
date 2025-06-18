@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+
 </head>
 
-<body class="box-border p-0 m-0">
+
+<body class="box-border p-0 m-0 ">
     <div class="custom-cursor"></div>
     <!-- <HERO-SECTION></HERO-SECTION> -->
     <section class="relative bg-[#121314]/95 min-h-250 lg:min-h-290 ">
@@ -29,14 +31,14 @@
                 class="absolute z-20 bottom-0 left-0 h-500 lg:h-1000 w-full"></div>
             <!-- <nav></nav> -->
             <nav
-                class="fixed z-50  pt-5 md:pt-9 px-3 md:px-5 lg:px-7.5 xl:px-21 flex justify-between items-center w-full">
+                class="fixed z-50  pt-5 md:pt-9 px-3 md:px-5 lg:px-7.5 xl:px-21 flex justify-between items-center w-full ">
                 <!-- right-section-->
                 <div class="" id="logoparent"><img src="img-2/logo-white.webp" alt=""></div>
                 <!-- left-section -->
                 <div class="flex items-center">
-                    <a href="#" class="fixed right-16 md:right-60 xl:right-78">
+                    <button class="fixed right-16 md:right-60 xl:right-78">
                         <span id="moonparent"
-                            class="border border-[hsla(0,0%,100%,0.1)] rounded-full size-10 flex items-center justify-center">
+                            class="border border-[hsla(0,0%,100%,0.1)] dark:border-[#E8E8E8] rounded-full size-10 flex items-center justify-center">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="#fff"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -46,7 +48,7 @@
                                 </path>
                             </svg>
                         </span>
-                    </a>
+                    </button>
                     <a href="#" class="relative py-2 group z-10 ml-8 pl-8 pr-4 flex max-md:hidden">
                         <div
                             class="flex items-center absolute top-0 bottom-0 right-0 bg-white rounded-full w-full py-3  duration-400 group-hover:w-10  group-hover:ease-in-out -z-10">
@@ -55,8 +57,8 @@
                             <span
                                 class="text-[#000f4a] font-normal duration-400 delay-90 group-hover:text-white group-hover:underline group-hover:underline-offset-4">Let's
                                 Talk</span>
-                            <span class="ml-7 "><svg width="12" height="12" viewBox="0 0 12 12" fill="#020b18"
-                                    id="moon" xmlns="http://www.w3.org/2000/svg">
+                            <span class="ml-7 "><svg width="12" height="12" viewBox="0 0 12 12" fill="#020b18" id="moon"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M4.9297 10.3651C5.12061 10.2162 5.29376 10.043 5.64006 9.69671L9.95722 5.37954C10.0616 5.27517 10.0138 5.0954 9.87438 5.04702C9.36479 4.87022 8.70189 4.53829 8.0818 3.9182C7.46171 3.29811 7.12978 2.63521 6.95299 2.12562C6.9046 1.98617 6.72483 1.9384 6.62046 2.04278L2.30329 6.35994L2.30328 6.35995C1.95699 6.70624 1.78385 6.87939 1.63494 7.0703C1.45928 7.29551 1.30868 7.53919 1.18581 7.79701C1.08164 8.01558 1.00421 8.24789 0.849336 8.71249L0.649225 9.31283L0.331026 10.2674L0.0326691 11.1625C-0.0435433 11.3911 0.0159628 11.6432 0.186379 11.8136C0.356795 11.984 0.608868 12.0435 0.837505 11.9673L1.73258 11.669L2.68717 11.3508L3.28751 11.1507C3.75211 10.9958 3.98442 10.9184 4.20299 10.8142C4.46082 10.6913 4.70449 10.5407 4.9297 10.3651Z"
                                         fill="#020b18">
@@ -230,23 +232,42 @@
         </div>
     </section>
     <!-- <section-3></section-3> -->
-    <section class="bg-[#1B1C1D]  px-3">
+    <section id="themeSection" class="bg-[#1B1C1D] dark:bg-white  px-3">
         <div class="md:container mx-auto pt-37.5 pb-30 md:pb-50   ">
             <!-- <first-section></first-section> -->
-            <div class=" pb-17.5  border-b border-[#31302E] flex max-xl:flex-col justify-between  ">
+            <div class=" pb-17.5  border-b border-[#31302E] dark:border-[#E8E8E8] flex max-xl:flex-col justify-between  ">
                 <div class="flex xl:items-end w-1/4 ">
-                    <button
-                        class="text-sm text-[#b7ab98] border border-[#B6A997] shrink-0 relative z-50  px-4.5 py-1.5 before:content-['.'] before:px-[53px] before:-left-0.5 before:absolute before:-z-50 before:bg-[#121314] after:content-['.'] after:px-[45.5px] after:py-2 after:left-1.5 after:-top-0.5 after:absolute after:-z-50 after:bg-[#121314] font-medium bg-[#1B1C1D] ">ABOUT
+                    <button id="moonBtn"
+                        class="text-sm text-[#b7ab98] border border-[#B6A997] shrink-0 relative z-40  px-4.5 py-1.5 before:content-['.'] before:px-[53px] before:-left-0.5 before:absolute before:-z-40 before:bg-[#121314] after:content-['.'] after:px-[45.5px] after:py-2 after:left-1.5 after:-top-0.5 after:absolute after:-z-40 after:bg-[#121314] font-medium bg-[#1B1C1D] dark:hidden ">ABOUT
                         ME</button>
+                    <button id="sunBtn"
+                        class="text-sm text-[#1B1C1D] border border-[#E8E8E8] shrink-0 relative z-40  px-4.5 py-1.5  font-medium hidden dark:block  ">ABOUT
+                        ME
+                        <!-- top- left-->
+                        <div class="absolute -top-[1px] -left-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                        <div class="absolute -top-[1px] -left-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                        <!-- top-right -->
+                        <div class="absolute  -top-[1px] -right-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                        <div class="absolute -top-[1px] -right-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                        <!-- bottom-left -->
+                        <div class="absolute -bottom-[1px] -left-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                        <div class="absolute -bottom-[1px] -left-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                        <!-- bottom-right -->
+                        <div class="absolute -bottom-[1px] -right-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                        <div class="absolute -bottom-[1px] -right-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                        <!-- end -->
+                    </button>
                 </div>
                 <div class="flex md:justify-between xl:w-full">
                     <div class="flex flex-col w-2/2 ">
-                        <h1
-                            class="text-[70px] md:text-[100px] xl:text-[120px]  text-[#B7AB98] font-medium leading-16 md:leading-23 xl:leading-26 mb-2.5 md:mb-5">
+                        <h1 id=""
+                            class="text-[70px] md:text-[100px] xl:text-[120px]  text-[#B7AB98] dark:text-[#121314] font-medium leading-16 md:leading-23 xl:leading-26 mb-2.5 md:mb-5 ">
                             EMMA
                             <br> MITCHELL
                         </h1>
-                        <p class="font-family-italic-f text-[22px] md:text-[26px] text-[#B6AA97] max-w-76.5 ">I
+                        <p id=""
+                            class="font-family-italic-f text-[22px] md:text-[26px] text-[#B6AA97]  dark:text-[#121314] ">
+                            I
                             have expanded in
                             comparison for faced here with an open form in a state of phase transition.</p>
                     </div>
@@ -261,23 +282,31 @@
                     <div><img class="max-md:w-full max-md:h-56 h-56" src="img-2/ab-4-1.webp" alt=""></div>
                     <div><img class="max-md:w-full max-md:h-138 h-137.5" src="img-2/ab-4-2 (1).webp" alt=""></div>
                     <div class="md:w-3/4 colg:w-1/3  flex flex-col">
-                        <p class="text-[#AEA391] font-medium text-lg leading-7 mb-16 ">Photography was always my passion
+                        <p id="" class="text-[#AEA391]  dark:text-[#121314] text-lg leading-7 mb-16 -1">Photography was
+                            always my passion
                             and my dream job. It's even difficult for me to call it a job, as I consider my profession
                             as a hobby of my life. New people, catching their mood being part of the happiest momentы of
                             their life. Kale chips subway tile before direct trade cliched hammock kinfolk deep
                             photography.</p>
                         <div class="flex justify-between">
                             <div class=" flex flex-col relative">
-                                <h2 class="mb-5  text-[#b7ab98] text-[22px] font-family-italic-f">Years</h2>
-                                <span class="absolute text-[#b7ab98] text-[70px] font-family-italic-f">17+</span>
+                                <h2 id="-2"
+                                    class="mb-5 text-[#b7ab98]  dark:text-[#121314] text-[22px] font-family-italic-f ">
+                                    Years
+                                </h2>
+                                <span id=""
+                                    class="absolute text-[#b7ab98]  dark:text-[#121314] text-[70px] font-family-italic-f ">17+</span>
                             </div>
                             <div class="">
                                 <span
                                     class=" relative   block before:content-['']  before:bg-[#eb5939] before:absolute before:left-5 before:-top-8 before:-rotate-20 before:h-[165px] before:w-[1px]"></span>
                             </div>
                             <div class=" flex flex-col relative right-0">
-                                <h2 class="mb-5 absolute text-[#b7ab98] text-[22px] font-family-italic-f">People</h2>
-                                <span class=" text-[#b7ab98] text-[70px] font-family-italic-f">100+</span>
+                                <h2 id=""
+                                    class="mb-5 absolute text-[#b7ab98]  dark:text-[#121314] text-[22px] font-family-italic-f  ">
+                                    People</h2>
+                                <span id=""
+                                    class=" text-[#b7ab98]  dark:text-[#121314] text-[70px] font-family-italic-f ">100+</span>
                             </div>
                         </div>
                     </div>
@@ -351,21 +380,39 @@
         </div>
     </section>
     <!-- <section-5></section-5> -->
-    <section class="bg-[#1B1C1D]  px-3 py-37.5">
+    <section class="bg-[#1B1C1D] dark:bg-white  px-3 py-37.5">
         <!-- <first-section></first-section> -->
         <div class=" pb-17.5  flex max-xl:flex-col justify-between container mx-auto ">
             <div class="flex xl:items-end w-1/4 ">
-                <button
-                    class="text-sm text-[#b7ab98] border border-[#B6A997] relative z-50  px-4.5 py-2 before:content-['.'] before:px-[53px] before:-left-0.5 before:absolute before:-z-50 before:bg-[#121314] after:content-['.'] after:px-10.5 after:py-2.5 after:left-2 after:-top-0.5 after:absolute after:-z-50 after:bg-[#121314] font-medium bg-[#1B1C1D] ">EXPERTISE</button>
+                <button id="moonBtn"
+                    class="text-sm text-[#b7ab98] border border-[#B6A997] shrink-0 relative z-40  px-4.5 py-1.5 before:content-['.'] before:px-[53px] before:-left-0.5 before:absolute before:-z-40 before:bg-[#121314] after:content-['.'] after:px-[45.5px] after:py-2 after:left-1.5 after:-top-0.5 after:absolute after:-z-40 after:bg-[#121314] font-medium bg-[#1B1C1D] dark:hidden ">EXPERTISE</button>
+                <button id="sunBtn"
+                    class="text-sm text-[#1B1C1D] border  border-[#E8E8E8]  shrink-0 relative z-40  px-4.5 py-1.5  font-medium hidden dark:block  ">EXPERTISE
+                    <!-- top- left-->
+                    <div class="absolute -top-[1px] -left-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                    <div class="absolute -top-[1px] -left-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                    <!-- top-right -->
+                    <div class="absolute  -top-[1px] -right-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                    <div class="absolute -top-[1px] -right-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                    <!-- bottom-left -->
+                    <div class="absolute -bottom-[1px] -left-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                    <div class="absolute -bottom-[1px] -left-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                    <!-- bottom-right -->
+                    <div class="absolute -bottom-[1px] -right-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                    <div class="absolute -bottom-[1px] -right-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                    <!-- end -->
+                </button>
             </div>
             <div class="flex md:justify-between xl:w-full">
                 <div class="flex flex-col w-2/2 ">
                     <h1
-                        class="text-[70px] md:text-[100px] xl:text-[120px]  text-[#B7AB98] font-medium leading-16 md:leading-23 xl:leading-26 mb-2.5 md:mb-5">
+                        class="text-[70px] md:text-[100px] xl:text-[120px]  text-[#B7AB98] dark:text-[#121314] font-medium leading-16 md:leading-23 xl:leading-26 mb-2.5 md:mb-5">
                         EMMA
                         <br> MITCHELL
                     </h1>
-                    <p class="font-family-italic-f text-[22px] md:text-[26px] text-[#B6AA97] max-md:max-w-150 ">[The
+                    <p
+                        class="font-family-italic-f text-[22px] md:text-[26px] text-[#B6AA97] dark:text-[#121314] max-md:max-w-150 ">
+                        [The
                         Projects I've Been Primarily Focused On Lately.]</p>
                 </div>
                 <div class="flex items-end justify-end  w-1/2 max-md:hidden">
@@ -377,31 +424,32 @@
         <div class="grid grid-cols-4 container mx-auto">
             <!-- <row-1></row-1> -->
             <div></div>
-            <div class="border-t border-[#31302E] py-10 col-span-4 xl:col-span-3 relative group howerImgRow-1 ">
+            <div
+                class="border-t border-[#31302E] dark:border-[#E8E8E8]  py-10 col-span-4 xl:col-span-3 relative group howerImgRow-1 ">
                 <div class="custom-cursor-img-1 hidden"></div>
                 <span
                     class="absolute left-0 bottom-0 w-0 h-[1px] bg-[#eb5939] transition-all duration-500 ease-in-out group-hover:w-full"></span>
                 <div class="flex  ">
                     <!-- <div-1></div-1> -->
                     <div class=" mt-4 mr-7.5 md:mr-[130px] ">
-                        <span class="text-[#b7ab98] ">2025</span>
+                        <span class="text-[#b7ab98] dark:text-[#121314] ">2025</span>
                     </div>
                     <div class="flex items-center justify-between w-full">
                         <!-- <div-2></div-2> -->
-                        <div class="text-[#b7ab98]">
-                            <h1 class="text-3xl md:text-[46px] font-family-italic-f mb-2">Wedding</h1>
+                        <div class="text-[#b7ab98] dark:text-[#121314]">
+                            <h1 class="text-3xl md:text-[46px] font-family-italic-f mb-2 ">Wedding</h1>
                             <p class="text-[11px] md:text-[13px]">COLLECTIONS / DESIGN / WEDDING</p>
                         </div>
                         <!-- <div-3></div-3> -->
                         <div class="inline-block">
-                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter"
+                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter stroke-[#b7ab98] dark:stroke-[#121314]"
                                 width="26" height="21" viewBox="0 0 26 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
 
-                                <path d="M0 10.3965H26" stroke="#b7ab98" stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke="#b7ab98"
+                                <path d="M0 10.3965H26" stroke="" stroke-width="2" stroke-miterlimit="10"></path>
+                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke="#b7ab98"
+                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
                             </svg>
                         </div>
@@ -410,31 +458,32 @@
             </div>
             <!-- <row-2></row-2> -->
             <div></div>
-            <div class="border-t border-[#31302E] py-10 col-span-4 xl:col-span-3 group relative howerImgRow-2">
+            <div
+                class="border-t border-[#31302E] dark:border-[#E8E8E8] py-10 col-span-4 xl:col-span-3 group relative howerImgRow-2">
                 <div class="custom-cursor-img-2 hidden"></div>
                 <span
                     class="absolute left-0 bottom-0 w-0 h-[1px] bg-[#eb5939] transition-all duration-500 ease-in-out group-hover:w-full"></span>
                 <div class="flex ">
                     <!-- <div-1></div-1> -->
                     <div class=" mt-4 mr-7.5 md:mr-[130px] ">
-                        <span class="text-[#b7ab98] ">2025</span>
+                        <span class="text-[#b7ab98]  dark:text-[#121314] ">2025</span>
                     </div>
                     <div class="flex items-center justify-between w-full">
                         <!-- <div-2></div-2> -->
-                        <div class="text-[#b7ab98]">
+                        <div class="text-[#b7ab98]  dark:text-[#121314]">
                             <h1 class="text-3xl md:text-[46px] font-family-italic-f mb-2">Event</h1>
                             <p class="text-[11px] md:text-[13px]">COLLECTIONS / DESIGN / WEDDING</p>
                         </div>
                         <!-- <div-3></div-3> -->
                         <div class="inline-block">
-                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter"
+                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter stroke-[#b7ab98] dark:stroke-[#121314]"
                                 width="26" height="21" viewBox="0 0 26 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
 
-                                <path d="M0 10.3965H26" stroke="#b7ab98" stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke="#b7ab98"
+                                <path d="M0 10.3965H26" stroke="" stroke-width="2" stroke-miterlimit="10"></path>
+                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke="#b7ab98"
+                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
                             </svg>
                         </div>
@@ -443,31 +492,32 @@
             </div>
             <!-- <row-3></row-3> -->
             <div></div>
-            <div class="border-t border-[#31302E] py-10 col-span-4 xl:col-span-3  group relative howerImgRow-3">
+            <div
+                class="border-t border-[#31302E] dark:border-[#E8E8E8] py-10 col-span-4 xl:col-span-3  group relative howerImgRow-3">
                 <div class="custom-cursor-img-3 hidden"></div>
                 <span
                     class="absolute left-0 bottom-0 w-0 h-[1px] bg-[#eb5939] transition-all duration-500 ease-in-out group-hover:w-full"></span>
                 <div class="flex ">
                     <!-- <div-1></div-1> -->
                     <div class=" mt-4 mr-7.5 md:mr-[130px] ">
-                        <span class="text-[#b7ab98] ">2025</span>
+                        <span class="text-[#b7ab98] dark:text-[#121314]">2025</span>
                     </div>
                     <div class="flex items-center justify-between w-full">
                         <!-- <div-2></div-2> -->
-                        <div class="text-[#b7ab98]">
+                        <div class="text-[#b7ab98] dark:text-[#121314]">
                             <h1 class="text-3xl md:text-[46px] font-family-italic-f mb-2">Family Shoots</h1>
                             <p class="text-[11px] md:text-[13px]">COLLECTIONS / DESIGN / WEDDING</p>
                         </div>
                         <!-- <div-3></div-3> -->
                         <div class="inline-block">
-                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter"
+                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter stroke-[#b7ab98] dark:stroke-[#121314]"
                                 width="26" height="21" viewBox="0 0 26 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
 
-                                <path d="M0 10.3965H26" stroke="#b7ab98" stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke="#b7ab98"
+                                <path d="M0 10.3965H26" stroke="" stroke-width="2" stroke-miterlimit="10"></path>
+                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke="#b7ab98"
+                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
                             </svg>
                         </div>
@@ -476,31 +526,32 @@
             </div>
             <!-- <row-4></row-4> -->
             <div></div>
-            <div class="border-t border-[#31302E] py-10 col-span-4 xl:col-span-3 group relative howerImgRow-4">
+            <div
+                class="border-t border-[#31302E] dark:border-[#E8E8E8] py-10 col-span-4 xl:col-span-3 group relative howerImgRow-4">
                 <div class="custom-cursor-img-4 hidden"></div>
                 <span
                     class="absolute left-0 bottom-0 w-0 h-[1px] bg-[#eb5939] transition-all duration-500 ease-in-out group-hover:w-full"></span>
                 <div class="flex ">
                     <!-- <div-1></div-1> -->
                     <div class=" mt-4 mr-7.5 md:mr-[130px] ">
-                        <span class="text-[#b7ab98] ">2025</span>
+                        <span class="text-[#b7ab98] dark:text-[#121314]">2025</span>
                     </div>
                     <div class="flex items-center justify-between w-full">
                         <!-- <div-2></div-2> -->
-                        <div class="text-[#b7ab98]">
+                        <div class="text-[#b7ab98] dark:text-[#121314]">
                             <h1 class="text-3xl md:text-[46px] font-family-italic-f mb-2">Cosmetic store</h1>
                             <p class="text-[11px] md:text-[13px]">COLLECTIONS / DESIGN / WEDDING</p>
                         </div>
                         <!-- <div-3></div-3> -->
                         <div class="inline-block">
-                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter"
+                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter  stroke-[#b7ab98] dark:stroke-[#121314]"
                                 width="26" height="21" viewBox="0 0 26 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
 
-                                <path d="M0 10.3965H26" stroke="#b7ab98" stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke="#b7ab98"
+                                <path d="M0 10.3965H26" stroke="" stroke-width="2" stroke-miterlimit="10"></path>
+                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke="#b7ab98"
+                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
                             </svg>
                         </div>
@@ -509,31 +560,32 @@
             </div>
             <!-- <row-5></row-5> -->
             <div></div>
-            <div class="border-y border-[#31302E] py-10 col-span-4 xl:col-span-3 group relative howerImgRow-5">
+            <div
+                class="border-y border-[#31302E] dark:border-[#E8E8E8] py-10 col-span-4 xl:col-span-3 group relative howerImgRow-5">
                 <div class="custom-cursor-img-5 hidden"></div>
                 <span
                     class="absolute left-0 bottom-0 w-0 h-[1px] bg-[#eb5939] transition-all duration-500 ease-in-out group-hover:w-full"></span>
                 <div class="flex ">
                     <!-- <div-1></div-1> -->
                     <div class=" mt-4 mr-7.5 md:mr-[130px] ">
-                        <span class="text-[#b7ab98] ">2025</span>
+                        <span class="text-[#b7ab98]   dark:text-[#121314]">2025</span>
                     </div>
                     <div class="flex items-center justify-between w-full">
                         <!-- <div-2></div-2> -->
-                        <div class="text-[#b7ab98]">
+                        <div class="text-[#b7ab98]  dark:text-[#121314]">
                             <h1 class="text-3xl md:text-[46px] font-family-italic-f mb-2">Fashion</h1>
                             <p class="text-[11px] md:text-[13px]">COLLECTIONS / DESIGN / WEDDING</p>
                         </div>
                         <!-- <div-3></div-3> -->
                         <div class="inline-block">
-                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter"
+                            <svg class="transition-transform duration-300 group-hover:-rotate-45 origincenter  stroke-[#b7ab98] dark:stroke-[#121314]"
                                 width="26" height="21" viewBox="0 0 26 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
 
-                                <path d="M0 10.3965H26" stroke="#b7ab98" stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke="#b7ab98"
+                                <path d="M0 10.3965H26" stroke="" stroke-width="2" stroke-miterlimit="10"></path>
+                                <path d="M15.9307 0C15.9307 5.74655 20.4343 10.3965 26 10.3965" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
-                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke="#b7ab98"
+                                <path d="M26 10.3965C20.4343 10.3965 15.9307 15.0465 15.9307 20.793" stroke=""
                                     stroke-width="2" stroke-miterlimit="10"></path>
                             </svg>
                         </div>
@@ -552,24 +604,42 @@
         </div>
     </section>
     <!-- <section-7></section-7> -->
-    <section class="bg-[#1B1C1D] pt-[150px] pb-[120px] px-3">
+    <section class="bg-[#1B1C1D] dark:bg-white pt-[150px] pb-[120px] px-3">
         <!-- first-section -->
         <div class=" pb-17.5  flex max-xl:flex-col justify-between container mx-auto ">
             <div class="flex xl:items-end w-1/4 ">
-                <button
-                    class="text-sm text-[#b7ab98] border border-[#B6A997] shrink-0 relative z-50  px-4.5 py-1.5 before:content-['.'] before:px-[52px] before:-left-0.5 before:absolute before:-z-50 before:bg-[#121314] after:content-['.'] after:px-[44px] after:py-2 after:left-1.5 after:-top-0.5 after:absolute after:-z-50 after:bg-[#121314] font-medium bg-[#1B1C1D] ">EXPERTISE</button>
+                <button id="moonBtn"
+                    class="text-sm text-[#b7ab98] border border-[#B6A997] shrink-0 relative z-40  px-4.5 py-1.5 before:content-['.'] before:px-[53px] before:-left-0.5 before:absolute before:-z-40 before:bg-[#121314] after:content-['.'] after:px-[45.5px] after:py-2 after:left-1.5 after:-top-0.5 after:absolute after:-z-40 after:bg-[#121314] font-medium bg-[#1B1C1D] dark:hidden ">EXPERTISE</button>
+                <button id="sunBtn"
+                    class="text-sm text-[#1B1C1D] border border-[#E8E8E8] shrink-0 relative z-40  px-4.5 py-1.5  font-medium hidden dark:block  ">EXPERTISE
+                    <!-- top- left-->
+                    <div class="absolute -top-[1px] -left-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                    <div class="absolute -top-[1px] -left-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                    <!-- top-right -->
+                    <div class="absolute  -top-[1px] -right-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                    <div class="absolute -top-[1px] -right-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                    <!-- bottom-left -->
+                    <div class="absolute -bottom-[1px] -left-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                    <div class="absolute -bottom-[1px] -left-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                    <!-- bottom-right -->
+                    <div class="absolute -bottom-[1px] -right-[1px] w-2.5 h-[0.5px] bg-[#121314]"></div>
+                    <div class="absolute -bottom-[1px] -right-[1px] w-[0.5px] h-2.5 bg-[#121314]"></div>
+                    <!-- end -->
+                </button>
             </div>
             <div class="flex md:justify-between xl:w-full">
                 <div class="flex flex-col w-2/2 ">
                     <h1
-                        class="text-[70px] md:text-[100px] xl:text-[120px]  text-[#B7AB98] font-medium leading-16 md:leading-23 xl:leading-26 mb-2.5 md:mb-5">
+                        class="text-[70px] md:text-[100px] xl:text-[120px]  text-[#B7AB98] dark:text-[#121314] font-medium leading-16 md:leading-23 xl:leading-26 mb-2.5 md:mb-5">
                         OUR
                         <br>
                         PRICING
                         <br>
                         PLANS
                     </h1>
-                    <p class="font-family-italic-f text-[22px] md:text-[26px] text-[#B6AA97] max-md:max-w-150 ">Pricing
+                    <p
+                        class="font-family-italic-f text-[22px] md:text-[26px] text-[#B6AA97] dark:text-[#121314] max-md:max-w-150 ">
+                        Pricing
                         that suits your needs</p>
                 </div>
                 <div class="w-1/2 ">
@@ -580,125 +650,125 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-start  container mx-auto">
             <!-- <card-1></card-1> -->
-            <div class="relative p-10 border border-[#31302E]">
+            <div class="relative p-10 border border-[#31302E] dark:border-[#E8E8E8]">
                 <!-- top-right -->
-                <div class="absolute top-0 left-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute top-0 left-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute top-0 left-0 w-3 h-[0.5px] bg-[#B6AA97] dark:bg-[#121314]"></div>
+                <div class="absolute top-0 left-0 w-[0.5px] h-3 bg-[#B6AA97] dark:bg-[#121314]"></div>
                 <!-- top-left -->
-                <div class="absolute top-0 right-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute top-0 right-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute top-0 right-0 w-3 h-[0.5px] bg-[#B6AA97] dark:bg-[#121314]"></div>
+                <div class="absolute top-0 right-0 w-[0.5px] h-3 bg-[#B6AA97] dark:bg-[#121314]"></div>
                 <!-- bottom-right -->
-                <div class="absolute bottom-0 left-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute bottom-0 left-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute bottom-0 left-0 w-3 h-[0.5px] bg-[#B6AA97] dark:bg-[#121314]"></div>
+                <div class="absolute bottom-0 left-0 w-[0.5px] h-3 bg-[#B6AA97] dark:bg-[#121314]"></div>
                 <!-- bottom-left -->
-                <div class="absolute bottom-0 right-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute bottom-0 right-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute bottom-0 right-0 w-3 h-[0.5px] bg-[#B6AA97] dark:bg-[#121314]"></div>
+                <div class="absolute bottom-0 right-0 w-[0.5px] h-3 bg-[#B6AA97] dark:bg-[#121314]"></div>
                 <!-- end -->
-                <div class="mb-10">
-                    <h2 class="text-[#B6AA97] text-[26px] font-family-italic-f">Premium</h2>
-                    <span class="text-[#B7AB98] text-[70px] font-semibold mb-2.5">$2400</span>
-                    <p class="text-[#726C63]">Have more active requests at a time?</p>
+                <div class="mb-10 ">
+                    <h2 class="text-[#B6AA97] dark:text-[#121314] text-[26px] font-family-italic-f">Premium</h2>
+                    <span class="text-[#B7AB98] dark:text-[#121314] text-[70px] font-semibold mb-2.5">$2400</span>
+                    <p class="text-[#726C63] dark:text-[#121314]">Have more active requests at a time?</p>
                 </div>
                 <button
-                    class="text-lg text-white font-medium w-full px-15 h-12.5 rounded-full border border-[#31302E] mb-10 transition-all duration-300 ease-in-out  hover:text-[#020B18] hover:bg-[#CFC292]">BOOK
+                    class="text-lg text-white dark:text-[#121314] font-medium w-full px-15 h-12.5 rounded-full border border-[#31302E]  dark:border-[#E8E8E8] mb-10 transition-all duration-300 ease-in-out  hover:text-[#020B18] hover:bg-[#CFC292] font-popins">BOOK
                     NOW</button>
-                <ul class="list-none space-y-5 font-medium text-[#726C63] pl-4 ">
+                <ul class="list-none space-y-5 font-medium text-[#726C63] dark:text-[#121314] pl-4 ">
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         Full-day coverage</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         2 photographer</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         Online gallery</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         High-resolution edited images</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         Engagement session included</li>
                 </ul>
             </div>
             <!-- <card-2></card-2> -->
-            <div class="relative p-10 border border-[#31302E]">
+            <div class="relative p-10 border border-[#31302E]  dark:border-[#E8E8E8]">
                 <!-- top-right -->
-                <div class="absolute top-0 left-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute top-0 left-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute top-0 left-0 w-3 h-[0.5px] bg-[#B6AA97]  dark:bg-[#121314]"></div>
+                <div class="absolute top-0 left-0 w-[0.5px] h-3 bg-[#B6AA97]  dark:bg-[#121314]"></div>
                 <!-- top-left -->
-                <div class="absolute top-0 right-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute top-0 right-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute top-0 right-0 w-3 h-[0.5px] bg-[#B6AA97]  dark:bg-[#121314]"></div>
+                <div class="absolute top-0 right-0 w-[0.5px] h-3 bg-[#B6AA97]  dark:bg-[#121314]"></div>
                 <!-- bottom-right -->
-                <div class="absolute bottom-0 left-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute bottom-0 left-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute bottom-0 left-0 w-3 h-[0.5px] bg-[#B6AA97]  dark:bg-[#121314]"></div>
+                <div class="absolute bottom-0 left-0 w-[0.5px] h-3 bg-[#B6AA97]  dark:bg-[#121314]"></div>
                 <!-- bottom-left -->
-                <div class="absolute bottom-0 right-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute bottom-0 right-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute bottom-0 right-0 w-3 h-[0.5px] bg-[#B6AA97]  dark:bg-[#121314]"></div>
+                <div class="absolute bottom-0 right-0 w-[0.5px] h-3 bg-[#B6AA97]  dark:bg-[#121314]"></div>
                 <!-- end -->
                 <div class="mb-10">
-                    <h2 class="text-[#B6AA97] text-[26px] font-family-italic-f">Basic</h2>
-                    <span class="text-[#B7AB98] text-[70px] font-semibold mb-2.5">$2400</span>
-                    <p class="text-[#726C63]">Have more active requests at a time?</p>
+                    <h2 class="text-[#B6AA97]  dark:text-[#121314] text-[26px] font-family-italic-f">Basic</h2>
+                    <span class="text-[#B7AB98] dark:text-[#121314] text-[70px] font-semibold mb-2.5">$2400</span>
+                    <p class="text-[#726C63] dark:text-[#121314]">Have more active requests at a time?</p>
                 </div>
                 <button
-                    class="text-lg text-white font-medium bg-[#EB5939] w-full px-15 h-12.5 rounded-full border border-[#31302E] mb-10 ">BOOK
+                    class="text-lg text-white font-medium bg-[#EB5939] w-full px-15 h-12.5 rounded-full border border-[#31302E]  dark:border-none mb-10 font-popins">BOOK
                     NOW</button>
-                <ul class="list-none space-y-5 font-medium text-[#726C63] pl-4 ">
+                <ul class="list-none space-y-5 font-medium text-[#726C63] dark:text-[#121314] pl-4 ">
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         Full-day coverage</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]  dark:before:bg-[#121314]">
                         2 photographer</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]  dark:before:bg-[#121314]">
                         Online gallery</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]  dark:before:bg-[#121314]">
                         Engagement session included</li>
                 </ul>
             </div>
             <!-- <card-3></card-3> -->
-            <div class="relative p-10 border border-[#31302E]">
+            <div class="relative p-10 border border-[#31302E] dark:border-[#E8E8E8]">
                 <!-- top-right -->
-                <div class="absolute top-0 left-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute top-0 left-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute top-0 left-0 w-3 h-[0.5px] bg-[#B6AA97] dark:bg-[#121314]"></div>
+                <div class="absolute top-0 left-0 w-[0.5px] h-3 bg-[#B6AA97] dark:bg-[#121314]"></div>
                 <!-- top-left -->
-                <div class="absolute top-0 right-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute top-0 right-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute top-0 right-0 w-3 h-[0.5px] bg-[#B6AA97] dark:bg-[#121314]"></div>
+                <div class="absolute top-0 right-0 w-[0.5px] h-3 bg-[#B6AA97] dark:bg-[#121314]"></div>
                 <!-- bottom-right -->
-                <div class="absolute bottom-0 left-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute bottom-0 left-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute bottom-0 left-0 w-3 h-[0.5px] bg-[#B6AA97] dark:bg-[#121314]"></div>
+                <div class="absolute bottom-0 left-0 w-[0.5px] h-3 bg-[#B6AA97] dark:bg-[#121314]"></div>
                 <!-- bottom-left -->
-                <div class="absolute bottom-0 right-0 w-3 h-[0.5px] bg-[#B6AA97]"></div>
-                <div class="absolute bottom-0 right-0 w-[0.5px] h-3 bg-[#B6AA97]"></div>
+                <div class="absolute bottom-0 right-0 w-3 h-[0.5px] bg-[#B6AA97] dark:bg-[#121314]"></div>
+                <div class="absolute bottom-0 right-0 w-[0.5px] h-3 bg-[#B6AA97] dark:bg-[#121314]"></div>
                 <!-- end -->
                 <div class="mb-10">
-                    <h2 class="text-white text-[26px] font-family-italic-f">Deluxe</h2>
-                    <span class="text-[#B7AB98] text-[70px] font-semibold mb-2.5">$3500</span>
-                    <p class="text-[#726C63]">Have more active requests at a time?</p>
+                    <h2 class="text-white dark:text-[#121314] text-[26px] font-family-italic-f ">Deluxe</h2>
+                    <span class="text-[#B7AB98] dark:text-[#121314] text-[70px] font-semibold mb-2.5">$3500</span>
+                    <p class="text-[#726C63] dark:text-[#121314]">Have more active requests at a time?</p>
                 </div>
                 <button
-                    class="text-lg text-white font-medium w-full px-15 h-12.5 rounded-full border border-[#31302E] mb-10 transition-all duration-300 ease-in-out  hover:text-[#020B18] hover:bg-[#CFC292]">BOOK
+                    class="text-lg text-white dark:text-[#121314] font-medium w-full px-15 h-12.5 rounded-full border border-[#31302E] dark:border-[#E8E8E8] mb-10 transition-all duration-300 ease-in-out  hover:text-[#020B18] hover:bg-[#CFC292] font-popins">BOOK
                     NOW</button>
-                <ul class="list-none space-y-5 font-medium text-[#726C63] pl-4 ">
+                <ul class="list-none space-y-5 font-medium text-[#726C63]  dark:text-[#121314] pl-4 ">
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         Full-day coverage</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         3 photographer</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         Premium photo album</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         Pre-wedding photo sessionss</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         Engagement session included</li>
                     <li
-                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63]">
+                        class="relative before:content-[''] before:absolute before:left-[-13px] before:top-2.5 before:w-1 before:h-1 before:rounded-full before:bg-[#726C63] dark:before:bg-[#121314]">
                         Online Gallery</li>
                 </ul>
             </div>
@@ -762,38 +832,23 @@
                 </p>
             </div>
         </div>
-        <div class="overflow-hidden">
+
+        <div class="overflow-hidden whitespace-nowrap">
             <div
                 class="animate-marquee-2 flex font-semibold text-[#B7AB98] text-[60px] md:text-[150px] colg:text-[180px] xl:text-[220px] 2xl:text-[270px] whitespace-nowrap">
-
-                <div class=" flex gap-10 max-md:hidden">
-                    <span>WENT TO REACH OUT </span>
-                    <span>WENT TO REACH OUT </span>
-                    <span>WENT TO REACH OUT </span>
+                <div class="inline-flex animate-marquee">
+                    <span class="mr-10">WENT TO REACH OUT WENT TO REACH OUT WENT TO REACH OUT</span>
+                    <span class="mr-10" aria-hidden="true">WENT TO REACH OUT WENT TO REACH OUT WENT TO REACH OUT</span>
                 </div>
-                <div class=" flex gap-10 max-md:hidden">
-                    <span>WENT TO REACH OUT </span>
-                    <span>WENT TO REACH OUT </span>
-                    <span>WENT TO REACH OUT </span>
-                </div>
-                <div class=" flex gap-10 md:hidden">
-                    <span>WENTTOREACHOUT </span>
-                    <span>WENTTOREACHOUT </span>
-                    <span>WENTTOREACHOUT </span>
-                </div>
-                <div class=" flex gap-10 md:hidden">
-                    <span>WENTTOREACHOUT </span>
-                    <span>WENTTOREACHOUT </span>
-                    <span>WENTTOREACHOUT </span>
-                </div>
-
             </div>
         </div>
+
     </section>
     <hr class="border border-[#292929]">
     <!-- <footer></footer> -->
     <section class="bg-[#121314] px-3 py-7.5">
-        <div class="flex max-md:flex-col md:justify-between justify-center max-md:items-center max-md:gap-1  container mx-auto">
+        <div
+            class="flex max-md:flex-col md:justify-between justify-center max-md:items-center max-md:gap-1  container mx-auto">
             <div>
                 <h4 class="text-sm text-[#B1A693] font-medium  uppercase">Themepure © 2025. All rights reserved.</h4>
             </div>
@@ -822,28 +877,38 @@
         </div>
     </section>
     <script>
-        let sun = false;
+
         let moonparent = document.querySelector("#moonparent");
         let logoparent = document.querySelector("#logoparent");
 
         moonparent.addEventListener("click", change);
-        logoparent.addEventListener("click", change);
+
+        let sun = localStorage.getItem('theme') !== "dark";
+
+        setTheme(sun)
 
         function change() {
-            if (!sun) {
-                moonparent.innerHTML = `svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0581 14.2166C12.3522 14.2166 14.212 12.3569 14.212 10.0628C14.212 7.7687 12.3522 5.90897 10.0581 5.90897C7.76403 5.90897 5.9043 7.7687 5.9043 10.0628C5.9043 12.3569 7.76403 14.2166 10.0581 14.2166Z" fill="#FFC05A"></path><path d="M10 1V2.63636" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 17.3637V19.0001" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3.63477 3.63455L4.79658 4.79637" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.2031 15.2036L16.3649 16.3654" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 10.0001H2.63636" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17.3652 10.0001H19.0016" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3.63477 16.3654L4.79658 15.2036" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.2031 4.79637L16.3649 3.63455" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
+            // sun = !sun
+            setTheme(!sun)
+        }
 
-            } else {
-                moonparent.innerHTML = ` <svg width="14" height="14" viewBox="0 0 14 14" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M14 7.63063C13.8774 8.95738 13.3795 10.2218 12.5645 11.2759C11.7495 12.33 10.6512 13.1301 9.39801 13.5828C8.14485 14.0354 6.78869 14.1218 5.48822 13.8319C4.18775 13.5419 2.99676 12.8875 2.05461 11.9454C1.11246 11.0032 0.458115 9.81225 0.168141 8.51178C-0.121832 7.21131 -0.0354396 5.85515 0.41721 4.60199C0.86986 3.34883 1.67005 2.2505 2.72413 1.43552C3.77822 0.620536 5.04262 0.122609 6.36937 0C5.5926 1.05088 5.21881 2.34566 5.31599 3.64884C5.41317 4.95202 5.97487 6.17704 6.89892 7.10109C7.82296 8.02513 9.04798 8.58683 10.3512 8.68401C11.6543 8.78119 12.9491 8.4074 14 7.63063Z"fill="#fff"> </path></svg>`
-            }
+        function setTheme(mode) {
+            sun = mode;
 
-            if (!sun) {
+            if (sun) {
+
+                moonparent.innerHTML = `<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0581 14.2166C12.3522 14.2166 14.212 12.3569 14.212 10.0628C14.212 7.7687 12.3522 5.90897 10.0581 5.90897C7.76403 5.90897 5.9043 7.7687 5.9043 10.0628C5.9043 12.3569 7.76403 14.2166 10.0581 14.2166Z" fill="#FFC05A"></path><path d="M10 1V2.63636" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 17.3637V19.0001" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3.63477 3.63455L4.79658 4.79637" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.2031 15.2036L16.3649 16.3654" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 10.0001H2.63636" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17.3652 10.0001H19.0016" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3.63477 16.3654L4.79658 15.2036" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.2031 4.79637L16.3649 3.63455" stroke="#FFC05A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>`;
                 logoparent.innerHTML = `<img src="img-2/logo-red.webp" alt="">`;
+                localStorage.setItem("theme", "light");
+                document.documentElement.classList.add("dark");
             } else {
+
+                moonparent.innerHTML = ` <svg width="14" height="14" viewBox="0 0 14 14" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M14 7.63063C13.8774 8.95738 13.3795 10.2218 12.5645 11.2759C11.7495 12.33 10.6512 13.1301 9.39801 13.5828C8.14485 14.0354 6.78869 14.1218 5.48822 13.8319C4.18775 13.5419 2.99676 12.8875 2.05461 11.9454C1.11246 11.0032 0.458115 9.81225 0.168141 8.51178C-0.121832 7.21131 -0.0354396 5.85515 0.41721 4.60199C0.86986 3.34883 1.67005 2.2505 2.72413 1.43552C3.77822 0.620536 5.04262 0.122609 6.36937 0C5.5926 1.05088 5.21881 2.34566 5.31599 3.64884C5.41317 4.95202 5.97487 6.17704 6.89892 7.10109C7.82296 8.02513 9.04798 8.58683 10.3512 8.68401C11.6543 8.78119 12.9491 8.4074 14 7.63063Z"fill="#fff"> </path></svg>`
                 logoparent.innerHTML = `<img src="img-2/logo-white.webp" alt="">`;
+                localStorage.setItem("theme", "dark");
+                document.documentElement.classList.remove("dark");
             }
 
-            sun = !sun;
         }
 
         // Custom Cursor Movement
@@ -892,7 +957,7 @@
         sectionimg2.addEventListener('mouseleave', function () {
             cursor.classList.remove('hidden');
         });
-        
+
         // img2
         const cursordemo2 = document.querySelector('.custom-cursor-demo-2');
 
@@ -922,7 +987,7 @@
         sectionimg3.addEventListener('mouseleave', function () {
             cursor.classList.remove('hidden');
         });
-        
+
         // img3
         const cursordemo3 = document.querySelector('.custom-cursor-demo-3');
 
