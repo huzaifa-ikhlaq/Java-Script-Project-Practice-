@@ -84,6 +84,13 @@
                     </a>
                 </div>
             </nav>
+            <a href="#"
+                class=" fixed z-50 right-10 bottom-10 w-[44px]  h-[44px] leading-[44px] text-center bg-white shadow-[0_8px_16px_rgba(3,4,28,0.3)] text-black rounded-full transition-all duration-300 ease-out hover:-translate-y-2 flex justify-center items-center">
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </a>
             <!-- <icon-area></icon-area> -->
             <div class="absolute left-18 top-60 max-2xl:hidden">
                 <span style="background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .5));"
@@ -924,7 +931,7 @@
             } else {
                 nav.classList.remove('-translate-y-full')
             }
-            lastscroll = currentScroll <= 0 ? 0:currentScroll
+            lastscroll = currentScroll <= 0 ? 0 : currentScroll
         })
 
         // Custom Cursor Movement
