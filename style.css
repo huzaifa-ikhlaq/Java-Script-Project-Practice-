@@ -14,6 +14,14 @@
   --breakpoint-coxl: 81.25rem; /* 1300px */
   --breakpoint-2xl: 87.5rem; /* 1400px */
 }
+.font-Didone {
+  font-family: "Didone right", serif;
+}
+.font-Cormorant {
+  font-family: "Cormorant", serif;
+  font-style: italic;
+  font-weight: 500;
+}
 .font-popins {
   font-family: "Poppins", sans-serif;
 }
@@ -87,6 +95,20 @@
   margin-bottom: 5px;
   border-radius: 999999px;
   transition: transform 0.13s ease, background-image 0.3s ease, opacity 0.13s ease;
+}
+@media (max-width: 768px) {
+  .custom-cursor-demo-1 {
+    display: none;
+  }
+  .custom-cursor-demo-2 {
+    display: none;
+  }
+  .custom-cursor-demo-3 {
+    display: none;
+  }
+  .custom-cursor-demo-4 {
+    display: none;
+  }
 }
 .custom-cursor-demo-3 {
   position: fixed;
@@ -212,4 +234,19 @@
   background-color: #eb5939;
   border-radius: 10px;
   border: 2px solid #1a1a1a;
+}
+.scroll-none.marquee-track {
+  background: #1b1c1d;
+}
+
+.scroll-none::-webkit-scrollbar {
+  width: 0px;
+}
+
+.scroll-none::-webkit-scrollbar-track {
+  background: #1b1c1d;
+}
+
+.scroll-none::-webkit-scrollbar-thumb {
+  background: #1b1c1d;
 }
