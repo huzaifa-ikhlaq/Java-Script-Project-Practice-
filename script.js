@@ -30,7 +30,7 @@ function setTheme(mode) {
 
 // nav-scroll
 let lastscroll = 0;
-const nav = document.getElementById("main-nav");
+let nav = document.getElementById("main-nav");
 
 window.addEventListener("scroll", function () {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -42,6 +42,51 @@ window.addEventListener("scroll", function () {
   }
   lastscroll = currentScroll <= 0 ? 0 : currentScroll;
 });
+// meanu open
+let navMeanu = document.querySelector("#navMeanu");
+let navMeanu1 = document.querySelector("#navMeanu1");
+let navMeanu2 = document.querySelector("#navMeanu2");
+let mainNav_text1 = document.querySelector("#navMeanu1_text1");
+let mainNav_text2 = document.querySelector("#navMeanu2_text2");
+let mainNav_ul = document.querySelector("#navMeanu2_ul");
+let three = document.querySelector("#three");
+let goTop = document.querySelector("#gotop");
+let closeBtn = document.querySelector("#closebtn");
+let mainNav = document.querySelector("#main-nav");
+three.addEventListener("click", navOpen);
+
+function navOpen() {
+  document.body.classList.add("overflow-hidden");
+  navMeanu1.classList.toggle("-translate-y-full");
+  navMeanu2.classList.toggle("translate-y-full");
+  goTop.classList.toggle("hidden");
+  mainNav.classList.remove("z-60");
+  mainNav_text2.classList.remove("opacity-100");
+  navMeanu1_text1.classList.remove("opacity-100");
+  setTimeout(() => {
+    mainNav_text2.classList.add("opacity-100");
+    navMeanu1_text1.classList.add("opacity-100");
+  }, 1000);
+  // navMeanu2_ul.classList.remove("translate-y-full");
+  setTimeout(() => {
+    navMeanu2_ul.classList.remove("opacity-0", "translate-y-full");
+  }, 1000);
+}
+
+closeBtn.addEventListener("click", navclose);
+
+function navclose() {
+  document.body.classList.remove("overflow-hidden");
+  navMeanu1.classList.toggle("-translate-y-full");
+  navMeanu2.classList.toggle("translate-y-full");
+  goTop.classList.toggle("hidden");
+  setTimeout(() => {
+    mainNav.classList.add("z-60");
+  }, 1000);
+  mainNav_text2.classList.remove("opacity-100");
+  navMeanu1_text1.classList.remove("opacity-100");
+  navMeanu2_ul.classList.add("opacity-0", "translate-y-full");
+}
 
 // cheak-text-hover
 const menuRows1 = document.querySelector(".menu-row-1");
@@ -50,7 +95,7 @@ const menuRows3 = document.querySelector(".menu-row-3");
 const menuRows4 = document.querySelector(".menu-row-4");
 const menuRows5 = document.querySelector(".menu-row-5");
 const menuRows6 = document.querySelector(".menu-row-6");
-            //  row-1
+//  row-1
 let hovered1 = menuRows1.addEventListener("mouseenter", function () {
   menuRows2.classList.remove("text-white");
   menuRows2.classList.add("text-[#55585b]");
@@ -75,8 +120,8 @@ let unHovered1 = menuRows1.addEventListener("mouseleave", function () {
   menuRows6.classList.add("text-white");
   menuRows6.classList.remove("text-[#55585b]");
 });
-            //  row-2
-let hovered2 = menuRows2.addEventListener("mouseenter", function () {   
+//  row-2
+let hovered2 = menuRows2.addEventListener("mouseenter", function () {
   menuRows1.classList.remove("text-white");
   menuRows1.classList.add("text-[#55585b]");
   menuRows3.classList.remove("text-white");
@@ -100,7 +145,7 @@ let unHovered2 = menuRows2.addEventListener("mouseleave", function () {
   menuRows6.classList.add("text-white");
   menuRows6.classList.remove("text-[#55585b]");
 });
-            //  row-3
+//  row-3
 let hovered3 = menuRows3.addEventListener("mouseenter", function () {
   menuRows1.classList.remove("text-white");
   menuRows1.classList.add("text-[#55585b]");
@@ -125,7 +170,7 @@ let unHovered3 = menuRows3.addEventListener("mouseleave", function () {
   menuRows6.classList.add("text-white");
   menuRows6.classList.remove("text-[#55585b]");
 });
-            //  row-4
+//  row-4
 let hovered4 = menuRows4.addEventListener("mouseenter", function () {
   menuRows1.classList.remove("text-white");
   menuRows1.classList.add("text-[#55585b]");
@@ -150,7 +195,7 @@ let unHovered4 = menuRows4.addEventListener("mouseleave", function () {
   menuRows6.classList.add("text-white");
   menuRows6.classList.remove("text-[#55585b]");
 });
-            //  row-5
+//  row-5
 let hovered5 = menuRows5.addEventListener("mouseenter", function () {
   menuRows1.classList.remove("text-white");
   menuRows1.classList.add("text-[#55585b]");
@@ -175,7 +220,7 @@ let unHovered5 = menuRows5.addEventListener("mouseleave", function () {
   menuRows6.classList.add("text-white");
   menuRows6.classList.remove("text-[#55585b]");
 });
-            //  row-6
+//  row-6
 let hovered6 = menuRows6.addEventListener("mouseenter", function () {
   menuRows1.classList.remove("text-white");
   menuRows1.classList.add("text-[#55585b]");
@@ -200,7 +245,47 @@ let unHovered6 = menuRows6.addEventListener("mouseleave", function () {
   menuRows5.classList.add("text-white");
   menuRows5.classList.remove("text-[#55585b]");
 });
+//  meanu-nav-item-open
+// row-1
+let meanuItems1 = document.querySelector("#meanu-items-1");
+let itemsPlus1 = document.querySelector("#items-plus-1");
 
+itemsPlus1.addEventListener("click", openItems1);
+
+function openItems1() {
+  meanuItems1.classList.toggle("hidden");
+  itemsPlus1.classList.toggle("rotate-134");
+}
+// row-3
+let meanuItems3 = document.querySelector("#meanu-items-3");
+let itemsPlus3 = document.querySelector("#items-plus-3");
+
+itemsPlus3.addEventListener("click", openItems3);
+
+function openItems3() {
+  meanuItems3.classList.toggle("hidden");
+  itemsPlus3.classList.toggle("rotate-134");
+}
+// row-4
+let meanuItems4 = document.querySelector("#meanu-items-4");
+let itemsPlus4 = document.querySelector("#items-plus-4");
+
+itemsPlus4.addEventListener("click", openItems4);
+
+function openItems4() {
+  meanuItems4.classList.toggle("hidden");
+  itemsPlus4.classList.toggle("rotate-134");
+}
+// row-5
+let meanuItems5 = document.querySelector("#meanu-items-5");
+let itemsPlus5 = document.querySelector("#items-plus-5");
+
+itemsPlus5.addEventListener("click", openItems5);
+
+function openItems5() {
+  meanuItems5.classList.toggle("hidden");
+  itemsPlus5.classList.toggle("rotate-134");
+}
 // Custom Cursor Movement
 const cursor = document.querySelector(".custom-cursor");
 

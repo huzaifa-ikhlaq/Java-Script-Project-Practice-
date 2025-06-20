@@ -30,7 +30,7 @@
                 class="absolute z-20 bottom-0 left-0 h-500 lg:h-1000 w-full"></div>
             <!-- <nav></nav> -->
             <nav id="main-nav"
-                class="fixed z-50 px-2 md:px-21 py-4 flex justify-between items-center w-full nav nav-2 transition-transform duration-300 -translate-y-full">
+                class="fixed z-60 px-2 md:px-21 py-4 flex justify-between items-center w-full nav nav-2 transition-transform duration-300 -translate-y-full">
                 <!-- left-section -->
                 <div class="" id="logoparent"><img src="img-2/logo-white.webp" alt=""></div>
                 <!-- right-section-->
@@ -71,7 +71,7 @@
 
                         </span>
                     </a>
-                    <a href="#" class="ml-5">
+                    <button id="three" class="ml-5">
                         <span>
                             <svg class="fill-white stroke-white dark:stroke-[#121314] dark:fill-[#121314]" width="32"
                                 height="10" viewBox="0 0 32 10" fill="" xmlns="http://www.w3.org/2000/svg">
@@ -80,145 +80,261 @@
                             </svg>
                             </svg>
                         </span>
-                    </a>
+                    </button>
                 </div>
             </nav>
             <!-- <cheak-box></cheak-box> -->
-            <div class="h-screen w-full grid md:grid-cols-2 absolute  z-50 overflo group ">
-                <div class="bg-[#1B1C1D] dark:bg-[#F5F5F5]  overflow-y-scroll scroll-none -translate-y-full group-hover:translate-y-full ">
-                    <div
-                        class="w-1/2 z-50  fixed pl-10 colg:pl-27.5 pt-9  bg-[#1B1C1D]  dark:bg-[#F5F5F5] dark:hidden  ">
-                        <img clas="w-[315px] h-[42.5px]    " src="img-2/logo-white.webp" alt="">
-                    </div>
-                    <div
-                        class="px-15 pb-15 md:px-10 md:pb-10 colg:px-12.5 colg:pb-12.5 xl:pt-37  md:pt-30 xl:pl-22.5 xl:pr-32.5  ">
-                        <!-- <row-1></row-1> -->
+            <div id="navMeanu" class="h-screen w-full grid md:grid-cols-2 absolute  z-50 overflow-hidden   ">
+                <div id="navMeanu1"
+                    class=" bg-[#1B1C1D] dark:bg-[#F5F5F5]  overflow-y-scroll scroll-none  -translate-y-full  ">
+                    <div id="navMeanu1_text1" class=" opacity-0 transition-opacity duration-500">
                         <div
-                            class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center  text-white dark:text-[#121314] max-colg:py-2  menu-row-1 ">
-                            <div class="flex">
-                                <h6 class=" -rotate-90 flex items-center  relative bottom-2 colg:-bottom-4"><a href="#"
-                                        class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">01</a></h6>
-                                <h1 class="pl-5"><a href="#"
-                                        class="font-Didone  text-[30px] colg:text-[80px] font-medium">Home</a></h1>
-                            </div>
-                            <div><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 1V27" stroke="currentcolor" stroke-opacity="0.95" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M1 14H27" stroke="currentcolor" stroke-opacity="0.95" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></div>
+                            class=" w-1/2 z-50 fixed pl-10 colg:pl-27.5 pt-9 bg-[#1B1C1D] dark:bg-[#F5F5F5] dark:hidden ">
+                            <img class=" w-[115px] h-[42.5px] " src=" img-2/logo-white.webp" alt="">
                         </div>
-                        <!-- <row-2></row-2> -->
                         <div
-                            class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center text-white dark:text-[#121314] max-colg:py-2 menu-row-2 ">
-                            <div class="flex">
-                                <h6 class=" -rotate-90 flex items-center  relative bottom-2 colg:-bottom-4"><a href="#"
-                                        class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">02</a></h6>
-                                <h1 class="pl-5"><a href="#"
-                                        class="font-Didone  text-[30px] colg:text-[80px] font-medium">About Me</a></h1>
+                            class="px-15 pb-15 md:px-10 md:pb-10 colg:px-12.5 colg:pb-12.5 xl:pt-37 pt-30  md:pt-30 xl:pl-22.5 xl:pr-32.5  ">
+                            <!-- <row-1></row-1> -->
+                            <div
+                                class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center  text-white dark:text-[#121314] max-colg:py-2  menu-row-1 relative">
+                                <div class="flex relative">
+                                    <h6 class=" -rotate-90 flex items-center  absolute top-0 colg:top-15.5 -left-1"><a
+                                            href="#"
+                                            class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">01</a>
+                                    </h6>
+                                    <div>
+                                        <h1 class="pl-5"><a href="#"
+                                                class="font-Didone  text-[30px] colg:text-[80px] font-medium">Home</a>
+                                        </h1>
+                                        <div id="meanu-items-1"
+                                            class="py-9 md:pl-17.5 text-[22px] md:text-[32px] font-medium font-Didone text-white   dark:text-[#171718] space-y-1 hidden">
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Freelancer</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Interface Designer</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Web Developer</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Photographer</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Fashion Designer</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Portfolio Slider 01</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Portfolio Slider 02</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute right-0 top-5 colg:top-14"><svg id="items-plus-1"
+                                        class=" transition-all duration-300" width="28" height="28" viewBox="0 0 28 28"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 1V27" stroke="currentcolor" stroke-opacity="0.95"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M1 14H27" stroke="currentcolor" stroke-opacity="0.95"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></div>
                             </div>
-                        </div>
-                        <!-- <row-3></row-3> -->
-                        <div
-                            class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center text-white dark:text-[#121314] max-colg:py-2 menu-row-3">
-                            <div class="flex">
-                                <h6 class=" -rotate-90 flex items-center  relative bottom-2 colg:-bottom-4"><a href="#"
-                                        class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">03</a></h6>
-                                <h1 class="pl-5"><a href="#"
-                                        class="font-Didone  text-[30px] colg:text-[80px] font-medium">Services</a></h1>
+                            <!-- <row-2></row-2> -->
+                            <div
+                                class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center text-white  dark:text-[#171718] max-colg:py-2 menu-row-2 ">
+                                <div class="flex">
+                                    <h6 class=" -rotate-90 flex items-center  relative bottom-2 colg:-bottom-4"><a
+                                            href="#"
+                                            class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">02</a>
+                                    </h6>
+                                    <h1 class="pl-5"><a href="#"
+                                            class="font-Didone  text-[30px] colg:text-[80px] font-medium">About Me</a>
+                                    </h1>
+                                </div>
                             </div>
-                            <div><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 1V27" stroke="currentcolor" stroke-opacity="0.95" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M1 14H27" stroke="currentcolor" stroke-opacity="0.95" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></div>
-                        </div>
-                        <!-- <row-4></row-4> -->
-                        <div
-                            class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center text-white dark:text-[#121314] max-colg:py-2  menu-row-4 ">
-                            <div class="flex">
-                                <h6 class=" -rotate-90 flex items-center  relative bottom-2 colg:-bottom-4"><a href="#"
-                                        class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">04</a></h6>
-                                <h1 class="pl-5"><a href="#"
-                                        class="font-Didone  text-[30px] colg:text-[80px] font-medium">Portfolio</a></h1>
+                            <!-- <row-3></row-3> -->
+                            <div
+                                class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center  text-white  dark:text-[#171718] max-colg:py-2  menu-row-3 relative">
+                                <div class="flex relative">
+                                    <h6 class=" -rotate-90 flex items-center  absolute top-0 colg:top-15.5 -left-1"><a
+                                            href="#"
+                                            class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">03</a>
+                                    </h6>
+                                    <div>
+                                        <h1 class="pl-5"><a href="#"
+                                                class="font-Didone  text-[30px] colg:text-[80px] font-medium">Services</a>
+                                        </h1>
+                                        <div id="meanu-items-3"
+                                            class="py-9 md:pl-17.5 text-[22px] md:text-[32px] font-medium font-Didone text-white  dark:text-[#171718] space-y-1 hidden">
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Service</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Service Details</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute right-0 top-5 colg:top-14"><svg id="items-plus-3"
+                                        class=" transition-all duration-300" width="28" height="28" viewBox="0 0 28 28"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 1V27" stroke="currentcolor" stroke-opacity="0.95"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M1 14H27" stroke="currentcolor" stroke-opacity="0.95"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></div>
                             </div>
-                            <div><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 1V27" stroke="currentcolor" stroke-opacity="0.95" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M1 14H27" stroke="currentcolor" stroke-opacity="0.95" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></div>
-                        </div>
-                        <!-- <row-5></row-5> -->
-                        <div
-                            class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center text-white dark:text-[#121314] max-colg:py-2 menu-row-5 ">
-                            <div class="flex">
-                                <h6 class=" -rotate-90 flex items-center  relative bottom-2 colg:-bottom-4"><a href="#"
-                                        class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">05</a></h6>
-                                <h1 class="pl-5"><a href="#"
-                                        class="font-Didone  text-[30px] colg:text-[80px] font-medium">Blog</a></h1>
+                            <!-- <row-4></row-4> -->
+                            <div
+                                class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center  text-white  dark:text-[#171718] max-colg:py-2  menu-row-4 relative">
+                                <div class="flex relative">
+                                    <h6 class=" -rotate-90 flex items-center  absolute top-0 colg:top-15.5 -left-1"><a
+                                            href="#"
+                                            class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">04</a>
+                                    </h6>
+                                    <div>
+                                        <h1 class="pl-5"><a href="#"
+                                                class="font-Didone  text-[30px] colg:text-[80px] font-medium">Portfolio</a>
+                                        </h1>
+                                        <div id="meanu-items-4"
+                                            class="py-9 md:pl-17.5 text-[22px] md:text-[32px] font-medium font-Didone text-white  dark:text-[#171718]  space-y-1 hidden">
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Portfolio</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Portfolio Details</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Portfolio Slider 01</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Portfolio Slider 02</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute right-0 top-5 colg:top-14"><svg id="items-plus-4"
+                                        class=" transition-all duration-300" width="28" height="28" viewBox="0 0 28 28"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 1V27" stroke="currentcolor" stroke-opacity="0.95"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M1 14H27" stroke="currentcolor" stroke-opacity="0.95"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></div>
                             </div>
-                            <div><svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 1V27" stroke="currentcolor" stroke-opacity="0.95" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M1 14H27" stroke="currentcolor" stroke-opacity="0.95" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg></div>
-                        </div>
-                        <!-- <row-6></row-6> -->
-                        <div
-                            class="border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center text-white dark:text-[#121314] max-colg:py-2 menu-row-6 ">
-                            <div class="flex">
-                                <h6 class=" -rotate-90 flex items-center  relative bottom-2 colg:-bottom-4"><a href="#"
-                                        class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">06</a></h6>
-                                <h1 class="pl-5"><a href="#"
-                                        class="font-Didone  text-[30px] colg:text-[80px] font-medium">Contact</a></h1>
+                            <!-- <row-5></row-5> -->
+                            <div
+                                class=" border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center  text-white  dark:text-[#171718] max-colg:py-2  menu-row-5 relative">
+                                <div class="flex relative">
+                                    <h6 class=" -rotate-90 flex items-center  absolute top-0 colg:top-15.5 -left-1"><a
+                                            href="#"
+                                            class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">05</a>
+                                    </h6>
+                                    <div>
+                                        <h1 class="pl-5"><a href="#"
+                                                class="font-Didone  text-[30px] colg:text-[80px] font-medium">Blog </a>
+                                        </h1>
+                                        <div id="meanu-items-5"
+                                            class="py-9 md:pl-17.5 text-[22px] md:text-[32px] font-medium font-Didone text-white  dark:text-[#171718] space-y-1 hidden">
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Blog List</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Blog Sidebar</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Blog Details</h3>
+                                            <h3
+                                                class="transition-all duration-300  hover:text-[#656C8D] hover:translate-x-4">
+                                                Blog Details 02</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute right-0 top-5 colg:top-14"><svg id="items-plus-5"
+                                        class=" transition-all duration-300" width="28" height="28" viewBox="0 0 28 28"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 1V27" stroke="currentcolor" stroke-opacity="0.95"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M1 14H27" stroke="currentcolor" stroke-opacity="0.95"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg></div>
+                            </div>
+                            <!-- <row-6></row-6> -->
+                            <div
+                                class="border-b border-[#373838] dark:border-[#C4C4C4] flex justify-between items-center text-white dark:text-[#121314] max-colg:py-2 menu-row-6 ">
+                                <div class="flex">
+                                    <h6 class=" -rotate-90 flex items-center  relative bottom-2 colg:-bottom-4"><a
+                                            href="#"
+                                            class="font-semibold colg:font-black font-Didone max-colg:text-sm  ">06</a>
+                                    </h6>
+                                    <h1 class="pl-5"><a href="#"
+                                            class="font-Didone  text-[30px] colg:text-[80px] font-medium">Contact</a>
+                                    </h1>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class=" bg-[#121314] dark:bg-white h-screen max-md:hidden translate-y-full group-hover:-translate-y-full">
+                <div id="navMeanu2" class=" bg-[#121314] dark:bg-white h-screen max-md:hidden     translate-y-full">
                     <span
-                        class="w-full pr-24 z-50 flex justify-end  colg:pr-13 pt-9  bg-[#121314]  dark:bg-[#F5F5F5] dark:hidden group ">
-                        <svg class="stroke-white dark:stroke-[#121314]" width="38" height="38" viewBox="0 0 38 38"
-                            fill="" xmlns="http://www.w3.org/2000/svg">
+                        class="w-full pr-24 z-50 flex justify-end  colg:pr-13 pt-9  bg-[#121314]  dark:bg-white  group ">
+                        <svg id="closebtn" class="stroke-white dark:stroke-[#171718] " width="38" height="38"
+                            viewBox="0 0 38 38" fill="" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.80859 9.80762L28.1934 28.1924" stroke="" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round"></path>
                             <path d="M9.80859 28.1924L28.1934 9.80761" stroke="" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
-                        <div class="text-white w-12 overflow-hidden text-sm  font-medium relative right-21.5 top-2 ">
+                        <div class="text-white dark:text-[#171718]  w-12 overflow-hidden text-sm  font-medium relative right-21.5 top-2 ">
                             <span
                                 class="absolute left-12 transition-all duration-250 ease-in group-hover:-translate-x-12 ">CLOSE</span>
                         </div>
                     </span>
-                    <div class=" p-12.5 colg:p-25 relative  ">
-                        <div class="absolute inset-0 object-cover "><img class="h-full pt-10" src="img-2/bg-shape-2.webp" alt=""></div>
-                        <div class="flex flex-col  justify-between  ">
-                            <div class="flex flex-col items-end text-white text-[22px] font-Didone pt-15">
-                                <span><a href="#">+61404093 954</a></span>
+                    <div class=" p-12.5 colg:p-25 relative   h-full ">
+                        <div class="absolute inset-0 object-cover "><img class="h-full pt-10"
+                                src="img-2/bg-shape-2.webp" alt=""></div>
+                        <div id="navMeanu2_text2"
+                            class="flex flex-col  justify-between h-full opacity-0 transition-opacity duration-500">
+                            <div class="flex flex-col items-end text-white dark:text-[#171718] text-[22px] font-Didone pt-15  ">
+                                <span>
+                                    <a href="#">+61404093 954</a>
+                                </span>
                                 <h3>hello contact@diego.com</h3>
                                 <p>If in doubt. reach out.</p>
                             </div>
-                            <div class="flex flex-col items-start">
-                                <ul class=" -space-y-1 text-[40px] text-white font-Didone">
+                            <div id="navMeanu2_ul"
+                                class="flex flex-col items-start justify-start transition-all duration-700 ease-in opacity-0 translate-y-full">
+                                
+                                <ul class=" -space-y-1 text-[40px] text-white  dark:text-[#171718] font-Didone">
                                     <li
-                                        class="relative before:content-[''] before:absolute before:left-[-14px] before:top-6.5  before:w-1 before:h-1 before:rounded-full before:bg-white dark:before:bg-[#121314]">
-                                        Dribbble</li>
+                                        class="relative group before:content-[''] before:absolute before:left-[-14px] before:top-6.5  before:w-1 before:h-1 before:rounded-full before:bg-white dark:before:bg-[#171718]">
+                                        Dribbble
+                                        <span
+                                            class="absolute z-50 left-0 bottom-2 w-0 h-[1px] bg-white dark:bg-[#171718]  transition-all duration-400 ease-in-out group-hover:w-full"></span>
+                                    </li>
                                     <li
-                                        class="relative before:content-[''] before:absolute before:left-[-14px] before:top-6.5  before:w-1 before:h-1 before:rounded-full before:bg-white dark:before:bg-[#121314]">
-                                        Instagram</li>
+                                        class="relative group before:content-[''] before:absolute before:left-[-14px] before:top-6.5  before:w-1 before:h-1 before:rounded-full before:bg-white dark:before:bg-[#171718]">
+                                        Instagram
+                                        <span
+                                            class="absolute z-50 left-0 bottom-2 w-0 h-[1px] bg-white dark:bg-[#171718] transition-all duration-400 ease-in-out group-hover:w-full"></span>
+                                    </li>
                                     <li
-                                        class="relative before:content-[''] before:absolute before:left-[-14px] before:top-6.5  before:w-1 before:h-1 before:rounded-full before:bg-white dark:before:bg-[#121314]">
-                                        Linkedin</li>
+                                        class="relative group before:content-[''] before:absolute before:left-[-14px] before:top-6.5  before:w-1 before:h-1 before:rounded-full before:bg-white dark:before:bg-[#171718]">
+                                        Linkedin
+                                        <span
+                                            class="absolute z-50 left-0 bottom-2 w-0 h-[1px] bg-white dark:bg-[#171718]  transition-all duration-400 ease-in-out group-hover:w-full"></span>
+
+                                    </li>
                                     <li
-                                        class="relative before:content-[''] before:absolute before:left-[-14px] before:top-6.5  before:w-1 before:h-1 before:rounded-full before:bg-white dark:before:bg-[#121314]">
-                                        Behance</li>
+                                        class="relative group before:content-[''] before:absolute before:left-[-14px] before:top-6.5  before:w-1 before:h-1 before:rounded-full before:bg-white dark:before:bg-[#171718]">
+                                        Behance
+                                        <span
+                                            class="absolute z-50 left-0 bottom-2 w-0 h-[1px] bg-white dark:bg-[#171718] transition-all duration-400 ease-in-out group-hover:w-full"></span>
+
+                                    </li>
 
                                 </ul>
                             </div>
@@ -229,8 +345,8 @@
 
             <!-- <cheak-box></cheak-box> -->
 
-            <a href="#"
-                class=" fixed z-50 right-10 bottom-10 w-[44px]  h-[44px] leading-[44px] text-center bg-white shadow-[0_8px_16px_rgba(3,4,28,0.3)] text-black rounded-full transition-all duration-300 ease-out hover:-translate-y-2 flex justify-center items-center">
+            <a id="gotop" href="#"
+                class=" fixed z-50 right-10 bottom-10 w-[44px]  h-[44px] leading-[44px] text-center bg-white shadow-[0_8px_16px_rgba(3,4,28,0.3)] text-black rounded-full transition-all duration-300 ease-out hover:-translate-y-2 flex justify-center items-center ">
                 <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                         stroke-linejoin="round"></path>
