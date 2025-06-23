@@ -56,7 +56,8 @@ let mainNav = document.querySelector("#main-nav");
 three.addEventListener("click", navOpen);
 
 function navOpen() {
-  document.body.classList.add("overflow-hidden");
+  // document.body.classList.add("overflow-hidden");
+  navMeanu.classList.toggle("z-50");
   navMeanu1.classList.toggle("-translate-y-full");
   navMeanu2.classList.toggle("translate-y-full");
   goTop.classList.toggle("hidden");
@@ -76,7 +77,8 @@ function navOpen() {
 closeBtn.addEventListener("click", navclose);
 
 function navclose() {
-  document.body.classList.remove("overflow-hidden");
+  // document.body.classList.remove("overflow-hidden");
+  navMeanu.classList.toggle("z-50");
   navMeanu1.classList.toggle("-translate-y-full");
   navMeanu2.classList.toggle("translate-y-full");
   goTop.classList.toggle("hidden");
