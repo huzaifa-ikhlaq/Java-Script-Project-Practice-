@@ -247,6 +247,7 @@ let unHovered6 = menuRows6.addEventListener("mouseleave", function () {
   menuRows5.classList.add("text-white");
   menuRows5.classList.remove("text-[#55585b]");
 });
+
 //  meanu-nav-item-open
 // row-1
 let meanuItems1 = document.querySelector("#meanu-items-1");
