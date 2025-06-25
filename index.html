@@ -86,19 +86,19 @@
 
                 // Product name span
                 let nameSpan = document.createElement('span');
-                nameSpan.textContent = `Product Name: ${productName}`
+                nameSpan.textContent = `Product name: ${productName}`
 
                 // Product Category span
                 let CategorySpan = document.createElement('span');
-                CategorySpan.textContent = `Product Category: ${productCategory}`
+                CategorySpan.textContent = `Product category: ${productCategory}`
 
                 // Product Quantity span
                 let QuantitySpan = document.createElement('span');
-                QuantitySpan.textContent = `Product Quantity: ${productQuantity}`
+                QuantitySpan.textContent = `Product quantity: ${productQuantity}`
 
                 // Product Price span
                 let priceSpan = document.createElement('span');
-                priceSpan.textContent = `Product Quantity: ${productPrice}`
+                priceSpan.textContent = `Product price: ${productPrice}`
 
                 // Icons container
                 let iconsDiv = document.createElement('div');
@@ -175,10 +175,21 @@
                     // popup 
                     let popup = document.createElement('div')
                     popup.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'bg-white', 'w-full', 'h-full', 'rounded-2xl', 'text-xl', 'font-medium')
-                    let inputUpdateName = document.createElement('input')
-                    inputUpdateName.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3')
 
-                    inputUpdateName.value = nameSpan.textContent.replace('Product Name: ', '');
+                    let inputUpdateName = document.createElement('input')
+                    let inputUpdateCategory = document.createElement('input')
+                    let inputUpdateQuantity = document.createElement('input')
+                    let inputUpdatePrice = document.createElement('input')
+
+                    inputUpdateName.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3','mb-2')
+                    inputUpdateCategory.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3','mb-2')
+                    inputUpdateQuantity.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3','mb-2')
+                    inputUpdatePrice.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3','mb-2')
+
+                    inputUpdateName.value = nameSpan.textContent.replace('Product name: ', '');
+                    inputUpdateCategory.value = CategorySpan.textContent.replace('Product category: ', '');
+                    inputUpdateQuantity.value = QuantitySpan.textContent.replace('Product quantity: ', '');
+                    inputUpdatePrice.value = priceSpan.textContent.replace('Product price: ', '');
 
                     // Add updateBtn buttons
                     let btnContainer = document.createElement('div');
@@ -190,13 +201,22 @@
                     updateBtn.classList.add('bg-green-700', 'text-white', 'px-4', 'py-2', 'rounded');
                     updateBtn.onclick = () => {
                         nameSpan.textContent = `Product Name: ${inputUpdateName.value}`;
+                        CategorySpan.textContent = `Product Category: ${inputUpdateCategory.value}`;
+                        QuantitySpan.textContent = `Product Quantity: ${inputUpdateQuantity.value}`;
+                        priceSpan.textContent = `Product price: ${inputUpdatePrice.value}`;
                         popupWrap.remove();
                         overlay.remove();
                     };
 
                     document.body.appendChild(popupWrap);
+
                     popupWrap.appendChild(popup);
+
                     popup.appendChild(inputUpdateName);
+                    popup.appendChild(inputUpdateCategory);
+                    popup.appendChild(inputUpdateQuantity);
+                    popup.appendChild(inputUpdatePrice);
+
                     popup.appendChild(btnContainer);
                     btnContainer.appendChild(updateBtn);
 
