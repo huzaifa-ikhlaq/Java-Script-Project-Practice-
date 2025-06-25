@@ -9,132 +9,123 @@
 </head>
 
 <body class="bg-gray-400 p-4">
-    <div>
-        <div class="flex justify-between items-center">
-            <button class="text-white text-lg bg-cyan-900 rounded-2xl px-10 py-3 ro mt-5 ">Click</button>
-            <span id="filter" class="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-                    <path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"
-                        d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z" />
-                </svg>
-            </span>
-        </div>
-        <form id="product-form" class="text-xl  flex flex-col gap-2 mt-20  ">
-            <!-- <input-1></input-1> -->
-            <input id="product-name" class="border border-gray-100 w-full pl-4 py-4 rounded-xl " type="text" name=""
-                required placeholder="Enter Product Name" id="">
-            <!-- <input-2></input-2> -->
-            <input id="product-Category" class="border border-gray-100 w-full pl-4 py-4 rounded-xl " type="text" name=""
-                required placeholder="Enter Product Category" id="">
-            <!-- <input-3></input-3> -->
-            <input id="product-quantity" class="border border-gray-100 pl-4 py-4 rounded-2xl " type="text" name=""
-                required placeholder="Enter Product Quantity" id="">
-            <!-- <input-4></input-4> -->
-            <input id="product-price" class="border border-gray-100 pl-4 py-4 rounded-2xl " type="text" name="" required
-                placeholder="Enter Product Price" id="">
-            <!-- <submit-btn></submit-btn> -->
-            <div class="flex justify-end gap-2 font-semibold">
-                <!-- <button id="clearBtn" type="button"
-                    class="text-white text-lg bg-red-800 rounded-2xl w-40 py-3  mt-5  relative ">Clear</button> -->
-                <button id="submitBtn" type="submit"
-                    class="text-white text-lg bg-emerald-800 rounded-2xl w-40 py-3  mt-5  relative ">Submit</button>
 
-            </div>
-        </form>
-        <ul id="product-list" class="mt-10  space-y-2 w-full  ">
-            <!-- Task items will be added here  -->
-        </ul>
-    </div>
+    <form id="product-form" class="text-xl flex flex-col gap-2 mt-10">
+        <input id="product-name" class="border border-gray-100 w-full pl-4 py-4 rounded-xl text-black" type="text"
+            required placeholder="Enter Product Name">
+        <input id="product-Category" class="border border-gray-100 w-full pl-4 py-4 rounded-xl" type="text"
+            required placeholder="Enter Product Category">
+        <input id="product-quantity" class="border border-gray-100 pl-4 py-4 rounded-2xl" type="text" required
+            placeholder="Enter Product Quantity">
+        <input id="product-price" class="border border-gray-100 pl-4 py-4 rounded-2xl" type="number" required
+            placeholder="Enter Product Price">
+        <div class="flex justify-end gap-2 font-semibold">
+            <button id="submitBtn" type="submit"
+                class="text-white text-lg bg-emerald-800 rounded-2xl w-40 py-3 mt-5 relative">Submit</button>
+        </div>
+    </form>
+    <input id="searchInput" class="border border-gray-300 pl-4 py-2 mt-5 w-70 rounded-lg" type="text"
+        placeholder="Search your product...">
+    <ul id="product-list" class="mt-10 space-y-2 w-full"></ul>
+
     <script>
         let productForm = document.getElementById('product-form');
         let productNameInput = document.getElementById('product-name');
-        let productCategoryeInput = document.getElementById('product-Category');
+        let productCategoryInput = document.getElementById('product-Category');
         let productQuantityInput = document.getElementById('product-quantity');
         let productPriceInput = document.getElementById('product-price');
         let productList = document.getElementById('product-list');
-        let clearBtn = document.getElementById('clearBtn');
-
-        // clearBtn.addEventListener('click', () => {
-        //     productList.innerHTML = '';
-        // })
 
         productForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            addProductdetail();
+            addProductDetail();
         });
 
-        function addProductdetail() {
-
+        function addProductDetail() {
             let productName = productNameInput.value.trim();
-            let productCategory = productCategoryeInput.value.trim();
+            let productCategory = productCategoryInput.value.trim();
             let productQuantity = productQuantityInput.value.trim();
             let productPrice = productPriceInput.value.trim();
 
-            if (productName, productCategory, productQuantityInput, productPriceInput) {
+            if (productName && productCategory && productQuantity && productPrice) {
 
                 let li = document.createElement('li');
-                li.classList.add('bg-[#0e5755]', 'text-white', 'rounded-2xl', 'py-3', 'pl-4', 'font-medium', 'border', 'border-gray-500', 'w-full', 'flex', 'items-center', 'justify-between')
-                productList.appendChild(li);
-                productNameInput.value = '';
-                productCategoryeInput.value = '';
-                productQuantityInput.value = '';
-                productPriceInput.value = '';
+                li.classList.add('bg-[#0e5755]', 'text-yellow-300', 'rounded-2xl', 'py-3', 'pl-4', 'font-medium', 'border', 'border-gray-500', 'w-full', 'flex', 'items-center', 'justify-between');
 
-                // Icons container
+                // Product info container
                 let productDiv = document.createElement('div');
-                productDiv.classList.add('flex', 'gap-2', 'pr-5');
+                productDiv.classList.add('flex', 'gap-4', 'pr-5');
 
-                // Product name span
+                // Product Name
+                let productNameContainer = document.createElement('div');
+                let nameLabel = document.createElement('label');
+                nameLabel.textContent = 'Product Name: ';
+                nameLabel.classList.add('text-white')
                 let nameSpan = document.createElement('span');
-                nameSpan.textContent = `Product name: ${productName}`
+                nameSpan.textContent = productName;
+                productNameContainer.appendChild(nameLabel);
+                productNameContainer.appendChild(nameSpan);
 
-                // Product Category span
-                let CategorySpan = document.createElement('span');
-                CategorySpan.textContent = `Product category: ${productCategory}`
+                // Product Category
+                let productCategoryContainer = document.createElement('div');
+                let categoryLabel = document.createElement('label');
+                categoryLabel.textContent = 'Product Category: ';
+                categoryLabel.classList.add('text-white')
+                let categorySpan = document.createElement('span');
+                categorySpan.textContent = productCategory;
+                productCategoryContainer.appendChild(categoryLabel);
+                productCategoryContainer.appendChild(categorySpan);
 
-                // Product Quantity span
-                let QuantitySpan = document.createElement('span');
-                QuantitySpan.textContent = `Product quantity: ${productQuantity}`
+                // Product Quantity
+                let productQuantityContainer = document.createElement('div');
+                let quantityLabel = document.createElement('label');
+                quantityLabel.textContent = 'Product Quantity: ';
+                quantityLabel.classList.add('text-white')
+                let quantitySpan = document.createElement('span');
+                quantitySpan.textContent = productQuantity;
+                productQuantityContainer.appendChild(quantityLabel);
+                productQuantityContainer.appendChild(quantitySpan);
 
-                // Product Price span
+                // Product Price
+                let productPriceContainer = document.createElement('div');
+                let priceLabel = document.createElement('label');
+                priceLabel.textContent = 'Product Price: ';
+                priceLabel.classList.add('text-white')
                 let priceSpan = document.createElement('span');
-                priceSpan.textContent = `Product price: ${productPrice}`
+                priceSpan.textContent = productPrice;
+                productPriceContainer.appendChild(priceLabel);
+                productPriceContainer.appendChild(priceSpan);
 
                 // Icons container
                 let iconsDiv = document.createElement('div');
                 iconsDiv.classList.add('flex', 'justify-end', 'gap-2', 'pr-5');
 
-                // Update  icon 
+                // Update icon
                 let updateBtn = document.createElement('button');
-                updateBtn.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"> <path stroke="#22c55e" stroke-width="2" d="M16.475 5.408a2.5 2.5 0 1 1 3.536 3.535l-9.192 9.192a2 2 0 0 1-.707.464l-4.243 1.415 1.415-4.243a2 2 0 0 1 .464-.707l9.192-9.192Z"/ </svg> `;
+                updateBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"><path stroke="#22c55e" stroke-width="2" d="M16.475 5.408a2.5 2.5 0 1 1 3.536 3.535l-9.192 9.192a2 2 0 0 1-.707.464l-4.243 1.415 1.415-4.243a2 2 0 0 1 .464-.707l9.192-9.192Z"/></svg>`;
                 updateBtn.classList.add('bg-transparent', 'border-none', 'cursor-pointer');
 
-                // Delete icon 
+                // Delete icon
                 let deleteBtn = document.createElement('button');
-                deleteBtn.innerHTML = ` <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"> <path stroke="#ef4444" stroke-width="2" d="M6 6l12 12M6 18L18 6"/> </svg>`;
+                deleteBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24"><path stroke="#ef4444" stroke-width="2" d="M6 6l12 12M6 18L18 6"/></svg>`;
                 deleteBtn.classList.add('bg-transparent', 'border-none', 'cursor-pointer');
 
                 // Delete functionality
                 deleteBtn.addEventListener('click', () => {
-
-                    // overlay
                     let overlay = document.createElement('div');
                     overlay.classList.add('fixed', 'inset-0', 'bg-black/60', 'z-40');
                     document.body.appendChild(overlay);
 
-                    //  popupWrap
-                    let popupWrap = document.createElement('li')
-                    popupWrap.classList.add('flex', 'bg-white', 'w-100', 'h-80', 'rounded-2xl', 'absolute', 'z-50', 'top-43', 'right-140')
+                    let popupWrap = document.createElement('div');
+                    popupWrap.classList.add('flex', 'bg-white', 'w-96', 'h-48', 'rounded-2xl', 'absolute', 'z-50', 'top-1/2', 'left-1/2', 'transform', '-translate-x-1/2', '-translate-y-1/2', 'items-center', 'justify-center');
 
-                    // popup 
-                    let popup = document.createElement('div')
-                    popup.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'bg-white', 'w-full', 'h-full', 'rounded-2xl', 'text-xl', 'font-medium')
-                    popup.textContent = 'Are you sure to delete it?'
+                    let popup = document.createElement('div');
+                    popup.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'bg-white', 'w-full', 'h-full', 'rounded-2xl', 'text-xl', 'font-medium');
+                    popup.textContent = 'Are you sure to delete it?';
 
-                    // Add Yes/No buttons
                     let btnContainer = document.createElement('div');
                     btnContainer.classList.add('flex', 'gap-4', 'mt-4');
-                    //  yesBtn
+
                     let yesBtn = document.createElement('button');
                     yesBtn.textContent = 'Yes';
                     yesBtn.classList.add('bg-red-600', 'text-white', 'px-4', 'py-2', 'rounded');
@@ -143,7 +134,7 @@
                         popupWrap.remove();
                         overlay.remove();
                     };
-                    // noBtn
+
                     let noBtn = document.createElement('button');
                     noBtn.textContent = 'No';
                     noBtn.classList.add('bg-gray-400', 'text-white', 'px-4', 'py-2', 'rounded');
@@ -152,64 +143,64 @@
                         overlay.remove();
                     };
 
-
                     document.body.appendChild(popupWrap);
                     popupWrap.appendChild(popup);
                     popup.appendChild(btnContainer);
                     btnContainer.appendChild(yesBtn);
                     btnContainer.appendChild(noBtn);
-
                 });
 
-                // update functionality
+                // Update functionality
                 updateBtn.addEventListener('click', () => {
-                    // overlay
                     let overlay = document.createElement('div');
                     overlay.classList.add('fixed', 'inset-0', 'bg-black/60', 'z-40');
                     document.body.appendChild(overlay);
 
-                    //  popupWrap
-                    let popupWrap = document.createElement('li')
-                    popupWrap.classList.add('flex', 'bg-white', 'w-100', 'h-80', 'rounded-2xl', 'absolute', 'z-50', 'top-43', 'right-140')
+                    let popupWrap = document.createElement('div');
+                    popupWrap.classList.add('flex', 'bg-white', 'w-96', 'h-96', 'rounded-2xl', 'absolute', 'z-50', 'top-1/2', 'left-1/2', 'transform', '-translate-x-1/2', '-translate-y-1/2', 'items-center', 'justify-center');
 
-                    // popup 
-                    let popup = document.createElement('div')
-                    popup.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'bg-white', 'w-full', 'h-full', 'rounded-2xl', 'text-xl', 'font-medium')
+                    let popup = document.createElement('div');
+                    popup.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'bg-white', 'w-full', 'h-full', 'rounded-2xl', 'text-xl', 'font-medium');
 
-                    let inputUpdateName = document.createElement('input')
-                    let inputUpdateCategory = document.createElement('input')
-                    let inputUpdateQuantity = document.createElement('input')
-                    let inputUpdatePrice = document.createElement('input')
+                    let inputUpdateName = document.createElement('input');
+                    let inputUpdateCategory = document.createElement('input');
+                    let inputUpdateQuantity = document.createElement('input');
+                    let inputUpdatePrice = document.createElement('input');
 
-                    inputUpdateName.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3','mb-2')
-                    inputUpdateCategory.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3','mb-2')
-                    inputUpdateQuantity.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3','mb-2')
-                    inputUpdatePrice.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3','mb-2')
+                    inputUpdateName.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3', 'mb-2');
+                    inputUpdateCategory.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3', 'mb-2');
+                    inputUpdateQuantity.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3', 'mb-2');
+                    inputUpdatePrice.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3', 'mb-2');
 
-                    inputUpdateName.value = nameSpan.textContent.replace('Product name: ', '');
-                    inputUpdateCategory.value = CategorySpan.textContent.replace('Product category: ', '');
-                    inputUpdateQuantity.value = QuantitySpan.textContent.replace('Product quantity: ', '');
-                    inputUpdatePrice.value = priceSpan.textContent.replace('Product price: ', '');
+                    inputUpdateName.value = nameSpan.textContent;
+                    inputUpdateCategory.value = categorySpan.textContent;
+                    inputUpdateQuantity.value = quantitySpan.textContent;
+                    inputUpdatePrice.value = priceSpan.textContent;
 
-                    // Add updateBtn buttons
                     let btnContainer = document.createElement('div');
                     btnContainer.classList.add('flex', 'gap-4', 'mt-4');
 
-                    // updateBtn
-                    let updateBtn = document.createElement('button');
-                    updateBtn.textContent = 'Update';
-                    updateBtn.classList.add('bg-green-700', 'text-white', 'px-4', 'py-2', 'rounded');
-                    updateBtn.onclick = () => {
-                        nameSpan.textContent = `Product Name: ${inputUpdateName.value}`;
-                        CategorySpan.textContent = `Product Category: ${inputUpdateCategory.value}`;
-                        QuantitySpan.textContent = `Product Quantity: ${inputUpdateQuantity.value}`;
-                        priceSpan.textContent = `Product price: ${inputUpdatePrice.value}`;
+                    let updateConfirmBtn = document.createElement('button');
+                    updateConfirmBtn.textContent = 'Update';
+                    updateConfirmBtn.classList.add('bg-green-700', 'text-white', 'px-4', 'py-2', 'rounded');
+                    updateConfirmBtn.onclick = () => {
+                        nameSpan.textContent = inputUpdateName.value;
+                        categorySpan.textContent = inputUpdateCategory.value;
+                        quantitySpan.textContent = inputUpdateQuantity.value;
+                        priceSpan.textContent = inputUpdatePrice.value;
+                        popupWrap.remove();
+                        overlay.remove();
+                    };
+
+                    let cancelBtn = document.createElement('button');
+                    cancelBtn.textContent = 'Cancel';
+                    cancelBtn.classList.add('bg-gray-400', 'text-white', 'px-4', 'py-2', 'rounded');
+                    cancelBtn.onclick = () => {
                         popupWrap.remove();
                         overlay.remove();
                     };
 
                     document.body.appendChild(popupWrap);
-
                     popupWrap.appendChild(popup);
 
                     popup.appendChild(inputUpdateName);
@@ -218,23 +209,45 @@
                     popup.appendChild(inputUpdatePrice);
 
                     popup.appendChild(btnContainer);
-                    btnContainer.appendChild(updateBtn);
-
+                    btnContainer.appendChild(updateConfirmBtn);
+                    btnContainer.appendChild(cancelBtn);
                 });
 
-                productList.appendChild(li);
-
+                // Append all containers
                 li.appendChild(productDiv);
-                productDiv.appendChild(nameSpan);
-                productDiv.appendChild(CategorySpan);
-                productDiv.appendChild(QuantitySpan);
-                productDiv.appendChild(priceSpan);
+                productDiv.appendChild(productNameContainer);
+                productDiv.appendChild(productCategoryContainer);
+                productDiv.appendChild(productQuantityContainer);
+                productDiv.appendChild(productPriceContainer);
 
                 li.appendChild(iconsDiv);
                 iconsDiv.appendChild(updateBtn);
                 iconsDiv.appendChild(deleteBtn);
+
+                productList.appendChild(li);
+
+                // Clear form
+                productNameInput.value = '';
+                productCategoryInput.value = '';
+                productQuantityInput.value = '';
+                productPriceInput.value = '';
             }
         }
+
+        // Search functionality (case-insensitive)
+        let searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', function () {
+            let filter = searchInput.value.toLowerCase();
+            let allProducts = productList.getElementsByTagName('li');
+            for (let i = 0; i < allProducts.length; i++) {
+                let productName = allProducts[i].querySelector('div > div > span')?.textContent.toLowerCase() || '';
+                if (productName.includes(filter)) {
+                    allProducts[i].style.display = 'flex';
+                } else {
+                    allProducts[i].style.display = 'none';
+                }
+            }
+        });
     </script>
 </body>
 
