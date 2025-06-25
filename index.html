@@ -13,8 +13,8 @@
     <form id="product-form" class="text-xl flex flex-col gap-2 mt-10">
         <input id="product-name" class="border border-gray-100 w-full pl-4 py-4 rounded-xl text-black" type="text"
             required placeholder="Enter Product Name">
-        <input id="product-Category" class="border border-gray-100 w-full pl-4 py-4 rounded-xl" type="text"
-            required placeholder="Enter Product Category">
+        <input id="product-Category" class="border border-gray-100 w-full pl-4 py-4 rounded-xl" type="text" required
+            placeholder="Enter Product Category">
         <input id="product-quantity" class="border border-gray-100 pl-4 py-4 rounded-2xl" type="text" required
             placeholder="Enter Product Quantity">
         <input id="product-price" class="border border-gray-100 pl-4 py-4 rounded-2xl" type="number" required
@@ -163,9 +163,13 @@
                     popup.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'bg-white', 'w-full', 'h-full', 'rounded-2xl', 'text-xl', 'font-medium');
 
                     let inputUpdateName = document.createElement('input');
+                    inputUpdateName.placeholder = "Product name";
                     let inputUpdateCategory = document.createElement('input');
+                    inputUpdateCategory.placeholder = "Product category";
                     let inputUpdateQuantity = document.createElement('input');
+                    inputUpdateQuantity.placeholder = "Product quantity";
                     let inputUpdatePrice = document.createElement('input');
+                    inputUpdatePrice.placeholder = "Product price";
 
                     inputUpdateName.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3', 'mb-2');
                     inputUpdateCategory.classList.add('border', 'border-gray-300', 'rounded-xl', 'py-2', 'px-3', 'mb-2');
