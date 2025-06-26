@@ -15,17 +15,44 @@
             required placeholder="Enter Product Name">
         <input id="product-Category" class="border border-gray-100 w-full pl-4 py-4 rounded-xl" type="text" required
             placeholder="Enter Product Category">
-        <input id="product-quantity" class="border border-gray-100 pl-4 py-4 rounded-2xl" type="text" required
+        <input id="product-quantity" class="border border-gray-100 pl-4 py-4 rounded-2xl" type="number" required min="0"
             placeholder="Enter Product Quantity">
-        <input id="product-price" class="border border-gray-100 pl-4 py-4 rounded-2xl" type="number" required
+        <input id="product-price" class="border border-gray-100 pl-4 py-4 rounded-2xl" type="number" required min="0"
             placeholder="Enter Product Price">
         <div class="flex justify-end gap-2 font-semibold">
             <button id="submitBtn" type="submit"
                 class="text-white text-lg bg-emerald-800 rounded-2xl w-40 py-3 mt-5 relative">Submit</button>
         </div>
     </form>
-    <input id="searchInput" class="border border-gray-300 pl-4 py-2 mt-5 w-70 rounded-lg" type="text"
-        placeholder="Search your product...">
+    <div class="flex gap-4 items-center">
+        <input id="searchInput" class="border border-gray-300 pl-4 py-2 mt-5 w-70 rounded-lg" type="text"
+            placeholder="Search your product...">
+        <div class="relative">
+            <div class="flex relative">
+                <input id="categoryDropDown"
+                    class="border border-gray-300 pl-2  mt-5 w-50 h-10 rounded-lg flex items-center "
+                    placeholder="Select category" readonly>
+
+                <button id="dropDownCross"
+                    class="w-3 h-3 flex items-center justify-center bg-red-500 rounded-full hover:bg-red-600 absolute top-9 right-9 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M18 6L6 18M6 6l12 12" stroke="#fff" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+                <span id="dropDownSymbol" class="absolute right-3 top-7.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#fff" d="m12 15l-4.243-4.242l1.415-1.414L12 12.172l2.828-2.828l1.415 1.414z"
+                            stroke-width="0.5" stroke="#fff" />
+                    </svg>
+                </span>
+
+            </div>
+            <ul id="dropDownList"
+                class="space-y-2 overflow-hidden bg-amber-100 rounded-md w-70 mt-2 py-5 absolute -right-25 hidden ">
+            </ul>
+        </div>
+    </div>
     <ul id="product-list" class="mt-10 space-y-2 w-full"></ul>
 
     <script>
@@ -38,10 +65,12 @@
 
         productForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            addCategory();
             addProductDetail();
         });
 
         function addProductDetail() {
+
             let productName = productNameInput.value.trim();
             let productCategory = productCategoryInput.value.trim();
             let productQuantity = productQuantityInput.value.trim();
@@ -51,6 +80,46 @@
 
                 let li = document.createElement('li');
                 li.classList.add('bg-[#0e5755]', 'text-yellow-300', 'rounded-2xl', 'py-3', 'pl-4', 'font-medium', 'border', 'border-gray-500', 'w-full', 'flex', 'items-center', 'justify-between');
+
+                let allProducts = productList.getElementsByTagName('li')
+                let isDuplicate = false;
+
+                for (let i = 0; i < allProducts.length; i++) {
+                    let exsitingName = allProducts[i].querySelector('div > div:nth-child(1) > span')?.textContent.trim().toLocaleLowerCase() || '';
+                    if (exsitingName == productName.toLowerCase()) {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+
+                if (isDuplicate) {
+
+                    productNameInput.addEventListener('click', remove)
+
+                    function remove() {
+                        productNameInput.classList.remove('border-2', 'border-red-600')
+                    }
+
+                    productNameInput.classList.add('border-2', 'border-red-600')
+
+                    let popupWrap = document.createElement('div');
+                    popupWrap.classList.add('flex', 'bg-white', 'w-96', 'h-16', 'rounded-2xl', 'absolute', 'z-50', 'top-7', 'right-10', 'items-center', 'justify-center');
+
+                    let popup = document.createElement('div');
+                    popup.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'text-center', 'bg-white', 'w-full', 'h-full', 'rounded-2xl', 'text-xl', 'font-medium');
+                    popup.textContent = 'This product name already exsit';
+
+                    setTimeout(function () {
+                        popupWrap.classList.add('hidden')
+                    }, 2000)
+
+                    document.body.appendChild(popupWrap);
+                    popupWrap.appendChild(popup);
+
+                    // // Clear form
+                    productNameInput.value.remove();
+
+                }
 
                 // Product info container
                 let productDiv = document.createElement('div');
@@ -133,6 +202,14 @@
                         li.remove();
                         popupWrap.remove();
                         overlay.remove();
+                        let categoryToRemove = categorySpan.textContent;
+                        let allDropDownLis = dropDownList.getElementsByTagName('li');
+                        for (let i = 0; i < allDropDownLis.length; i++) {
+                            if (allDropDownLis[i].textContent === categoryToRemove) {
+                                allDropDownLis[i].remove();
+                                break;
+                            }
+                        }
                     };
 
                     let noBtn = document.createElement('button');
@@ -188,6 +265,20 @@
                     updateConfirmBtn.textContent = 'Update';
                     updateConfirmBtn.classList.add('bg-green-700', 'text-white', 'px-4', 'py-2', 'rounded');
                     updateConfirmBtn.onclick = () => {
+                        let newName = inputUpdateName.value.trim().toLowerCase();
+                        let isDuplicate = false;
+                        let allProducts = productList.getElementsByTagName('li');
+                        for (let i = 0; i < allProducts.length; i++) {
+                            let exName = allProducts[i].querySelector('div > div:nth-child(1) > span')?.textContent.trim().toLowerCase() || '';
+                            if (exName === newName && allProducts[i] !== li) {
+                                isDuplicate = true;
+                                break;
+                            }
+                        }
+                        if (isDuplicate) {
+                            alert('🚫 Product with this name already exists!');
+                            return;
+                        }
                         nameSpan.textContent = inputUpdateName.value;
                         categorySpan.textContent = inputUpdateCategory.value;
                         quantitySpan.textContent = inputUpdateQuantity.value;
@@ -238,13 +329,15 @@
             }
         }
 
-        // Search functionality (case-insensitive)
+        // Search product name  functionality 
         let searchInput = document.getElementById('searchInput');
+
         searchInput.addEventListener('input', function () {
             let filter = searchInput.value.toLowerCase();
             let allProducts = productList.getElementsByTagName('li');
             for (let i = 0; i < allProducts.length; i++) {
-                let productName = allProducts[i].querySelector('div > div > span')?.textContent.toLowerCase() || '';
+                let productName = allProducts[i].querySelector('div > div:nth-child(1) > span')?.textContent.toLowerCase() || '';
+
                 if (productName.includes(filter)) {
                     allProducts[i].style.display = 'flex';
                 } else {
@@ -252,6 +345,97 @@
                 }
             }
         });
+        // search category functionality 
+
+        let searchDropDown = document.querySelector('#categoryDropDown')
+
+        let dropDownSymbol = document.querySelector('#dropDownSymbol')
+        let dropDownList = document.querySelector('#dropDownList')
+        let allDropDownlists = dropDownList.getElementsByTagName('li')
+        let dropDownCross = document.getElementById('dropDownCross')
+        let dropDownLi = document.createElement('li')
+
+        dropDownCross.addEventListener('click', DropDownInputClear)
+        function DropDownInputClear() {
+            searchDropDown.value = '',
+                showAllProducts()
+            console.log('test-25.');
+
+        }
+
+        function showAllProducts() {
+            let allProducts = productList.getElementsByTagName('li');
+            for (let i = 0; i < allProducts.length; i++) {
+                allProducts[i].style.display = 'flex';
+            }
+        }
+        dropDownSymbol.addEventListener('click', clickDropDownopen);
+        searchDropDown.addEventListener('click', clickDropDownopen);
+
+        function clickDropDownopen() {
+            dropDownList.classList.toggle('hidden');
+            console.log('test-1');
+        }
+
+        document.addEventListener('click', (e) => {
+
+            if (
+                !dropDownSymbol.contains(e.target) &&
+                !searchDropDown.contains(e.target) &&
+                !dropDownList.contains(e.target)
+            ) {
+                dropDownList.classList.add('hidden');
+            }
+        });
+
+
+
+        function addCategory() {
+            let productCategoryInputDropDown = document.getElementById('product-Category');
+            let productCategoryDropDown = productCategoryInputDropDown.value.trim();
+
+            // Check if category already exists in dropdown
+            let exists = false;
+            let allDropDownLis = dropDownList.getElementsByTagName('li');
+            for (let i = 0; i < allDropDownLis.length; i++) {
+                if (allDropDownLis[i].textContent === productCategoryDropDown) {
+                    exists = true;
+                    break;
+                }
+            }
+            if (productCategoryDropDown && !exists) {
+                let dropDownLi = document.createElement('li')
+                dropDownLi.textContent = productCategoryDropDown;
+                dropDownLi.classList.add('border-y', 'border-red-400', 'py-1', 'pl-2')
+                dropDownList.appendChild(dropDownLi)
+                console.log('test-2');
+
+                // add in search category
+                dropDownLi.addEventListener('click', dropDownItem)
+                function dropDownItem() {
+                    searchDropDown.value = dropDownLi.textContent;
+                    dropDownList.classList.add('hidden');
+                    console.log('test-3');
+                    dropDownfilter()
+                    categoryDropDown.textContent = dropDownLi.textContent;
+                }
+            }
+
+            searchDropDown.addEventListener('input', dropDownfilter)
+            function dropDownfilter() {
+                let filter = searchDropDown.value.toLowerCase();
+                let allProducts = productList.getElementsByTagName('li');
+                for (let i = 0; i < allProducts.length; i++) {
+                    let productCategory = allProducts[i].querySelector('div > div:nth-child(2) > span')?.textContent.toLowerCase() || '';
+
+                    if (productCategory.includes(filter)) {
+                        allProducts[i].style.display = 'flex';
+                    } else {
+                        allProducts[i].style.display = 'none';
+                    }
+                }
+            }
+        }
     </script>
 </body>
 
