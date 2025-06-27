@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curved Scroll Button</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: Custom size if not in your config */
+        .size-17\.5 {
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+
+<body class="bg-black flex justify-center items-center min-h-screen">
+
+    
+    <div class="group cursor-pointer">
+        <div class=" group-hover:bg-hover-yellow bg-yellow size-17.5 rounded-full flex justify-center items-center ">
+            <div class="bg-black transition-all duration-400 ease-[cubic-bezier(0, 0, 0.3642, 1)]  group-hover:scale-115
+                                size-10 rounded-full flex justify-center items-center  ">
+                <span class="">
+                    <svg class=" transition-all duration-1000 ease-[cubic-bezier(0, 0, 0.3642, 1)]
+                                group-hover:scale-110 rotate-90" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#FF9800" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

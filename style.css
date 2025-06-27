@@ -2,27 +2,27 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-  --font-family-italic-f: "Playfair Display", serif;
-  --breakpoint-coxs: 23.4375rem;
-  /* 375px */
-  --breakpoint-xs: 26.5625rem;
-  /* 425px */
-  --breakpoint-sm: 36rem;
-  /* 576px */
-  --breakpoint-md: 48rem;
-  /* 768px */
-  --breakpoint-colg: 62rem;
-  /* 992px */
-  --breakpoint-lg: 64rem;
-  /* 1024px */
-  --breakpoint-xl: 75rem;
-  /* 1200px */
-  --breakpoint-coxl: 81.25rem;
-  /* 1300px */
-  --breakpoint-2xl: 87.5rem;
-  /* 1400px */
-}
+  @theme {
+    --font-family-italic-f: "Playfair Display", serif;
+    --breakpoint-coxs: 23.4375rem;
+    /* 375px */
+    --breakpoint-xs: 26.5625rem;
+    /* 425px */
+    --breakpoint-sm: 36rem;
+    /* 576px */
+    --breakpoint-md: 48rem;
+    /* 768px */
+    --breakpoint-colg: 62rem;
+    /* 992px */
+    --breakpoint-lg: 64rem;
+    /* 1024px */
+    --breakpoint-xl: 75rem;
+    /* 1200px */
+    --breakpoint-coxl: 81.25rem;
+    /* 1300px */
+    --breakpoint-2xl: 87.5rem;
+    /* 1400px */
+  }
 
 .font-Didone {
   font-family: "Didone right", serif;
@@ -279,7 +279,7 @@
   animation: marquee-scroll 60s linear infinite;
 }
 
-/* 
+/*  
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -296,7 +296,7 @@
 
 .scroll-none.marquee-track {
   background: #1b1c1d;
-}
+} */
 
 .scroll-none::-webkit-scrollbar {
   width: 0px;
@@ -308,4 +308,4 @@
 
 .scroll-none::-webkit-scrollbar-thumb {
   background: #1b1c1d;
-} */
+}
