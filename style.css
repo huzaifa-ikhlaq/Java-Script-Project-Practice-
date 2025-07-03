@@ -279,7 +279,7 @@
   animation: marquee-scroll 60s linear infinite;
 }
 
-/*  
+ 
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -296,7 +296,7 @@
 
 .scroll-none.marquee-track {
   background: #1b1c1d;
-} */
+}
 
 .scroll-none::-webkit-scrollbar {
   width: 0px;

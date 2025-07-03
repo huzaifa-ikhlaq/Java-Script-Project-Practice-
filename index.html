@@ -12,7 +12,7 @@
 
 <body class="box-border p-0 m-0">
     <!-- <first-page></first-page> -->
-    <div id="page-1" class=" ">
+    <!-- <div id="page-1" class=" ">
         <section class="bg-black h-screen  flex  justify-center items-center">
             <h1
                 class="text-white text-[35px] colg:text-[45px] font-thin flex max-colg:flex-col leading-9 text-center gap-3">
@@ -22,190 +22,475 @@
                 <span id="word-3" class="block opacity-0 transition-all duration-1000 translate-y-4">Excellence</span>
             </h1>
         </section>
-    </div>
+    </div> -->
 
     <!-- <second-page></second-page> -->
-    <div id="page-2" class="bg-black hidden">
+    <!-- <div id="page-2" class="bg-black hidden">
         <section class=" h-screen flex items-center justify-center">
             <div id="page2MainDiv"
-                class="relative w-65  group overflow-x-hidden transition-all duration-800 ease-[cubic-bezier(0, 0, 0.3642, 1)] -translate-x-10 ">
-                <h3 id="page-2-text" class="text-[50px] text-white font-thin opacity-0">ashely.com</h3>
+                class="relative w-65 flex justify-center items-center
+                  group overflow-hidden transition-all duration-800 ease-[cubic-bezier(0, 0, 0.3642, 1)] -translate-x-10 ">
+                <h3 id="page-2-text" class=" text-[36px] colg:text-[39px] xl:text-[42px] text-white font-thin opacity-0 text-center translate-x-5">ashely.com</h3>
                 <div id="page-2-bg"
-                    class="bg-yellow h-12 w-full transition-all duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] -translate-x-full  absolute z-10 top-5 left-0 ">
+                    class="bg-yellow h-11.5 xl:h-12.5 w-full transition-all duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] -translate-x-full  absolute z-10 top-3.5 left-0 ">
                 </div>
             </div>
         </section>
-    </div>
+    </div> -->
 
     <!-- <main-page></main-page> -->
-    <div id="main-page" class=" hidden">
-        <!-- <hero-section></hero-section> -->
-        <section class="bg-black  w-full h-screen relative overflow-hidden ">
-            <div id="dodecahedron-bg" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></div>
+    <!-- <div id="main-page" class="relative -z-50"> -->
+    <!-- <hero-section></hero-section> -->
+    <section class="bg-black  w-full h-screen relative z-40 overflow-hidden   ">
+        <!-- <div id="dodecahedron-bg" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></div>
             <div id="dodecahedron-bg2" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></div>
-            <div id="dodecahedron-bg3" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></div>
-            <div>
-                <nav id="nav-three-line"
-                    class="h-22.5 xl:h-35.5 px-7.5 2xl:px-15 w-full flex justify-between items-center fixed max-xl:bg-black z-60">
-                    <div class="text-white text-4xl colg:text-[42px] font-medium">
-                        <a href="#" onclick="event.preventDefault()">A.</a>
+            <div id="dodecahedron-bg3" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></div> -->
+        <div>
+            <nav
+                class="h-22.5 xl:h-35.5 px-7.5 2xl:px-15 w-full flex justify-between items-center fixed max-xl:bg-black z-60">
+                <div class="text-white text-4xl colg:text-[42px] font-medium">
+                    <a id="nav-logo" href="#" onclick="event.preventDefault()">A.</a>
+                </div>
+                <div id="nav-three-line" class="flex flex-col gap-1.5 relative cursor-pointer group">
+
+                    <div id="nav-three-line-1" class="bg-white w-7 h-[2.5px]  origin-center transition">
                     </div>
-                    <div class="flex flex-col gap-1.5 relative cursor-pointer group">
+                    <div id="nav-three-line-2" class="bg-white w-7 h-[2.5px]  origin-center transition">
+                    </div>
+                    <div id="nav-three-line-3" class="bg-white w-4.5 h-[3.3px] relative -bottom-[0.5px]  transition ">
+                    </div>
 
-                        <div id="nav-three-line-1" class="bg-white w-7 h-[2.5px]  origin-center transition">
+                </div>
+            </nav>
+            <!-- <nav-meanu>-->
+            <div id="nav-meanu-div" class="bg-black h-screen w-full absolute -z-10 opacity-0 overflow-hidden">
+                <!-- 1 column -->
+                <div class="grid grid-cols-7  h-full container mx-auto px-7.5 xl:px-32.5">
+                    <div id="nav-meanu-column-1-items"
+                        class="transition -translate-x-10 opacity-0 flex flex-col col-span-3 justify-center gap-y-3 px-[15px]">
+
+                        <!-- nav-meanu-heading-1  -->
+                        <div class="">
+                            <!-- outer div -->
+                            <div class="  transition  group  cursor-pointer w-[40%]  ">
+                                <!-- innner div  -->
+                                <div id="nav-meanu-home-page-innner-div"
+                                    class="flex items-center translate-y-0 absolut ">
+                                    <div id="nav-meanu-home-page-dot"
+                                        class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
+                                    </div>
+                                    <h1 id="nav-meanu-home-page"
+                                        class="text-[34px] font-medium text-yellow  transition group-hover:translate-x-4 ">
+                                        Homepage</h1>
+                                </div>
+                            </div>
+
+                            <div id="nav-meanu-home-page-list" class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[29%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    LANDING PAGE</p>
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[20%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    PERSONAL</p>
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[39%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    PORTFOLIO SLIDER</p>
+                            </div>
                         </div>
-                        <div id="nav-three-line-2" class="bg-white w-7 h-[2.5px]  origin-center transition">
+                        <!-- nav-meanu-heading-2  -->
+                        <div class="">
+                            <!-- outer div -->
+                            <div class="  transition  group  cursor-pointer w-[40%]  ">
+                                <!-- innner div  -->
+                                <div id="nav-meanu-Portfolio-innner-div"
+                                    class="flex items-center translate-y-0 absolut ">
+                                    <div id="nav-meanu-Portfolio-dot"
+                                        class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
+                                    </div>
+                                    <h1 id="nav-meanu-Portfolio"
+                                        class="text-[34px] font-medium text-white  transition group-hover:translate-x-4 ">
+                                        Portfolio</h1>
+                                </div>
+                            </div>
+
+                            <div id="nav-meanu-Portfolio-list" class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[24%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    GRID TYPE 1</p>
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[24%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    GRID TYPE 2</p>
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[17%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    SLIDER</p>
+                            </div>
                         </div>
-                        <div id="nav-three-line-3"
-                            class="bg-white w-4.5 h-[3.3px] relative -bottom-[0.5px]  transition ">
+                        <!-- nav-meanu-heading-3  -->
+                        <div class="">
+                            <!-- outer div -->
+                            <div class="  transition  group  cursor-pointer w-[40%]  ">
+                                <!-- innner div  -->
+                                <div id="nav-meanu-Services-innner-div"
+                                    class="flex items-center translate-y-0 absolut ">
+                                    <div id="nav-meanu-Services-dot"
+                                        class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
+                                    </div>
+                                    <h1 id="nav-meanu-Services"
+                                        class="text-[34px] font-medium text-white  transition group-hover:translate-x-4 ">
+                                        Services</h1>
+                                </div>
+                            </div>
+
+                            <div id="nav-meanu-Services-list" class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    SERVICES LIST</p>
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    SINGLE SERVICE</p>
+                            </div>
+                        </div>
+                        <!-- nav-meanu-heading-4  -->
+                        <div class="">
+                            <!-- outer div -->
+                            <div class="  transition  group  cursor-pointer w-[40%]  ">
+                                <!-- innner div  -->
+                                <div id="nav-meanu-Newsletter-innner-div"
+                                    class="flex items-center translate-y-0 absolut ">
+                                    <div id="nav-meanu-Newsletter-dot"
+                                        class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
+                                    </div>
+                                    <h1 id="nav-meanu-Newsletter"
+                                        class="text-[34px] font-medium text-white  transition group-hover:translate-x-4 ">
+                                        Newsletter</h1>
+                                </div>
+                            </div>
+
+                            <div id="nav-meanu-Newsletter-list" class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    Blog LIST</p>
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    PUBLICATION</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <!-- outer div -->
+                            <div class="  transition  group  cursor-pointer w-[50%]  ">
+                                <!-- innner div  -->
+                                <div id="nav-meanu-Other-Pages-innner-div"
+                                    class="flex items-center translate-y-0 absolut ">
+                                    <div id="nav-meanu-Other-Pages-dot"
+                                        class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
+                                    </div>
+                                    <h1 id="nav-meanu-other-pages"
+                                        class="text-[34px] font-medium text-white  transition group-hover:translate-x-4 ">
+                                        Other pages</h1>
+                                </div>
+                            </div>
+
+                            <div id="nav-meanu-Other-Pages-list"
+                                class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    TEAM</p>
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    CONTACT</p>
+                                <p
+                                    class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                    404</p>
+                            </div>
                         </div>
 
                     </div>
-                </nav>
-                <!-- <nav-meanu>-->
-                <div id="nav-meanu-div" class="bg-black h-screen w-full absolute -z-10 opacity-0 ">
-                    <!-- 1 column -->
-                    <div class="grid grid-cols-7  h-full container mx-auto px-7.5 xl:px-32.5">
-                        <div id="nav-meanu-column-1-items"
-                            class="transition -translate-x-10 opacity-0 flex flex-col col-span-3 justify-center gap-y-3 px-[15px]">
-
-                            <div class=" ">
-                                <!-- outer div -->
-                                <div class="  transition  group  cursor-pointer w-[40%]">
-                                    <!-- innner div  -->
-                                    <div id="nav-meanu-home-page-innner-div" class="flex items-center translate-y-0">
-                                        <div id="nav-meanu-home-page-dot"
-                                            class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
-                                        </div>
-                                        <h1 id="nav-meanu-home-page"
-                                            class="text-[34px] font-medium text-yellow  transition group-hover:translate-x-4 ">
-                                            Homepage</h1>
-                                    </div>
-                                </div>
-
-                                <div id="nav-meanu-home-page-list"
-                                    class="pl-[27px] mb-4 translate-y-32 hidden opacity-0">
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[29%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        LANDING PAGE</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[20%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        PERSONAL</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[39%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        PORTFOLIO SLIDER</p>
+                    <!-- 2 column -->
+                    <div
+                        class="text-white flex flex-col col-span-4 justify-end gap-5 pl-15 pb-15 border-l border-[#1A1A1A] px-[15px] max-[1537px]:hidden">
+                        <!-- row-1 -->
+                        <div class="flex justify-between mb-9 ">
+                            <div>
+                                <h2 class="text-lg text-white font-medium mb-7.5">Projects</h2>
+                                <div class="cursor-pointer">
+                                    <p class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
+                                        interior design studio</p>
+                                    <p class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
+                                        Home Security Camera</p>
+                                    <p class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
+                                        Kemia Honest Skincare</p>
+                                    <p class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
+                                        Cascade of Lava</p>
+                                    <p class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
+                                        Air Pro by Molekule</p>
+                                    <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
+                                        Tony's Chocolonely</p>
                                 </div>
                             </div>
-
-                            <h1 class="text-[34px] font-medium text-white">Portfolio</h1>
-                            <h1 class="text-[34px] font-medium text-white">Services</h1>
-                            <h1 class="text-[34px] font-medium text-white">Newsletter</h1>
-                            <h1 class="text-[34px] font-medium text-white">Other pages</h1>
-                        </div>
-                        <!-- 2 column -->
-                        <div
-                            class="text-white flex flex-col col-span-4 justify-end gap-5 pl-15 pb-15 border-l border-[#1A1A1A] px-[15px] max-[1537px]:hidden">
-                            <!-- row-1 -->
-                            <div class="flex justify-between mb-9 ">
-                                <div>
-                                    <h2 class="text-lg text-white font-medium mb-7.5">Projects</h2>
-                                    <div class="cursor-pointer">
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            interior design studio</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Home Security Camera</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Kemia Honest Skincare</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Cascade of Lava</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Air Pro by Molekule</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Tony's Chocolonely</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h1 class="text-lg text-white font-medium  mb-7.5">Useful links</h1>
-                                    <div class="cursor-pointer">
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Privacy Policy</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Terms and conditions</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Cookie Policy</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Careers</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="text-[#1A1A1A] mb-9 ">
-                            <!-- row-2 -->
-                            <div class="flex justify-between mb-15">
-                                <div>
-                                    <h1 class="text-lg text-white font-medium  mb-7.5">Canada</h1>
-                                    <div class="cursor-pointer">
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            71 South Los Carneros</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Road, Cailifornia</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            +51174 705 812</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h1 class="text-lg text-white font-medium  mb-7.5">Germany</h1>
-                                    <div class="cursor-pointer">
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Leehove 40, 2678 MC De</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Lier, Netherlands</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            +31 174 705 811 </p>
-                                    </div>
+                            <div>
+                                <h1 class="text-lg text-white font-medium  mb-7.5">Useful links</h1>
+                                <div class="cursor-pointer">
+                                    <p class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
+                                        Privacy Policy</p>
+                                    <p class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
+                                        Terms and conditions</p>
+                                    <p class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
+                                        Cookie Policy</p>
+                                    <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
+                                        Careers</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- row-end -->
+                        <hr class="text-[#1A1A1A] mb-9 ">
+                        <!-- row-2 -->
+                        <div class="flex justify-between mb-15">
+                            <div>
+                                <h1 class="text-lg text-white font-medium  mb-7.5">Canada</h1>
+                                <div class="cursor-pointer">
+                                    <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
+                                        71 South Los Carneros</p>
+                                    <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
+                                        Road, Cailifornia</p>
+                                    <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
+                                        +51174 705 812</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h1 class="text-lg text-white font-medium  mb-7.5">Germany</h1>
+                                <div class="cursor-pointer">
+                                    <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
+                                        Leehove 40, 2678 MC De</p>
+                                    <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
+                                        Lier, Netherlands</p>
+                                    <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
+                                        +31 174 705 811 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row-end -->
+                </div>
+            </div>
+            <!--</nav-meanu> -->
+            <!-- side-text -->
+            <h4 class="text-white text-xs -rotate-90 fixed left-[31px] bottom-23.5 tracking-[2px] max-xl:hidden">
+                HOMEPAGE</h4>
+            <!-- <main-content-in-hero-section> -->
+            <div
+                class="xl:container xl:mx-auto px-7.5  xl:px-32.5 pb-15 colg:pb-20 xl:pb-30 absolute bottom-0  inset-x-0 ">
+                <!-- first-div-hero  -->
+                <div class="mb-10 md:mb-15">
+                    <h1
+                        class="text-blend-white text-[34px] md:text-[58px] colg:text-[72px] xl:text-[74px] 2xl:text-[86px] leading-[120%] font-medium">
+                        Designing <span class="font-thin">a Better</span>
+                        <br class="max-md:hidden">
+                        World <span class="font-thin">Today</span>
+                    </h1>
+                </div>
+                <!-- second-div-hero  -->
+                <div class="w-full mb-10 md:mb-15 ">
+                    <p class="text-blend-brown md:w-[60%] colg:w-[40%]  ">
+                        Welcome to our world of endless imagination and boundless creativity. Together, let's embark
+                        on
+                        a remarkable journey where dreams become tangible realities.
+                    </p>
+                </div>
+                <!-- last-div-hero  -->
+                <div class="flex justify-between items-center">
+                    <!-- left-side -->
+                    <div class="max-sm:flex-col flex  justify-center items-center">
+                        <div class="group max-sm:mb-7.5 flex items-center">
+                            <a href="#"
+                                class=" text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
+                                WHAT WE DO
+                                <div class="bg-black transition  group-hover:scale-115
+                                size-10 rounded-full flex justify-center items-center ml-7.5 ">
+                                    <span>
+                                        <svg class=" transition
+                                group-hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+                                            viewBox="0 0 24 24">
+                                            <path fill="none" stroke="#FF9800" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
+                                                d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex items-center sm:ml-7.5 group cursor-pointer">
+                            <a href="#" class="text-[#E1E1E1] text-xs font-medium tracking-[2px]">VIEW WORKS</a>
+                            <div
+                                class="bg-[#1A1A1A] transition group-hover:size-11 size-10 rounded-full flex justify-center items-center ml-4 ">
+                                <span>
+                                    <svg class=" transition group-hover:size-[30px]" xmlns="http://www.w3.org/2000/svg"
+                                        width="27" height="27" viewBox="0 0 24 24">
+                                        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- right-side -->
+                    <div
+                        class="absolute right-12.5 bottom-2.5 w-[300px] h-[300px] cursor-pointer overflow-hidden max-colg:hidden group">
+                        <!-- Curved Text SVG -->
+                        <!-- Curved Text SVG -->
+                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 300">
+                            <defs>
+                                <path id="circlePath" d="M150,150
+                                        m -55,0
+                                        a55,55 0 1,1 110,0
+                                        a55,55 0 1,1 -110,0" fill="none" />
+                            </defs>
+                            <text
+                                class="fill-current  text-[#616161] font-bold group-hover:text-white transition-all duration-300"
+                                font-size="12" font-family="sans-serif">
+                                <textPath href="#circlePath" startOffset="40%" text-anchor="middle"
+                                    class="[letter-spacing:6px]">
+                                    – SCROLL DOWN – SCROLL DOWN –
+                                </textPath>
+                            </text>
+                        </svg>
+
+                        <!-- Center Circular Button -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+                            <div
+                                class="group-hover:bg-hover-yellow bg-yellow size-17.5 rounded-full flex justify-center items-center">
+                                <div
+                                    class="bg-black transition group-hover:scale-115 size-10 rounded-full flex justify-center items-center">
+                                    <span>
+                                        <svg class="transition-all duration-1000 ease-[cubic-bezier(0, 0, 0.3642, 1)] group-hover:scale-110 rotate-90"
+                                            xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+                                            viewBox="0 0 24 24">
+                                            <path fill="none" stroke="#FF9800" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
+                                                d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!--</nav-meanu> -->
-                <!-- side-text -->
-                <h4 class="text-white text-xs -rotate-90 absolute left-[31px] bottom-23.5 tracking-[2px] max-xl:hidden">
-                    HOMEPAGE</h4>
-
-                <!-- <main-content-in-hero-section> -->
-                <div
-                    class="xl:container xl:mx-auto px-7.5  xl:px-32.5 pb-15 colg:pb-20 xl:pb-30 absolute bottom-0  inset-x-0 ">
-                    <!-- first-div-hero  -->
-                    <div class="mb-10 md:mb-15">
-                        <h1
-                            class="text-blend-white text-[34px] md:text-[58px] colg:text-[72px] xl:text-[74px] 2xl:text-[86px] leading-[120%] font-medium">
-                            Designing <span class="font-thin">a Better</span>
-                            <br class="max-md:hidden">
-                            World <span class="font-thin">Today</span>
-                        </h1>
+            </div>
+    </section>
+    <!-- <section-2></section-2> -->
+    <section id="white-section" class="bg-white relative z-10  ">
+        <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5 ">
+            <div class="flex max-colg:flex-col justify-between pt-22.5 pb-18 colg:pt-30 colg:pb-20 ">
+                <!-- left-side -->
+                <div class="flex flex-col justify-center max-colg:mb-22.5">
+                    <h1
+                        class="text-black text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] font-medium mb-15 leading-12 colg:leading-14 xl:leading-18">
+                        Discover
+                        <br class="max-md:hidden">
+                        Our
+                        <span class="font-thin">Studio</span>
+                    </h1>
+                    <p class="text-[#858585] text-[15px] md:text-base colg:w-[60%] mb-7.5 font-light">At our design
+                        studio, we are a
+                        collective of talented
+                        ignited by our unwavering passion for transforming ideas into reality. With a harmonious
+                        blend
+                        of backgrounds and a vast array of skill sets, we join forces to create compelling solutions
+                        for
+                        our clients.</p>
+                    <p class="text-[#858585] text-[15px] md:text-base colg:w-[65%] mb-15 font-light">
+                        Collaboration is at the heart of what we do. Our team thrives on the synergy that arises
+                        when
+                        unique perspectives converge, environment of boundless creativity. By harnessing our
+                        collective
+                        expertise, we produce extraordinary results that consistently surpass expectations.
+                    </p>
+                    <div class="flex items-center ">
+                        <div class="relative shrink-0">
+                            <img class="size-17.5 colg:size-22.5 rounded-full object-cover object-top shrink-0 "
+                                src="img4/2.jpg" alt="">
+                            <div
+                                class="bg-yellow size-[25px] colg:size-7.5 rounded-full flex justify-center items-center text-[23px] colg:text-[30px] absolute top-12 colg:top-16 right-0">
+                                <span class="absolute top-[1px] tracking-[-2px]">''</span>
+                            </div>
+                        </div>
+                        <div class=" flex flex-col pl-6 colg:pl-7.5">
+                            <h4 class="colg:text-lg font-semibold">Passionately Creating <span class="font-thin">Design
+                                    Wonders:</span></h4>
+                            <h4 class="colg:text-lg font-semibold">Unleashing <span class="font-thin">Boundless
+                                    Creativity</span></h4>
+                        </div>
                     </div>
-                    <!-- second-div-hero  -->
-                    <div class="w-full mb-10 md:mb-15 ">
-                        <p class="text-blend-brown md:w-[60%] colg:w-[40%]  ">
-                            Welcome to our world of endless imagination and boundless creativity. Together, let's embark
-                            on
-                            a remarkable journey where dreams become tangible realities.
-                        </p>
+                </div>
+                <!-- svg  -->
+                <div class="relative -z-20 max-colg:hidden">
+                    <span class="absolute -top-[234px] -right-31  -z-50 ">
+                        <svg width="250" height="1400" viewBox="0 0 300 1404" fill="#F2F2F2"
+                            xmlns="http://www.w3.org/2000/svg" class="mil-lines">
+                            <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
+                                class="mil-move"></path>
+                            <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
+                                class="mil-move"></path>
+                            <path class=" svg2Animatio" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z">
+                            </path>
+                            <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z"></path>
+                            <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
+                                class="mil-move"></path>
+                            <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M300 1175H0V1174H300V1175Z" class="mil-move"></path>
+                            <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
+                                class="mil-move"></path>
+                            <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="mil-move"></path>
+                        </svg>
+                    </span>
+                </div>
+                <!-- right-side -->
+                <div class="">
+                    <div class="colg:w-113 w-full colg:min-h-185 overflow-hidden">
+                        <img class=" scale-x-123 scale-y-134 " src="img4/1.jpg" alt="">
                     </div>
-                    <!-- last-div-hero  -->
-                    <div class="flex justify-between items-center">
-                        <!-- left-side -->
-                        <div class="max-sm:flex-col flex  justify-center items-center">
-                            <div class="group max-sm:mb-7.5 flex items-center">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section-3></section-3> -->
+    <section class="bg-black relative z-10 pt-22.5 colg:pt-30 overflow-hidden ">
+        <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5  ">
+            <div>
+                <!-- first-part  -->
+                <div class="mb-22.5 colg:mb-30">
+                    <div class="flex justify-center md:justify-end relative mb-12  colg:right-49 ">
+                        <h3 class="text-[#616161] text-[15px] md:text-base text-center">Professionals focused on helping
+                            your brand
+                            <hr class="text-[#3a3737] absolute w-90 -right-98 top-2.5 max-colg:hidden ">
+                            <br>
+                            <span class="flex justify-center md:justify-end">grow and move forward.</span>
+                        </h3>
+                    </div>
+                    <div class="flex flex-col ">
+                        <div class="flex items-center justify-center ">
+                            <div class="h-20 w-62.5  rounded-full overflow-hidden mr-7.5 max-md:hidden">
+                                <img class=" object-cover object-top shrink-0 transition hover:scale-105  "
+                                    src="img4/3.jpg" alt="">
+                            </div>
+                            <h1
+                                class="text-[34px] md:text-[58px] colg:text-[72px] xl:text-[74px] 2xl:text-[86px] text-white font-medium text-center max-md:mb-[0px]">
+                                Unique <span class="font-thin">Ideas</span>
+                                <br>
+                            </h1>
+                        </div>
+                        <div class="flex max-md:flex-col items-center justify-center mt-4    ">
+                            <h1
+                                class="text-[34px] md:text-[58px] colg:text-[72px] xl:text-[74px] 2xl:text-[86px] text-white font-medium text-center leading-10 sm:flex    ">
+                                For Your
+                                <span class="font-thin pl-2.5">Business.</span>
+                            </h1>
+                            <div class="group shrink-0 flex items-center md:ml-7.5 max-md:mt-15 justify-center">
                                 <a href="#"
                                     class=" text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
                                     WHAT WE DO
@@ -223,88 +508,204 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="flex items-center sm:ml-7.5 group cursor-pointer">
-                                <a href="#" class="text-[#E1E1E1] text-xs font-medium tracking-[2px]">VIEW WORKS</a>
-                                <div
-                                    class="bg-[#1A1A1A] transition group-hover:size-11 size-10 rounded-full flex justify-center items-center ml-4 ">
-                                    <span>
-                                        <svg class=" transition group-hover:size-[30px]"
-                                            xmlns="http://www.w3.org/2000/svg" width="27" height="27"
-                                            viewBox="0 0 24 24">
-                                            <path fill="none" stroke="#fff" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- right-side -->
-                        <div
-                            class="absolute right-12.5 bottom-2.5 w-[300px] h-[300px] cursor-pointer overflow-hidden max-colg:hidden group">
-                            <!-- Curved Text SVG -->
-                            <!-- Curved Text SVG -->
-                            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 300">
-                                <defs>
-                                    <path id="circlePath" d="M150,150
-                                        m -55,0
-                                        a55,55 0 1,1 110,0
-                                        a55,55 0 1,1 -110,0" fill="none" />
-                                </defs>
-                                <text
-                                    class="fill-current  text-[#616161] font-bold group-hover:text-white transition-all duration-300"
-                                    font-size="12" font-family="sans-serif">
-                                    <textPath href="#circlePath" startOffset="40%" text-anchor="middle"
-                                        class="[letter-spacing:6px]">
-                                        – SCROLL DOWN – SCROLL DOWN –
-                                    </textPath>
-                                </text>
-                            </svg>
-
-                            <!-- Center Circular Button -->
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
-                                <div
-                                    class="group-hover:bg-hover-yellow bg-yellow size-17.5 rounded-full flex justify-center items-center">
-                                    <div
-                                        class="bg-black transition group-hover:scale-115 size-10 rounded-full flex justify-center items-center">
-                                        <span>
-                                            <svg class="transition-all duration-1000 ease-[cubic-bezier(0, 0, 0.3642, 1)] group-hover:scale-110 rotate-90"
-                                                xmlns="http://www.w3.org/2000/svg" width="27" height="27"
-                                                viewBox="0 0 24 24">
-                                                <path fill="none" stroke="#FF9800" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                    d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-        </section>
-        <!-- <section-2></section-2> -->
-     <!-- <section class="bg-white h-screen">
-            <div class="xl:container xl:mx-auto px-7.5  xl:px-32.5 pt-30 pb-7.5">
-                <div>
-                    left-side
-                    <div class="flex flex-col">
-                        <div class="mb-15">
-                            <h1 class="text-[68px] font-medium leading-20">Discover
-                                <br>
-                                Our
-                                <span class="font-thin">Studio</span>
-                            </h1>
+                <!-- second-part  -->
+                <div class="grid md:grid-cols-2 colg:grid-cols-4 max-colg:pb-22.5">
+                    <!-- card-1  -->
+                    <div
+                        class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] py-15 px-7.5 sm:px-8 cursor-pointer group relative">
+                        <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
+                        <h3 class="font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Branding and
+                            <br class="max-md:hidden">
+                            identity Design
+                        </h3>
+                        <p
+                            class="text-[#555555] text-[15px] md:text-base mb-7.5 transition opacity-0 translate-y-3 colg:group-hover:opacity-100 max-colg:opacity-100 colg:group-hover:-translate-y-0 max-colg:-translate-y-0">
+                            Our Creative agency is team of professionals focused on helping
+                            your brand grow.</p>
+                        <div
+                            class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute">
+                            <span>
+                                <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
+                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                                </svg>
+                            </span>
                         </div>
                     </div>
-                    right-side
-                    <div></div>
+                    <!-- card-2  -->
+                    <div
+                        class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] py-15 px-8 cursor-pointer group relative">
+                        <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
+                        <h3 class="font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Website Design
+                            <br class="max-md:hidden">
+                            and develompent
+                        </h3>
+                        <p
+                            class="text-[#555555] text-[15px] md:text-base mb-7.5 transition opacity-0 translate-y-3 colg:group-hover:opacity-100 max-colg:opacity-100 colg:group-hover:-translate-y-0 max-colg:-translate-y-0">
+                            Our Creative agency is team of professionals focused on helping
+                            your brand grow.</p>
+                        <div
+                            class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute">
+                            <span>
+                                <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
+                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- card-3  -->
+                    <div
+                        class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] py-15 px-8 cursor-pointer group relative">
+                        <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
+                        <h3 class="font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Advertising and
+                            <br class="max-md:hidden">
+                            Marketing Campaigns
+                        </h3>
+                        <p
+                            class="text-[#555555] text-[15px] md:text-base mb-7.5 transition opacity-0 translate-y-3 colg:group-hover:opacity-100 max-colg:opacity-100 colg:group-hover:-translate-y-0 max-colg:-translate-y-0">
+                            Our Creative agency is team of professionals focused on helping
+                            your brand grow.</p>
+                        <div
+                            class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute">
+                            <span>
+                                <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
+                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- card-4  -->
+                    <div
+                        class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] py-15 px-8 cursor-pointer group relative">
+                        <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
+                        <h3 class="font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Creative Consulting
+                            <br class="max-md:hidden">
+                            and Develompent
+                        </h3>
+                        <p
+                            class="text-[#555555] text-[15px] md:text-base mb-7.5 transition opacity-0 translate-y-3 colg:group-hover:opacity-100 max-colg:opacity-100 colg:group-hover:-translate-y-0 max-colg:-translate-y-0">
+                            Our Creative agency is team of professionals focused on helping
+                            your brand grow.</p>
+                        <div
+                            class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute">
+                            <span>
+                                <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
+                                    xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>  -->
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+        </div>
+    </section>
+    <!-- <section-4></section-4> -->
+    <section class="bg-white relative z-0">
+        <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5">
+            <div class="flex max-colg:flex-col justify-between pt-22.5 pb-22.5 colg:pt-30 colg:pb-30">
+                <!-- left-side -->
+                <div class="flex flex-col  justify-center mb-22.5">
+                    <h1
+                        class="text-black font-medium text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] mb-15 leading-13.5 colg:leading-19">
+                        Meet
+                        <br class="">
+                        Our
+                        <br class="max-xl:hidden 2xl:hidden">
+                        Team
+                    </h1>
+                    <p class="text-[#7F7F7F] colg:w-[80%] xl:w-[65%] font-light mb-7.5">We are talented individuals who are passionate
+                        about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate
+                        to produce effective solutions for our clients.</p>
+                    <p class="text-[#7F7F7F] colg:w-[80%] xl:w-[62%] font-light mb-15">Together, our creative team is committed to
+                        delivering impactful work that exceeds expectations.</p>
+                    <div class="group shrink-0 flex items-center  mb-15 cursor-pointer">
+                        <a href="#"
+                            class=" text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
+                            READ MORE
+                            <div class="bg-black transition  group-hover:scale-115
+                                size-10 rounded-full flex justify-center items-center ml-7.5 ">
+                                <span>
+                                    <svg class=" transition
+                                group-hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
+                                        viewBox="0 0 24 24">
+                                        <path fill="none" stroke="#FF9800" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
+                                            d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <h3 class="font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-8 max-md:flex max-md:flex-wrap gap-1">
+                        <span class="font-thin">We</span>
+                        delivering
+                        <br class="max-md:hidden">
+                        <span class="font-thin">exceptional</span>
+                        results.
+                    </h3>
+                </div>
+                <!-- svg  -->
+                <div class="relative right-[109px] -z-5 -top-[121px] bottom-0 max-colg:hidden">
+                    <span class="absolute svg2Animation ">
+                        <svg width="250" viewBox="0 0 300 1404" fill="#F2F2F2" xmlns="http://www.w3.org/2000/svg"
+                            class="mil-lines">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
+                                class="mil-move"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
+                                class="mil-move"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z">
+                            </path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
+                                class="mil-move"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z"
+                                class="mil-move">
+                            </path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
+                                class="mil-move"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="mil-move"></path>
+                        </svg>
+                    </span>
+                </div>
+                <!-- right-side  -->
+                <div class="colg:w-[135%] xl:w-[114%]">
+                    <div class="flex max-sm:flex-col">
+                        <div class="flex flex-col gap-7.5">
+                            <img class="sm:px-[15px] " src="img4/4.jpg" alt="">
+                            <img class="sm:px-[15px] " src="img4/5.jpg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-7.5">
+                            <div class="text-[15px] text-[#9F9F9F] font-light pl-3 max-colg:hidden">
+                                <span class="text-yellow">*</span>
+                                The founders of our agency
+                            </div>
+                            <img class="sm:px-[15px] max-sm:pt-7.5" src="img4/6.jpg" alt="">
+                            <img class="sm:px-[15px] " src="img4/7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-black h-screen"></section>
+    <!-- </div> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script> -->
     <script src="script4.js"></script>
 </body>
 
