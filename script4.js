@@ -1,4 +1,3 @@
-
 // let word1 = document.getElementById('word-1')
 // let word2 = document.getElementById('word-2')
 // let word3 = document.getElementById('word-3')
@@ -175,7 +174,7 @@ NavMeanuPortfolioText.addEventListener('click', NavMeanuPortfolioclick)
 
 function NavMeanuPortfolioclick() {
     //  hide other list if their is any open 
-    let otherLists = document.querySelectorAll('#nav-meanu-home-page-list, #nav-meanu-Services-list, #nav-meanu-Newsletter-list, #nav-meanu-Portfolio-list');
+    let otherLists = document.querySelectorAll('#nav-meanu-home-page-list, #nav-meanu-Services-list, #nav-meanu-Portfolio-list');
     otherLists.forEach(list => {
         list.classList.remove('opacity-100', '-translate-y-0');
         list.classList.add('translate-y-32', 'opacity-0', 'hidden');
@@ -342,6 +341,196 @@ function NavMeanuOtherPagesclick() {
     // Show and animate the list
     NavMeanuOtherPagesList.classList.add('transition-all', 'duration-300', 'ease-[cubic-bezier(0,0,0.3642,1)]', 'opacity-100', '-translate-y-0');
     NavMeanuOtherPagesList.classList.remove('translate-y-32', 'opacity-0', 'hidden');
+}
+
+
+// customer-img1
+let customerImg1Border = document.getElementById('customer-img1-border');
+let customerImg1BorderDiv = document.getElementById('customer-img1-border-div');
+
+if (customerImg1BorderDiv && customerImg1Border) {
+    customerImg1BorderDiv.addEventListener('click', borderChange1);
+}
+let yellow1 = true;
+function borderChange1() {
+    if (yellow1) {
+        customerImg1Border.classList.remove('border-white');
+        customerImg1Border.classList.add('border-[#FF9800]', 'border-4');
+        customerImg2Border.classList.add('border-white');
+        customerImg2Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg3Border.classList.add('border-white');
+        customerImg3Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg4Border.classList.add('border-white');
+        customerImg4Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg5Border.classList.add('border-white');
+        customerImg5Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg6Border.classList.add('border-white');
+        customerImg6Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg7Border.classList.add('border-white');
+        customerImg7Border.classList.remove('border-[#FF9800]', 'border-4');
+    }
+}
+// customer-img2
+
+let customerImg2Border = document.getElementById('customer-img2-border');
+let customerImg2BorderDiv = document.getElementById('customer-img2-border-div');
+
+if (customerImg2BorderDiv && customerImg2Border) {
+    customerImg2BorderDiv.addEventListener('click', borderChange2);
+}
+let yellow2 = true;
+function borderChange2() {
+    if (yellow2) {
+        customerImg2Border.classList.remove('border-white');
+        customerImg2Border.classList.add('border-[#FF9800]', 'border-4');
+        customerImg1Border.classList.add('border-white');
+        customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg3Border.classList.add('border-white');
+        customerImg3Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg4Border.classList.add('border-white');
+        customerImg4Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg5Border.classList.add('border-white');
+        customerImg5Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg6Border.classList.add('border-white');
+        customerImg6Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg7Border.classList.add('border-white');
+        customerImg7Border.classList.remove('border-[#FF9800]', 'border-4');
+    }
+}
+// customer-img3
+
+let customerImg3Border = document.getElementById('customer-img3-border');
+let customerImg3BorderDiv = document.getElementById('customer-img3-border-div');
+
+if (customerImg3BorderDiv && customerImg3Border) {
+    customerImg3BorderDiv.addEventListener('click', borderChange3);
+}
+let yellow3 = true;
+function borderChange3() {
+    if (yellow3) {
+        customerImg3Border.classList.remove('border-white');
+        customerImg3Border.classList.add('border-[#FF9800]', 'border-4');
+        customerImg2Border.classList.add('border-white');
+        customerImg2Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg1Border.classList.add('border-white');
+        customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg4Border.classList.add('border-white');
+        customerImg4Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg5Border.classList.add('border-white');
+        customerImg5Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg6Border.classList.add('border-white');
+        customerImg6Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg7Border.classList.add('border-white');
+        customerImg7Border.classList.remove('border-[#FF9800]', 'border-4');
+    }
+}
+// customer-img4
+
+let customerImg4Border = document.getElementById('customer-img4-border');
+let customerImg4BorderDiv = document.getElementById('customer-img4-border-div');
+
+if (customerImg4BorderDiv && customerImg4Border) {
+    customerImg4BorderDiv.addEventListener('click', borderChange4);
+}
+let yellow4 = true;
+function borderChange4() {
+    if (yellow4) {
+        customerImg4Border.classList.remove('border-white');
+        customerImg4Border.classList.add('border-[#FF9800]', 'border-4');
+        customerImg3Border.classList.add('border-white');
+        customerImg3Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg2Border.classList.add('border-white');
+        customerImg2Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg1Border.classList.add('border-white');
+        customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg5Border.classList.add('border-white');
+        customerImg5Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg6Border.classList.add('border-white');
+        customerImg6Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg7Border.classList.add('border-white');
+        customerImg7Border.classList.remove('border-[#FF9800]', 'border-4');
+    }
+}
+// customer-img5
+
+let customerImg5Border = document.getElementById('customer-img5-border');
+let customerImg5BorderDiv = document.getElementById('customer-img5-border-div');
+
+if (customerImg5BorderDiv && customerImg5Border) {
+    customerImg5BorderDiv.addEventListener('click', borderChange5);
+}
+let yellow5 = true;
+function borderChange5() {
+    if (yellow5) {
+        customerImg5Border.classList.remove('border-white');
+        customerImg5Border.classList.add('border-[#FF9800]', 'border-4');
+        customerImg4Border.classList.add('border-white');
+        customerImg4Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg3Border.classList.add('border-white');
+        customerImg3Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg2Border.classList.add('border-white');
+        customerImg2Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg1Border.classList.add('border-white');
+        customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg6Border.classList.add('border-white');
+        customerImg6Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg7Border.classList.add('border-white');
+        customerImg7Border.classList.remove('border-[#FF9800]', 'border-4');
+    }
+}
+// customer-img6
+
+let customerImg6Border = document.getElementById('customer-img6-border');
+let customerImg6BorderDiv = document.getElementById('customer-img6-border-div');
+
+if (customerImg6BorderDiv && customerImg6Border) {
+    customerImg6BorderDiv.addEventListener('click', borderChange6);
+}
+let yellow6 = true;
+function borderChange6() {
+    if (yellow6) {
+        customerImg6Border.classList.remove('border-white');
+        customerImg6Border.classList.add('border-[#FF9800]', 'border-4');
+        customerImg5Border.classList.add('border-white');
+        customerImg5Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg4Border.classList.add('border-white');
+        customerImg4Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg3Border.classList.add('border-white');
+        customerImg3Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg2Border.classList.add('border-white');
+        customerImg2Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg1Border.classList.add('border-white');
+        customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg7Border.classList.add('border-white');
+        customerImg7Border.classList.remove('border-[#FF9800]', 'border-4');
+    }
+}
+// customer-img7
+
+let customerImg7Border = document.getElementById('customer-img7-border');
+let customerImg7BorderDiv = document.getElementById('customer-img7-border-div');
+
+if (customerImg7BorderDiv && customerImg7Border) {
+    customerImg7BorderDiv.addEventListener('click', borderChange7);
+}
+let yellow7 = true;
+function borderChange7() {
+    if (yellow7) {
+        customerImg7Border.classList.remove('border-white');
+        customerImg7Border.classList.add('border-[#FF9800]', 'border-4');
+        customerImg6Border.classList.add('border-white');
+        customerImg6Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg5Border.classList.add('border-white');
+        customerImg5Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg4Border.classList.add('border-white');
+        customerImg4Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg3Border.classList.add('border-white');
+        customerImg3Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg2Border.classList.add('border-white');
+        customerImg2Border.classList.remove('border-[#FF9800]', 'border-4');
+        customerImg1Border.classList.add('border-white');
+        customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
+    }
 }
 
 // Selection - 2 nav color function
