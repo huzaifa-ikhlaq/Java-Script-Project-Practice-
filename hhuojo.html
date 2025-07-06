@@ -2,80 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Dodecahedron Outer Edges Only</title>
-    <style>
-        body {
-            margin: 0;
-            background: transparent;
-            /* ✅ Transparent background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        canvas {
-            display: block;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-    <script>
-        // ✅ Setup scene
-        const scene = new THREE.Scene();
 
-        // ✅ Setup camera
-        const camera = new THREE.PerspectiveCamera(
-            75,
-            window.innerWidth / window.innerHeight,
-            0.1,
-            1000
-        );
-        camera.position.z = 3; // ✅ Change this to zoom in/out
-
-        // ✅ Setup renderer with transparent background
-        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        // ✅ Dodecahedron geometry
-        const size = 1; // ✅ Change this value to scale the shape (e.g., 1.5 or 2)
-        const geometry = new THREE.DodecahedronGeometry(size);
-
-        // ✅ Extract only outer edges
-        const edges = new THREE.EdgesGeometry(geometry);
-
-        // ✅ Line material (only outer lines)
-        const lineMaterial = new THREE.LineBasicMaterial({
-            color: 0x00ffff,  // ✅ Change color here (hex or named color)
-            transparent: true,
-            opacity: 0.7      // ✅ Change opacity here (0 to 1)
-        });
-
-        const line = new THREE.LineSegments(edges, lineMaterial);
-        scene.add(line);
-
-        // ✅ Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            line.rotation.x += 0.005; // ✅ Change X rotation speed
-            line.rotation.y += 0.008; // ✅ Change Y rotation speed
-            renderer.render(scene, camera);
-        }
-
-        animate();
-
-        // ✅ Handle window resize
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
 </body>
 
 </html>

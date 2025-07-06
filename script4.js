@@ -348,9 +348,13 @@ function NavMeanuOtherPagesclick() {
 let customerImg1Border = document.getElementById('customer-img1-border');
 let customerImg1BorderDiv = document.getElementById('customer-img1-border-div');
 
+customerImg1Border.classList.remove('border-white');
+customerImg1Border.classList.add('border-[#FF9800]', 'border-4');
+
 if (customerImg1BorderDiv && customerImg1Border) {
     customerImg1BorderDiv.addEventListener('click', borderChange1);
 }
+
 let yellow1 = true;
 function borderChange1() {
     if (yellow1) {
@@ -532,6 +536,49 @@ function borderChange7() {
         customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
     }
 }
+const reviews = [
+    document.getElementById("customer-review1"),
+    document.getElementById("customer-review2"),
+    document.getElementById("customer-review3"),
+    document.getElementById("customer-review4"),
+    document.getElementById("customer-review5"),
+    document.getElementById("customer-review6"),
+    document.getElementById("customer-review7"),
+];
+
+let current = 0;
+
+function showReview(index) {
+    reviews.forEach((review, i) => {
+        if (i === index) {
+            review.classList.remove("opacity-0", "translate-x-full", "absolute");
+            review.classList.add("opacity-100", "translate-x-0", "relative");
+        } else {
+            review.classList.remove("opacity-100", "translate-x-0", "relative");
+            review.classList.add("opacity-0", "translate-x-full", "absolute");
+        }
+    });
+}
+
+document.getElementById("left-side-arrow").addEventListener("click", () => {
+    current = (current - 1 + reviews.length) % reviews.length;
+    showReview(current);
+});
+
+document.getElementById("right-side-arrow").addEventListener("click", () => {
+    current = (current + 1) % reviews.length;
+    showReview(current);
+});
+
+showReview(current);
+
+// footer input 
+const footerInput = document.getElementById('footerInput')
+
+footerInput.addEventListener('input', function () {
+    this.value = this.value.toUpperCase()
+
+})
 
 // Selection - 2 nav color function
 
@@ -725,3 +772,4 @@ function borderChange7() {
 //     camera3.updateProjectionMatrix();
 //     renderer3.setSize(window.innerWidth, window.innerHeight);
 // });
+
