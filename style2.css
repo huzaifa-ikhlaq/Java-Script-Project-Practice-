@@ -28,23 +28,267 @@ body {
     font-family: "Outfit", sans-serif;
 }
 
+.custom-cursor {
+    position: fixed;
+    top: -11px;
+    left: -11px;
+    width: 23px;
+    height: 23px;
+    pointer-events: none;
+    z-index: 11;
+    margin-bottom: 5px;
+    border-radius: 999999px;
+    transition: all 0.4s cubic-bezier(0, 0, 0.3642, 1);
+}
+
+
 /* Transition utility */
 .transition {
     transition: all 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 
-/* Canvas and background */
-/* #dodecahedron-bg,
-#dodecahedron-bg2,
-#dodecahedron-canvas,
-#dodecahedron-canvas2 {
+/* dodecahdron */
+.dodecahedron-wrapper {
+    perspective: 1200px;
+    perspective-origin: center;
+}
+
+.dodecahedron {
+    position: relative;
+    width: 40px;
+    height: 669px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: rotate 60s linear infinite;
+    transform: translateY(0px);
+    /* Center vertically (669px / 2) */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(-360deg);
+    }
+}
+
+.pentagon {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-} */
+    width: 300px;
+    height: auto;
+    opacity: 0.8;
+}
+
+/* Top ring (Faces 1–5) */
+.pentagon:nth-child(1) {
+    transform: rotateY(0deg) translateZ(207px) rotateX(26.5deg);
+}
+
+.pentagon:nth-child(2) {
+    transform: rotateY(72deg) translateZ(207px) rotateX(26.5deg);
+}
+
+.pentagon:nth-child(3) {
+    transform: rotateY(144deg) translateZ(207px) rotateX(26.5deg);
+}
+
+.pentagon:nth-child(4) {
+    transform: rotateY(216deg) translateZ(207px) rotateX(26.5deg);
+}
+
+.pentagon:nth-child(5) {
+    transform: rotateY(288deg) translateZ(207px) rotateX(26.5deg);
+}
+
+/* Bottom ring (Faces 6–10) */
+.pentagon:nth-child(6) {
+    bottom: 0;
+    transform: rotateY(0deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+.pentagon:nth-child(7) {
+    bottom: 0;
+    transform: rotateY(72deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+.pentagon:nth-child(8) {
+    bottom: 0;
+    transform: rotateY(144deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+.pentagon:nth-child(9) {
+    bottom: 0;
+    transform: rotateY(216deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+.pentagon:nth-child(10) {
+    bottom: 0;
+    transform: rotateY(288deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+/* Caps (Top and Bottom) */
+.pentagon:nth-child(11) {
+    transform: translateZ(207px) rotateX(-90deg);
+}
+
+.pentagon:nth-child(12) {
+    bottom: 0;
+    transform: translateZ(-207px) rotateX(90deg);
+}
+
+.pentagon div {
+    position: absolute;
+    width: 300px;
+    height: 207px;
+    transform-origin: bottom;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.05);   */
+}
+
+.pentagon div:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.pentagon div:nth-child(2) {
+    transform: rotate(72deg);
+}
+
+.pentagon div:nth-child(3) {
+    transform: rotate(144deg);
+}
+
+.pentagon div:nth-child(4) {
+    transform: rotate(216deg);
+}
+
+.pentagon div:nth-child(5) {
+    transform: rotate(288deg);
+}
+
+/* small dodecahedron */
+
+.dodecahedron-wrapper {
+    perspective: 1200px;
+    perspective-origin: center;
+}
+
+.dodecahedron {
+    position: relative;
+    width: 40px;
+    height: 669px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: rotate 60s linear infinite;
+    transform: translateY(0px);
+    /* Center vertically (669px / 2) */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(-360deg);
+    }
+}
+
+.pentagon {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    opacity: 0.8;
+}
+
+/* Top ring (Faces 1–5) */
+.pentagon:nth-child(1) {
+    transform: rotateY(0deg) translateZ(207px) rotateX(26.5deg);
+}
+
+.pentagon:nth-child(2) {
+    transform: rotateY(72deg) translateZ(207px) rotateX(26.5deg);
+}
+
+.pentagon:nth-child(3) {
+    transform: rotateY(144deg) translateZ(207px) rotateX(26.5deg);
+}
+
+.pentagon:nth-child(4) {
+    transform: rotateY(216deg) translateZ(207px) rotateX(26.5deg);
+}
+
+.pentagon:nth-child(5) {
+    transform: rotateY(288deg) translateZ(207px) rotateX(26.5deg);
+}
+
+/* Bottom ring (Faces 6–10) */
+.pentagon:nth-child(6) {
+    bottom: 0;
+    transform: rotateY(0deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+.pentagon:nth-child(7) {
+    bottom: 0;
+    transform: rotateY(72deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+.pentagon:nth-child(8) {
+    bottom: 0;
+    transform: rotateY(144deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+.pentagon:nth-child(9) {
+    bottom: 0;
+    transform: rotateY(216deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+.pentagon:nth-child(10) {
+    bottom: 0;
+    transform: rotateY(288deg) translateZ(-207px) rotateX(206.5deg);
+}
+
+/* Caps (Top and Bottom) */
+.pentagon:nth-child(11) {
+    transform: translateZ(207px) rotateX(-90deg);
+}
+
+.pentagon:nth-child(12) {
+    bottom: 0;
+    transform: translateZ(-207px) rotateX(90deg);
+}
+
+.pentagon div {
+    position: absolute;
+    width: 300px;
+    height: 207px;
+    transform-origin: bottom;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.05);   */
+}
+
+.pentagon div:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.pentagon div:nth-child(2) {
+    transform: rotate(72deg);
+}
+
+.pentagon div:nth-child(3) {
+    transform: rotate(144deg);
+}
+
+.pentagon div:nth-child(4) {
+    transform: rotate(216deg);
+}
+
+.pentagon div:nth-child(5) {
+    transform: rotate(288deg);
+}
+
+
 
 .svg2Animation {
     animation: svg2Animation 7s linear infinite;
@@ -71,7 +315,6 @@ body {
         transform: translateY(0);
     }
 }
-
 
 ::-webkit-scrollbar {
     width: 4px;

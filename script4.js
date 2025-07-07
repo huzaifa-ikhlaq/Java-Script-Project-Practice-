@@ -1,76 +1,84 @@
-let word1 = document.getElementById('word-1')
-let word2 = document.getElementById('word-2')
-let word3 = document.getElementById('word-3')
+// custom cursor 
+const cursor = document.querySelector(".custom-cursor");
 
-let page2Text = document.getElementById('page-2-text')
-let page2Bg = document.getElementById('page-2-bg')
-let page2MainDiv = document.getElementById('page2MainDiv')
+document.addEventListener("mousemove", function (e) {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});     
 
-let page1 = document.getElementById('page-1')
-let page2 = document.getElementById('page-2')
-let mainPage = document.getElementById('main-page')
+// loading functionality 
+// let word1 = document.getElementById('word-1')
+// let word2 = document.getElementById('word-2')
+// let word3 = document.getElementById('word-3')
 
-function revealWord(word) {
-    word.classList.remove('opacity-0', 'translate-y-4');
-    word.classList.add('opacity-100', '-translate-y-0');
-}
+// let page2Text = document.getElementById('page-2-text')
+// let page2Bg = document.getElementById('page-2-bg')
+// let page2MainDiv = document.getElementById('page2MainDiv')
 
-function revealWord2(word) {
-    word.classList.remove('opacity-100', '-translate-y-0');
-    word.classList.add('opacity-0', '-translate-y-4');
-}
+// let page1 = document.getElementById('page-1')
+// let page2 = document.getElementById('page-2')
+// let mainPage = document.getElementById('main-page')
 
-window.addEventListener('DOMContentLoaded', () => {
-    // start page1 animation
-    setTimeout(() => {
-        revealWord(word1);
-        setTimeout(() => {
-            revealWord(word2);
-            setTimeout(() => {
-                revealWord(word3);
+// function revealWord(word) {
+//     word.classList.remove('opacity-0', 'translate-y-4');
+//     word.classList.add('opacity-100', '-translate-y-0');
+// }
 
-                setTimeout(() => {
-                    revealWord2(word1);
-                    revealWord2(word2);
-                    revealWord2(word3);
+// function revealWord2(word) {
+//     word.classList.remove('opacity-100', '-translate-y-0');
+//     word.classList.add('opacity-0', '-translate-y-4');
+// }
 
-                    // page1 change to page2
-                    setTimeout(() => {
-                        page1.classList.add('hidden');
-                        page2.classList.remove('hidden');
+// window.addEventListener('DOMContentLoaded', () => {
+//     // start page1 animation
+//     setTimeout(() => {
+//         revealWord(word1);
+//         setTimeout(() => {
+//             revealWord(word2);
+//             setTimeout(() => {
+//                 revealWord(word3);
 
-                        // Start page 2 animation
-                        setTimeout(() => {
-                            page2MainDiv.classList.remove('-translate-x-10')
-                            page2Bg.classList.remove('-translate-x-full')
+//                 setTimeout(() => {
+//                     revealWord2(word1);
+//                     revealWord2(word2);
+//                     revealWord2(word3);
 
-                            setTimeout(() => {
-                                page2MainDiv.classList.add('-translate-x-10')
-                                page2Text.classList.remove('opacity-0')
-                                page2Bg.classList.add('translate-x-full', 'delay-500')
+//                     // page1 change to page2
+//                     setTimeout(() => {
+//                         page1.classList.add('hidden');
+//                         page2.classList.remove('hidden');
 
-                                setTimeout(() => {
-                                    page2Text.classList.add('transition-all', 'duration-700', 'delay-300', '-translate-y-10', 'opacity-0')
+//                         // Start page 2 animation
+//                         setTimeout(() => {
+//                             page2MainDiv.classList.remove('-translate-x-10')
+//                             page2Bg.classList.remove('-translate-x-full')
 
-                                    // page2 change to mainPage
-                                    setTimeout(() => {
-                                        page2.classList.add('hidden')
-                                        mainPage.classList.remove('hidden');
-                                    }, 1200);
-                                }, 1200)
+//                             setTimeout(() => {
+//                                 page2MainDiv.classList.add('-translate-x-10')
+//                                 page2Text.classList.remove('opacity-0')
+//                                 page2Bg.classList.add('translate-x-full', 'delay-500')
 
-                            }, 900);
-                            // Start page 2 animation
-                        }, 600);
-                        // page1 change to page2
-                    }, 600);
-                    // start page1 animation
-                }, 600);
+//                                 setTimeout(() => {
+//                                     page2Text.classList.add('transition-all', 'duration-700', 'delay-300', '-translate-y-10', 'opacity-0')
 
-            }, 500);
-        }, 500)
-    }, 500);
-})
+//                                     // page2 change to mainPage
+//                                     setTimeout(() => {
+//                                         page2.classList.add('hidden')
+//                                         mainPage.classList.remove('hidden');
+//                                     }, 1200);
+//                                 }, 1200)
+
+//                             }, 900);
+//                             // Start page 2 animation
+//                         }, 600);
+//                         // page1 change to page2
+//                     }, 600);
+//                     // start page1 animation
+//                 }, 600);
+
+//             }, 500);
+//         }, 500)
+//     }, 500);
+// })
 
 // nav Meanu 
 let NavIcon = document.querySelector('#nav-three-line')
@@ -536,235 +544,29 @@ function borderChange7() {
         customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
     }
 }
-const reviews = [
-    document.getElementById("customer-review1"),
-    document.getElementById("customer-review2"),
-    document.getElementById("customer-review3"),
-    document.getElementById("customer-review4"),
-    document.getElementById("customer-review5"),
-    document.getElementById("customer-review6"),
-    document.getElementById("customer-review7"),
-];
 
-let current = 0;
+// slider
+const leftSideArrow = document.getElementById('left-side-arrow');
+const rideSideArrow = document.getElementById('right-side-arrow');
+const slider = document.getElementById('reviews-slider');
 
-function showReview(index) {
-    reviews.forEach((review, i) => {
-        if (i === index) {
-            review.classList.remove("opacity-0", "translate-x-full", "absolute");
-            review.classList.add("opacity-100", "translate-x-0", "relative");
-        } else {
-            review.classList.remove("opacity-100", "translate-x-0", "relative");
-            review.classList.add("opacity-0", "translate-x-full", "absolute");
-        }
-    });
-}
+let currentTranslate = 0;
+const totalSlides = slider.children.length;
 
-document.getElementById("left-side-arrow").addEventListener("click", () => {
-    current = (current - 1 + reviews.length) % reviews.length;
-    showReview(current);
+leftSideArrow.addEventListener('click', () => {
+    if (currentTranslate < 0) {
+        currentTranslate += 100;
+        slider.style.transform = `translateX(${currentTranslate}%)`;
+    }
+
 });
 
-document.getElementById("right-side-arrow").addEventListener("click", () => {
-    current = (current + 1) % reviews.length;
-    showReview(current);
+rideSideArrow.addEventListener('click', () => {
+    if (Math.abs(currentTranslate) < (totalSlides - 1) * 100) {
+        currentTranslate -= 100;
+        slider.style.transform = `translateX(${currentTranslate}%)`;
+    }
 });
 
-showReview(current);
 
-// footer input 
-b
-
-// Selection - 2 nav color function
-
-// const logo = document.getElementById('nav-logo');
-// const line1 = document.getElementById('nav-three-line-1');
-// const line2 = document.getElementById('nav-three-line-2');
-// const line3 = document.getElementById('nav-three-line-3');
-
-// const marker = document.getElementById('white-section');
-
-// const observer = new IntersectionObserver(
-//     (entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 // white section is showing
-//                 logo.classList.remove('text-white');
-//                 logo.classList.add('text-black');
-
-//                 line1.classList.remove('bg-white');
-//                 line1.classList.add('bg-black');
-
-//                 line2.classList.remove('bg-white');
-//                 line2.classList.add('bg-black');
-
-//                 line3.classList.remove('bg-white');
-//                 line3.classList.add('bg-black');
-//             } else {
-//                 // black section is showing
-//                 logo.classList.remove('text-black');
-//                 logo.classList.add('text-white');
-
-//                 line1.classList.remove('bg-black');
-//                 line1.classList.add('bg-white');
-
-//                 line2.classList.remove('bg-black');
-//                 line2.classList.add('bg-white');
-
-//                 line3.classList.remove('bg-black');
-//                 line3.classList.add('bg-white');
-//             }
-//         });
-//     },
-//     {
-//         root: null,
-//         threshold: 0,
-//     }
-// );
-
-// observer.observe(marker);
-
-
-// // dodecahedron 1
-// const scene1 = new THREE.Scene();
-// const camera1 = new THREE.PerspectiveCamera(
-//     75,
-//     window.innerWidth / window.innerHeight,
-//     0.1,
-//     1000
-// );
-// camera1.position.z = 10;
-// const renderer1 = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-// renderer1.setClearColor(0x000000, 0);
-// renderer1.setSize(window.innerWidth, window.innerHeight);
-// renderer1.domElement.id = 'dodecahedron-canvas';
-// const dodecahedronBg1 = document.getElementById('dodecahedron-bg');
-// if (dodecahedronBg1) {
-//     renderer1.domElement.style.position = 'absolute';
-//     renderer1.domElement.style.top = '-100px';
-//     renderer1.domElement.style.left = '500px';
-//     renderer1.domElement.style.width = '100%';
-//     renderer1.domElement.style.height = '100%';
-//     renderer1.domElement.style.zIndex = '0';
-//     renderer1.domElement.style.pointerEvents = 'none';
-//     dodecahedronBg1.appendChild(renderer1.domElement);
-// }
-// const size1 = 6; // Smaller size for a smaller hole
-// const geometry1 = new THREE.DodecahedronGeometry(size1);
-// const edges1 = new THREE.EdgesGeometry(geometry1);
-// const lineMaterial1 = new THREE.LineBasicMaterial({
-//     color: 0xffffff,
-//     transparent: true,
-//     opacity: 0.7
-// });
-// const line1 = new THREE.LineSegments(edges1, lineMaterial1);
-// scene1.add(line1);
-
-// // dodecahedron 2
-// const scene2 = new THREE.Scene();
-// const camera2 = new THREE.PerspectiveCamera(
-//     75,
-//     window.innerWidth / window.innerHeight,
-//     0.1,
-//     1000
-// );
-
-// // dodecahedron2
-// camera2.position.z = 10;
-// const renderer2 = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-// renderer2.setClearColor(0x000000, 0); // Set to fully transparent
-// renderer2.setSize(window.innerWidth, window.innerHeight);
-// renderer2.domElement.id = 'dodecahedron-canvas2';
-// const dodecahedronBg2 = document.getElementById('dodecahedron-bg2');
-// if (dodecahedronBg2) {
-//     renderer2.domElement.style.position = 'absolute';
-//     renderer2.domElement.style.top = '300px';
-//     renderer2.domElement.style.left = '100px';
-//     renderer2.domElement.style.width = '100%';
-//     renderer2.domElement.style.height = '100%';
-//     renderer2.domElement.style.zIndex = '0';
-//     renderer2.domElement.style.pointerEvents = 'none';
-//     dodecahedronBg2.appendChild(renderer2.domElement);
-// }
-// const size2 = 2;
-// const geometry2 = new THREE.DodecahedronGeometry(size2);
-// const edges2 = new THREE.EdgesGeometry(geometry2);
-// const lineMaterial2 = new THREE.LineBasicMaterial({
-//     color: 0xffffff,
-//     transparent: true,
-//     opacity: 0.5
-// });
-// const line2 = new THREE.LineSegments(edges2, lineMaterial2);
-// scene2.add(line2);
-
-// // dodecahedron 3
-// const scene3 = new THREE.Scene();
-// const camera3 = new THREE.PerspectiveCamera(
-//     75,
-//     window.innerWidth / window.innerHeight,
-//     0.1,
-//     1000
-// );
-// camera3.position.z = 10;
-// const renderer3 = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-// renderer3.setClearColor(0x000000, 0); // Set to fully transparent
-// renderer3.setSize(window.innerWidth, window.innerHeight);
-// renderer3.domElement.id = 'dodecahedron-canvas3';
-// const dodecahedronBg3 = document.getElementById('dodecahedron-bg3');
-// if (dodecahedronBg3) {
-//     renderer3.domElement.style.position = 'absolute';
-//     renderer3.domElement.style.top = '-280px'; // Move to top
-//     renderer3.domElement.style.left = '-370px'; // Move to left
-//     renderer3.domElement.style.width = '100%'; // Fixed size for visibility
-//     renderer3.domElement.style.height = '100%';
-//     renderer3.domElement.style.zIndex = '1'; // Above the others if needed
-//     renderer3.domElement.style.pointerEvents = 'none';
-//     dodecahedronBg3.appendChild(renderer3.domElement);
-// }
-// const size3 = 4; // Smaller size for better fit
-// const geometry3 = new THREE.DodecahedronGeometry(size3);
-// const edges3 = new THREE.EdgesGeometry(geometry3);
-// const lineMaterial3 = new THREE.LineBasicMaterial({
-//     color: 0xffffff,
-//     transparent: true,
-//     opacity: 0.6
-// });
-// const line3 = new THREE.LineSegments(edges3, lineMaterial3);
-// scene3.add(line3);
-
-// // Animation loops
-// function animate1() {
-//     requestAnimationFrame(animate1);
-//     line1.rotation.x += 0.001;
-//     line1.rotation.y += 0.001;
-//     renderer1.render(scene1, camera1);
-// }
-// function animate2() {
-//     requestAnimationFrame(animate2);
-//     line2.rotation.x -= 0.001;
-//     line2.rotation.y -= 0.001;
-//     renderer2.render(scene2, camera2);
-// }
-// function animate3() {
-//     requestAnimationFrame(animate3);
-//     line3.rotation.x += 0.001;
-//     line3.rotation.y -= 0.001;
-//     renderer3.render(scene3, camera3);
-// }
-// animate1();
-// animate2();
-// animate3();
-
-// // Responsive resize
-// window.addEventListener('resize', () => {
-//     camera1.aspect = window.innerWidth / window.innerHeight;
-//     camera1.updateProjectionMatrix();
-//     renderer1.setSize(window.innerWidth, window.innerHeight);
-//     camera2.aspect = window.innerWidth / window.innerHeight;
-//     camera2.updateProjectionMatrix();
-//     renderer2.setSize(window.innerWidth, window.innerHeight);
-//     camera3.aspect = window.innerWidth / window.innerHeight;
-//     camera3.updateProjectionMatrix();
-//     renderer3.setSize(window.innerWidth, window.innerHeight);
-// });
 
