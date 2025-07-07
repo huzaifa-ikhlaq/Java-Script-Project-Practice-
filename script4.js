@@ -6,79 +6,79 @@ document.addEventListener("mousemove", function (e) {
 });     
 
 // loading functionality 
-// let word1 = document.getElementById('word-1')
-// let word2 = document.getElementById('word-2')
-// let word3 = document.getElementById('word-3')
+let word1 = document.getElementById('word-1')
+let word2 = document.getElementById('word-2')
+let word3 = document.getElementById('word-3')
 
-// let page2Text = document.getElementById('page-2-text')
-// let page2Bg = document.getElementById('page-2-bg')
-// let page2MainDiv = document.getElementById('page2MainDiv')
+let page2Text = document.getElementById('page-2-text')
+let page2Bg = document.getElementById('page-2-bg')
+let page2MainDiv = document.getElementById('page2MainDiv')
 
-// let page1 = document.getElementById('page-1')
-// let page2 = document.getElementById('page-2')
-// let mainPage = document.getElementById('main-page')
+let page1 = document.getElementById('page-1')
+let page2 = document.getElementById('page-2')
+let mainPage = document.getElementById('main-page')
 
-// function revealWord(word) {
-//     word.classList.remove('opacity-0', 'translate-y-4');
-//     word.classList.add('opacity-100', '-translate-y-0');
-// }
+function revealWord(word) {
+    word.classList.remove('opacity-0', 'translate-y-4');
+    word.classList.add('opacity-100', '-translate-y-0');
+}
 
-// function revealWord2(word) {
-//     word.classList.remove('opacity-100', '-translate-y-0');
-//     word.classList.add('opacity-0', '-translate-y-4');
-// }
+function revealWord2(word) {
+    word.classList.remove('opacity-100', '-translate-y-0');
+    word.classList.add('opacity-0', '-translate-y-4');
+}
 
-// window.addEventListener('DOMContentLoaded', () => {
-//     // start page1 animation
-//     setTimeout(() => {
-//         revealWord(word1);
-//         setTimeout(() => {
-//             revealWord(word2);
-//             setTimeout(() => {
-//                 revealWord(word3);
+window.addEventListener('DOMContentLoaded', () => {
+    // start page1 animation
+    setTimeout(() => {
+        revealWord(word1);
+        setTimeout(() => {
+            revealWord(word2);
+            setTimeout(() => {
+                revealWord(word3);
 
-//                 setTimeout(() => {
-//                     revealWord2(word1);
-//                     revealWord2(word2);
-//                     revealWord2(word3);
+                setTimeout(() => {
+                    revealWord2(word1);
+                    revealWord2(word2);
+                    revealWord2(word3);
 
-//                     // page1 change to page2
-//                     setTimeout(() => {
-//                         page1.classList.add('hidden');
-//                         page2.classList.remove('hidden');
+                    // page1 change to page2
+                    setTimeout(() => {
+                        page1.classList.add('hidden');
+                        page2.classList.remove('hidden');
 
-//                         // Start page 2 animation
-//                         setTimeout(() => {
-//                             page2MainDiv.classList.remove('-translate-x-10')
-//                             page2Bg.classList.remove('-translate-x-full')
+                        // Start page 2 animation
+                        setTimeout(() => {
+                            page2MainDiv.classList.remove('-translate-x-10')
+                            page2Bg.classList.remove('-translate-x-full')
 
-//                             setTimeout(() => {
-//                                 page2MainDiv.classList.add('-translate-x-10')
-//                                 page2Text.classList.remove('opacity-0')
-//                                 page2Bg.classList.add('translate-x-full', 'delay-500')
+                            setTimeout(() => {
+                                page2MainDiv.classList.add('-translate-x-10')
+                                page2Text.classList.remove('opacity-0')
+                                page2Bg.classList.add('translate-x-full', 'delay-500')
 
-//                                 setTimeout(() => {
-//                                     page2Text.classList.add('transition-all', 'duration-700', 'delay-300', '-translate-y-10', 'opacity-0')
+                                setTimeout(() => {
+                                    page2Text.classList.add('transition-all', 'duration-700', 'delay-300', '-translate-y-10', 'opacity-0')
 
-//                                     // page2 change to mainPage
-//                                     setTimeout(() => {
-//                                         page2.classList.add('hidden')
-//                                         mainPage.classList.remove('hidden');
-//                                     }, 1200);
-//                                 }, 1200)
+                                    // page2 change to mainPage
+                                    setTimeout(() => {
+                                        page2.classList.add('hidden')
+                                        mainPage.classList.remove('hidden');
+                                    }, 1200);
+                                }, 1200)
 
-//                             }, 900);
-//                             // Start page 2 animation
-//                         }, 600);
-//                         // page1 change to page2
-//                     }, 600);
-//                     // start page1 animation
-//                 }, 600);
+                            }, 900);
+                            // Start page 2 animation
+                        }, 600);
+                        // page1 change to page2
+                    }, 600);
+                    // start page1 animation
+                }, 600);
 
-//             }, 500);
-//         }, 500)
-//     }, 500);
-// })
+            }, 500);
+        }, 500)
+    }, 500);
+})
 
 // nav Meanu 
 let NavIcon = document.querySelector('#nav-three-line')
