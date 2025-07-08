@@ -10,11 +10,11 @@
 
 </head>
 
-<body class="box-border p-0 m-0">
+<body class="box-border p-0 m-0 bg-black">
     <div class="custom-cursor bg-gray-200"></div>
 
     <!-- <first-page></first-page> -->
-     <div id="page-1" class=" relative z-50">
+    <div id="page-1" class=" relative z-50">
         <section class="bg-black h-screen  flex  justify-center items-center">
             <h1
                 class="text-white text-[35px] colg:text-[45px] font-thin flex max-colg:flex-col leading-9 text-center gap-3">
@@ -27,7 +27,7 @@
     </div> 
 
     <!-- <second-page></second-page> -->
-     <div id="page-2" class="bg-black hidden relative z-50">
+    <div id="page-2" class="bg-black hidden relative z-50">
         <section class=" h-screen flex items-center justify-center">
             <div id="page2MainDiv"
                 class="relative w-65 flex justify-center items-center
@@ -44,25 +44,46 @@
 
     <!-- <main-page></main-page> -->
     <div id="main-page" class="relativ -z-50 hidden">
-    <!-- <hero-section></hero-section> -->
-    <section class="bg-black  w-full h-screen relative z-40 overflow-hidden">
+    <!-- <nav></nav> -->
+    <nav
+        class="xl:mix-blend-difference h-22.5 xl:h-35.5 px-7.5 2xl:px-15 w-full flex justify-between items-center fixed z-60   bg-black">
+        <!-- ✅ logo inside nav is fine now -->
+        <div id="nav-logo" class="text-white text-4xl colg:text-[42px] font-medium">
+            <a href="#" onclick="event.preventDefault()">A.</a>
+        </div>
+
+        <!-- ✅ hamburger menu lines -->
+        <div id="nav-three-line" class="flex flex-col gap-1.5 relative cursor-pointer group">
+            <div id="nav-three-line-1" class="bg-white w-7 h-[2.5px] origin-center transition"></div>
+            <div id="nav-three-line-2" class="bg-white w-7 h-[2.5px] origin-center transition"></div>
+            <div id="nav-three-line-3" class="bg-white w-4.5 h-[3.3px] relative -bottom-[0.5px] transition"></div>
+        </div>
+    </nav>
+    <!-- <side-text></side-text> -->
+    <!-- left-side-text -->
+    <h4 id="leftSideText"
+        class=" text-xs -rotate-90 z-50 fixed mix-blend-difference text-white left-[31px] bottom-23.5 tracking-[2px] max-xl:hidden">
+        HOMEPAGE</h4>
+    <!-- Right Side-text -->
+    <a href="#" onclick="event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' })" id="rightSideText"
+        class="flex flex-col justify-center items-center cursor-pointer group opacity-0 transition max-xl:hidden ">
+        <div
+            class="bg-[#E5E5E5] fixed bottom-47 right-15 z-50 size-10 rounded-full  flex justify-center items-center group-hover:scale-110 transition">
+            <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+                <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                    stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
+            </svg>
+        </div>
+
+        <div id="leftSideText"
+            class=" text-xs -rotate-90 z-50 fixed mix-blend-difference text-white  bottom-27 right-8 tracking-[2px] max-xl:hidden">
+            BACK TO TOP</div>
+    </a>
+    <!-- <hero-section></hero-section>  -->
+    <section id="heroSection" class=" bg-black w-full h-screen relative z-40 overflow-hidden ">
         <div>
-            <nav
-                class="h-22.5 xl:h-35.5 px-7.5 2xl:px-15 w-full flex justify-between items-center fixed max-xl:bg-black z-60">
-                <div class="text-white text-4xl colg:text-[42px] font-medium">
-                    <a id="nav-logo" href="#" onclick="event.preventDefault()">A.</a>
-                </div>
-                <div id="nav-three-line" class="flex flex-col gap-1.5 relative cursor-pointer group">
+            <!-- nav  -->
 
-                    <div id="nav-three-line-1" class="bg-white w-7 h-[2.5px]  origin-center transition">
-                    </div>
-                    <div id="nav-three-line-2" class="bg-white w-7 h-[2.5px]  origin-center transition">
-                    </div>
-                    <div id="nav-three-line-3" class="bg-white w-4.5 h-[3.3px] relative -bottom-[0.5px]  transition ">
-                    </div>
-
-                </div>
-            </nav>
             <!-- <nav-meanu>-->
             <div id="nav-meanu-div" class="bg-black h-screen w-full absolute -z-50 opacity-0 overflow-hidden">
                 <div class="grid grid-cols-7  h-full container mx-auto px-7.5 xl:px-32.5">
@@ -274,9 +295,6 @@
                 </div>
             </div>
             <!--</nav-meanu> -->
-            <!-- side-text -->
-            <h4 class="text-white text-xs -rotate-90 fixed left-[31px] bottom-23.5 tracking-[2px] max-xl:hidden">
-                HOMEPAGE</h4>
             <!-- <main-content-in-hero-section> -->
             <div
                 class="xl:container xl:mx-auto px-7.5  xl:px-32.5 pb-15 colg:pb-20 xl:pb-30 absolute bottom-0  inset-x-0 ">
@@ -340,19 +358,21 @@
                         <!-- Curved Text SVG -->
                         <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 300">
                             <defs>
-                                <path id="circlePath" d="M150,150
-                                        m -55,0
-                                        a55,55 0 1,1 110,0
-                                        a55,55 0 1,1 -110,0" fill="none" />
+                                <path id="circlePath" d="M150,150 m -55,0 a55,55 0 1,1 110,0 a55,55 0 1,1 -110,0"
+                                    fill="none" />
                             </defs>
-                            <text
-                                class="fill-current  text-[#616161] font-bold group-hover:text-white transition-all duration-300"
-                                font-size="12" font-family="sans-serif">
-                                <textPath href="#circlePath" startOffset="40%" text-anchor="middle"
-                                    class="[letter-spacing:6px]">
-                                    – SCROLL DOWN – SCROLL DOWN –
-                                </textPath>
-                            </text>
+
+                            <!-- 🔁 Add this group to rotate the text -->
+                            <g id="rotating-group">
+                                <text
+                                    class="fill-current text-[#616161] font-bold group-hover:text-white transition-all duration-300"
+                                    font-size="12" font-family="sans-serif">
+                                    <textPath href="#circlePath" startOffset="0" text-anchor="start"
+                                        class="[letter-spacing:6px]">
+                                        – SCROLL DOWN – SCROLL DOWN – SCROLL DOWN – SCROLL DOWN –
+                                    </textPath>
+                                </text>
+                            </g>
                         </svg>
 
                         <!-- Center Circular Button -->
@@ -377,9 +397,8 @@
                 </div>
             </div>
 
-            <!-- dodecahedron -->
-
-            <div class="dodecahedron-wrapper absolute -z-10 -top-25 right-80">
+            <!-- big-dodecahedron -->
+            <div class="dodecahedron-wrapper absolute -z-10 -top-35 right-50">
                 <div class="dodecahedron" id="dodecahedron">
                     <!-- 12 pentagon faces -->
                     <div class="pentagon">
@@ -470,7 +489,7 @@
             </div>
 
             <!-- small decdecahrdron  -->
-            <div class="dodecahedron-wrapperSmall absolute -z-10 top-00 left-0">
+            <div class="dodecahedron-wrapperSmall absolute -z-10 -top-15 left-90 max-2xl:hidden">
                 <div class="dodecahedronSmall" id="dodecahedronSmall">
                     <div class="pentagonSmall">
                         <div></div>
@@ -559,12 +578,102 @@
                 </div>
             </div>
 
+            <!-- Extra small decdecahrdron  -->
+            <div class="dodecahedron-wrapperExtraSmall absolute -z-10 -bottom-35 left-200 max-2xl:hidden">
+                <div class="dodecahedronExtraSmall" id="dodecahedronExtraSmall">
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="pentagonExtraSmall">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+
 
     </section>
     <!-- <section-2></section-2> -->
     <section id="white-section" class="bg-white relative z-10   ">
         <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5 ">
-            <div class="flex max-colg:flex-col justify-between pt-22.5 pb-18 colg:pt-30 colg:pb-20 ">
+            <div class="flex max-colg:flex-col justify-between py-22.5 colg:py-30  ">
                 <!-- left-side -->
                 <div class="flex flex-col justify-center max-colg:mb-22.5">
                     <h1
@@ -795,9 +904,190 @@
                 </div>
             </div>
         </div>
+
+        <!-- small decdecahrdron  -->
+        <div class="dodecahedron-wrapperSmall absolute -z-10 top-70 right-20  ">
+            <div class="dodecahedronSmall" id="dodecahedronSmall">
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Extra small decdecahrdron  -->
+        <div class="dodecahedron-wrapperExtraSmall absolute -z-10 -top-10 left-65 max-colg:hidden">
+            <div class="dodecahedronExtraSmall" id="dodecahedronExtraSmall">
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="pentagonExtraSmall">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
     </section>
     <!-- <section-4></section-4> -->
-    <section class="bg-white relative z-0  ">
+    <section id="white-section" class="bg-white relative z-0  ">
         <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5">
             <div class="flex max-colg:flex-col justify-between pt-22.5 pb-22.5 colg:pt-30 colg:pb-30">
                 <!-- left-side -->
@@ -1022,7 +1312,7 @@
                                 The founders of our agency
                             </div>
                             <!-- img-3  -->
-                            <div class="relative group inline-block w-fit h-fit sm:px-[15px]">
+                            <div class="relative group inline-block w-fit h-fit sm:px-[15px] max-sm:mt-7.5">
                                 <img class="" src="img4/6.jpg" alt="">
                                 <div class="relative bottom-38 justify-center ">
                                     <div
@@ -1165,7 +1455,7 @@
         </div>
     </section>
     <!-- <section-5></section-5> -->
-    <section class="bg-[#F2F2F2] overflow-hidden relative z-20  ">
+    <section id="white-section" class="bg-[#F2F2F2] overflow-hidden relative z-20  ">
         <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5">
             <div class="py-22.5 colg:py-30 ">
                 <!-- top-heading  -->
@@ -1189,70 +1479,77 @@
                 <!-- customer-imgs  -->
                 <div class="flex justify-center transition flex-wrap gap-6 mb-15">
                     <!-- img-1 -->
-                    <span class="">
+                    <span class="dot2">
                         <div id="customer-img1-border-div" class="group relative">
-                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0 "
+                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  "
                                 src="img4/4.jpg" alt="">
+                            <div class="dot "></div>
                             <div id="customer-img1-border"
                                 class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white   size-[85px] colg:size-[110px] rounded-full">
                             </div>
                         </div>
                     </span>
                     <!-- img-2  -->
-                    <span class="">
+                    <span class="dot2">
                         <div id="customer-img2-border-div" class="group relative">
-                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0 colg:mt-7.5 "
+                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  colg:mt-7.5 "
                                 src="img4/6.jpg" alt="">
+                            <div class="dot "></div>
                             <div id="customer-img2-border"
                                 class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
                             </div>
                         </div>
                     </span>
                     <!-- img-3  -->
-                    <span class="">
+                    <span class="dot2">
                         <div id="customer-img3-border-div" class="group relative">
-                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0 "
+                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  "
                                 src="img4/5.jpg" alt="">
+                            <div class="dot "></div>
                             <div id="customer-img3-border"
                                 class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
                             </div>
                         </div>
                     </span>
                     <!-- img-4  -->
-                    <span class="">
+                    <span class="dot2">
                         <div id="customer-img4-border-div" class="group relative">
-                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0 colg:mt-7.5 "
+                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  colg:mt-7.5 "
                                 src="img4/7.jpg" alt="">
+                            <div class="dot "></div>
                             <div id="customer-img4-border"
                                 class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
                             </div>
                         </div>
                     </span>
                     <!-- img-5  -->
-                    <span class="">
+                    <span class="dot2">
                         <div id="customer-img5-border-div" class="group relative">
-                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  "
+                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0   "
                                 src="img4/8.jpg" alt="">
+                            <div class="dot "></div>
                             <div id="customer-img5-border"
                                 class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
                             </div>
                         </div>
                     </span>
                     <!-- img-6  -->
-                    <span class="">
+                    <span class="dot2">
                         <div id="customer-img6-border-div" class="group relative">
-                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0 colg:mt-7.5"
+                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  colg:mt-7.5"
                                 src="img4/9.jpg" alt="">
+                            <div class="dot "></div>
                             <div id="customer-img6-border"
                                 class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
                             </div>
                         </div>
                     </span>
                     <!-- img-7  -->
-                    <span class="">
+                    <span class="dot2">
                         <div id="customer-img7-border-div" class="group relative">
-                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  "
+                            <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0   "
                                 src="img4/10.jpg" alt="">
+                            <div class="dot "></div>
                             <div id="customer-img7-border"
                                 class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
                             </div>
@@ -1262,21 +1559,16 @@
                 </div>
                 <div class="flex flex-col w-full  justify-center  items-center">
                     <!-- Quote Icon -->
-                    <span class="text-center mb-4">
+                    <span class="text-center  -mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 48 48">
                             <path fill="#FF9800"
                                 d="M 13.5 10 A 8.5 8.5 0 0 0 13.5 27 A 8.5 8.5 0 0 0 18.291016 25.519531 C 17.422273 29.222843 15.877848 31.803343 14.357422 33.589844 C 12.068414 36.279429 9.9433594 37.107422 9.9433594 37.107422 A 1.50015 1.50015 0 1 0 11.056641 39.892578 C 11.056641 39.892578 13.931586 38.720571 16.642578 35.535156 C 19.35357 32.349741 22 27.072581 22 19 A 1.50015 1.50015 0 0 0 21.984375 18.78125 A 8.5 8.5 0 0 0 13.5 10 z M 34.5 10 A 8.5 8.5 0 0 0 34.5 27 A 8.5 8.5 0 0 0 39.291016 25.519531 C 38.422273 29.222843 36.877848 31.803343 35.357422 33.589844 C 33.068414 36.279429 30.943359 37.107422 30.943359 37.107422 A 1.50015 1.50015 0 1 0 32.056641 39.892578 C 32.056641 39.892578 34.931586 38.720571 37.642578 35.535156 C 40.35357 32.349741 43 27.072581 43 19 A 1.50015 1.50015 0 0 0 42.984375 18.78125 A 8.5 8.5 0 0 0 34.5 10 z" />
                         </svg>
                     </span>
 
-                    <!-- Name -->
-                    <h3 class="text-xl font-medium text-center mb-1">Sarah Newman</h3>
-                    <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] ">ENVATO MARKET</p>
-
                     <!-- Review + Arrows -->
-                    <div class="flex items-center justify-between w-full gap-4 relative  top-7.5">
-
-                        <!-- left-arrow  -->
+                    <div class="flex colg:items-center justify-between w-full gap-4 relative top-7.5">
+                        <!-- Left Arrow -->
                         <span id="left-side-arrow"
                             class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
                             <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
@@ -1285,69 +1577,102 @@
                                     stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
                             </svg>
                         </span>
-                        <!-- Reviews Wrapper -->
-                        <!-- Reviews Wrapper (Add overflow-hidden for hiding overflow content) -->
-                        <div class="overflow-hidden w-[60%]">
-                            <div id="reviews-slider" class="flex transition">
 
-                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light min-w-full">
-                                    I had the pleasure of working with this creative agency, and I must say, they
-                                    truly impressed me. They consistently think outside the box, resulting in impressive
-                                    and impactful work. I highly recommend this agency for their consistent delivery of
-                                    exceptional creative solutions.</p>
-
-
-                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light min-w-full">
-                                    This creative agency stands out with their exceptional talent and expertise.
-                                    Their ability to think outside the box and bring unique ideas to life is truly
-                                    impressive.With meticulous attention to detail, they consistently deliver visually
-                                    stunning
-                                    and impactful work.</p>
-
-
-                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light min-w-full">
-                                    I had the pleasure of working with this creative agency, and I must say, they
-                                    truly impressed me. They consistently think outside the box, resulting in impressive
-                                    and impactful work. I highly recommend this agency for their consistent delivery of
-                                    exceptional creative solutions.</p>
-
-                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light min-w-full">
-                                    This creative agency stands out with their exceptional talent and expertise.
-                                    Their ability to think outside the box and bring unique ideas to life is truly
-                                    impressive. With meticulous attention to detail, they consistently deliver visually
-                                    stunning
-                                    and impactful work.</p>
-
-
-                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light min-w-full">
-                                    I had the pleasure of working with this creative agency, and I must say, they
-                                    truly
-                                    impressed me. They consistently think outside the box, resulting in impressive
-                                    and
+                        <!-- Reviews Container -->
+                        <div class="relative w-full colg:w-[70%] h-270 coxs:h-170 sm:h-80 max-sm:overflow-hidden">
+                            <!-- Review 1 -->
+                            <div class="review-item active absolute inset-0 flex flex-col items-center justify-center ">
+                                <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
+                                <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET</p>
+                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    I had the pleasure of working with this creative agency, and I must say, they truly
+                                    impressed me. They consistently think outside the box, resulting in impressive and
                                     impactful work. I highly recommend this agency for their consistent delivery of
-                                    exceptional creative solutions.</p>
-
-
-                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light min-w-full">
-                                    This creative agency stands out with their exceptional talent and expertise.
-                                    Their
-                                    ability to think outside the box and bring unique ideas to life is truly
-                                    impressive.
-                                    With meticulous attention to detail, they consistently deliver visually stunning
-                                    and
-                                    impactful work.</p>
-
-
-                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light min-w-full">
-                                    I had the pleasure of working with this creative agency, and I must say, they
-                                    truly
-                                    impressed me. They consistently think outside the box, resulting in impressive
-                                    and
-                                    impactful work. I highly recommend this agency for their consistent delivery of
-                                    exceptional creative solutions.</p>
-
+                                    exceptional creative solutions.
+                                </p>
                             </div>
+
+                            <!-- Review 2 -->
+                            <div
+                                class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                <h3 class="text-xl font-medium text-center mb-2.5">Emma Trueman</h3>
+                                <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET</p>
+                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    This creative agency stands out with their exceptional talent and expertise. Their
+                                    ability to think outside the box and bring unique ideas to life is truly impressive.
+                                    With meticulous attention to detail, they consistently deliver visually stunning and
+                                    impactful work.
+                                </p>
+                            </div>
+
+                            <!-- Review 3 -->
+                            <div
+                                class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
+                                <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET</p>
+                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    I had the pleasure of working with this creative agency, and I must say, they truly
+                                    impressed me. They consistently think outside the box, resulting in impressive and
+                                    impactful work. I highly recommend this agency for their consistent delivery of
+                                    exceptional creative solutions.
+                                </p>
+                            </div>
+
+                            <!-- Review 4 -->
+                            <div
+                                class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                <h3 class="text-xl font-medium text-center mb-2.5">Emma Trueman</h3>
+                                <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET</p>
+                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    This creative agency stands out with their exceptional talent and expertise. Their
+                                    ability to think outside the box and bring unique ideas to life is truly impressive.
+                                    With meticulous attention to detail, they consistently deliver visually stunning and
+                                    impactful work.
+                                </p>
+                            </div>
+
+                            <!-- Review 5 -->
+                            <div
+                                class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
+                                <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET</p>
+                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    I had the pleasure of working with this creative agency, and I must say, they truly
+                                    impressed me. They consistently think outside the box, resulting in impressive and
+                                    impactful work. I highly recommend this agency for their consistent delivery of
+                                    exceptional creative solutions.
+                                </p>
+                            </div>
+
+                            <!-- Review 6 -->
+                            <div
+                                class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                <h3 class="text-xl font-medium text-center mb-2.5">Emma Trueman</h3>
+                                <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET</p>
+                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    This creative agency stands out with their exceptional talent and expertise. Their
+                                    ability to think outside the box and bring unique ideas to life is truly impressive.
+                                    With meticulous attention to detail, they consistently deliver visually stunning and
+                                    impactful work.
+                                </p>
+                            </div>
+
+
+                            <!-- Review 7 -->
+                            <div
+                                class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
+                                <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET</p>
+                                <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    I had the pleasure of working with this creative agency, and I must say, they truly
+                                    impressed me. They consistently think outside the box, resulting in impressive and
+                                    impactful work. I highly recommend this agency for their consistent delivery of
+                                    exceptional creative solutions.
+                                </p>
+                            </div>
+
                         </div>
+
                         <!-- Right Arrow -->
                         <span id="right-side-arrow"
                             class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
@@ -1357,6 +1682,7 @@
                             </svg>
                         </span>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -1372,7 +1698,7 @@
         </div>
     </section>
     <!-- <section-6></section-6> -->
-    <section class="bg-white   ">
+    <section id="white-section" class="bg-white   ">
         <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5 py-22.5 colg:py-30">
             <!-- heading  -->
             <div class="flex max-colg:flex-col justify-between  colg:items-center mb-7.5">
@@ -1587,7 +1913,6 @@
             </div>
     </section>
     </div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script> -->
     <script src="script4.js"></script>
 
 </body>

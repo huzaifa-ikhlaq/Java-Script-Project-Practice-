@@ -3,7 +3,8 @@ const cursor = document.querySelector(".custom-cursor");
 
 document.addEventListener("mousemove", function (e) {
     cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-});     
+});
+
 
 // loading functionality 
 let word1 = document.getElementById('word-1')
@@ -80,6 +81,52 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 500);
 })
 
+
+
+// side-text 
+const backToTop = document.getElementById('rightSideText');
+const heroSection = document.getElementById('heroSection');
+
+window.addEventListener('scroll', () => {
+    const heroBottom = heroSection.getBoundingClientRect().bottom;
+    const windowHeight = window.innerHeight;
+
+    if (heroBottom < windowHeight - 300) {
+        // You've slightly entered the next section
+        backToTop.style.opacity = '1';
+        backToTop.style.pointerEvents = 'auto';
+        backToTop.style.visibility = 'visible';
+    } else {
+        // You're still fully inside the hero section
+        backToTop.style.opacity = '0';
+        backToTop.style.pointerEvents = 'none';
+        backToTop.style.visibility = 'hidden';
+    }
+});
+
+// herosection text scroll 
+
+const rotatingGroup = document.getElementById("rotating-group");
+let lastScrollY = window.scrollY;
+let angle = 0;
+
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+        angle += 2; // scrolling down
+    } else {
+        angle -= 2; // scrolling up
+    }
+
+    // Rotate the group around the center of the circle (150, 150)
+    rotatingGroup.setAttribute("transform", `rotate(${angle} 150 150)`);
+
+    lastScrollY = currentScrollY;
+});
+
+
+
 // nav Meanu 
 let NavIcon = document.querySelector('#nav-three-line')
 let NavIconLine1 = document.querySelector('#nav-three-line-1')
@@ -88,6 +135,10 @@ let NavIconLine3 = document.querySelector('#nav-three-line-3')
 let NavMeanuDiv = document.querySelector('#nav-meanu-div')
 let NavMeanucolumn1Items = document.querySelector('#nav-meanu-column-1-items')
 
+
+// nav-meanu-item
+
+// nav-meanu 
 NavIcon.addEventListener('click', navMeanuToggle);
 
 function navMeanuToggle() {
@@ -546,27 +597,96 @@ function borderChange7() {
 }
 
 // slider
-const leftSideArrow = document.getElementById('left-side-arrow');
-const rideSideArrow = document.getElementById('right-side-arrow');
-const slider = document.getElementById('reviews-slider');
+let currentSlide = 0;
+const reviews = document.querySelectorAll('.review-item');
+const dots = document.querySelectorAll('.dot');
+const dots2 = document.querySelectorAll('.dot2');
+const leftArrow = document.getElementById('left-side-arrow');
+const rightArrow = document.getElementById('right-side-arrow');
+const totalSlides = reviews.length;
 
-let currentTranslate = 0;
-const totalSlides = slider.children.length;
+leftArrow.addEventListener('click', removeImgBorder);
+rightArrow.addEventListener('click', removeImgBorder);
 
-leftSideArrow.addEventListener('click', () => {
-    if (currentTranslate < 0) {
-        currentTranslate += 100;
-        slider.style.transform = `translateX(${currentTranslate}%)`;
+function removeImgBorder() {
+    customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
+    customerImg2Border.classList.remove('border-[#FF9800]', 'border-4');
+    customerImg3Border.classList.remove('border-[#FF9800]', 'border-4');
+    customerImg4Border.classList.remove('border-[#FF9800]', 'border-4');
+    customerImg5Border.classList.remove('border-[#FF9800]', 'border-4');
+    customerImg6Border.classList.remove('border-[#FF9800]', 'border-4');
+    customerImg7Border.classList.remove('border-[#FF9800]', 'border-4');
+    console.log('remove-border');
+
+}
+
+
+function showSlide(index) {
+    // Hide all reviews
+    reviews.forEach(review => {
+        review.classList.remove('active');
+        review.classList.add('inactive');
+    });
+
+    // Update dots
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+        dot.classList.remove('border-[#FF9800]', 'border-4');
+    });
+
+    // Show current review
+    reviews[index].classList.remove('inactive');
+    reviews[index].classList.add('active');
+
+    // Update active dot
+    dots[index].classList.add('active');
+    dots[index].classList.add('border-[#FF9800]', 'border-4', 'rounded-full', 'absolute', 'colg:-top-[9.5px]', 'colg:-left-[9.5px]', 'colg:size-[110px]', 'size-[85px]', '-left-[7.5px]', '-top-[7.5px]');
+
+
+    // // Update dots2
+    dots2.forEach(dot => {
+        dot.classList.remove('active');
+    });
+
+    // Update active dot2
+    dots2[index].classList.add('active');
+}
+
+function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        showSlide(currentSlide, 'right');
+        checkArrowState();
     }
+}
 
+function prevSlide() {
+    if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide, 'left');
+        checkArrowState();
+    }
+}
+
+// Arrow click events
+rightArrow.addEventListener('click', nextSlide);
+leftArrow.addEventListener('click', prevSlide);
+
+// Dot click events
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+    });
+});
+// Dot click events
+dots2.forEach((dot2, index) => {
+    dot2.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+    });
 });
 
-rideSideArrow.addEventListener('click', () => {
-    if (Math.abs(currentTranslate) < (totalSlides - 1) * 100) {
-        currentTranslate -= 100;
-        slider.style.transform = `translateX(${currentTranslate}%)`;
-    }
-});
 
 
 

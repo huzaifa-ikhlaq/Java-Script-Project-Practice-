@@ -1,9 +1,15 @@
-// tailwind.config.js (ES module style)
+// tailwind.config.js
 export default {
   darkMode: 'class',
   content: [
     './*.html',
-    './**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{html,js,ts,jsx,tsx}',
+  ],
+  safelist: [
+    'mix-blend-difference',
+    'text-white',
+    'bg-black',
+    'bg-white',
   ],
   theme: {
     extend: {},
