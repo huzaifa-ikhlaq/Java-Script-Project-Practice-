@@ -10,29 +10,13 @@
 </head>
 
 <body class="bg-black text-white h-[900px]">
-    <div class="colg:w-113 w-full colg:min-h-185 overflow-hidden">
-        <img id="zoomImage" class="zoom-image transition scale-x-123 scale-y-134 object-cover " src="img4/1.jpg" alt="">
+    <div class="group w-64 h-40 overflow-hidden relative">
+        <img src="img4/4.jpg"
+            class="w-[105%] h-[105%] object-cover transition-transform duration-300 ease-in-out group-hover:scale-100"
+            alt="Zoom Out Effect" />
     </div>
 
-    <script>
-        const image = document.getElementById('zoomImage');
-        let lastScrollY = window.scrollY;
-        let scale = 1;
 
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-
-            if (currentScrollY > lastScrollY) {
-                scale += 0.01; // zoom in
-            } else {
-                scale -= 0.01; // zoom out
-            }
-
-            scale = Math.min(Math.max(scale, 1), 1.5); // clamp between 1 and 1.5
-            image.style.transform = `scale(${scale})`;
-
-            lastScrollY = currentScrollY;
-        });
 
     </script>
 

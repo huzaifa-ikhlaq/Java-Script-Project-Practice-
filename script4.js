@@ -8,9 +8,9 @@ document.addEventListener("mousemove", function (e) {
 
 window.onscroll = function () {
     let scroll = window.pageYOffset,
-    dHeight = document.body.scrollHeight, 
-    wHeight = window.innerHeight,
-    progress = (scroll / (dHeight - wHeight) * 100);
+        dHeight = document.body.scrollHeight,
+        wHeight = window.innerHeight,
+        progress = (scroll / (dHeight - wHeight) * 100);
     document.getElementById('progress').style.height = progress + '%'
 }
 
@@ -453,7 +453,7 @@ function handleScrollReveal() {
     revealElements.forEach((el) => {
         const rect = el.getBoundingClientRect();
 
-        if (rect.top < windowHeight - 13) {
+        if (rect.top < windowHeight - 11) {
             el.classList.add('visible');
         } else {
             el.classList.remove('visible'); // Optional: remove if you want it to stay
@@ -680,14 +680,14 @@ function borderChange7() {
         customerImg1Border.classList.remove('border-[#FF9800]', 'border-4');
     }
 }
-
-// slider
 let currentSlide = 0;
 const reviews = document.querySelectorAll('.review-item');
 const dots = document.querySelectorAll('.dot');
 const dots2 = document.querySelectorAll('.dot2');
 const leftArrow = document.getElementById('left-side-arrow');
+const LeftArrowSvg = document.getElementById('LeftArrowSvg');
 const rightArrow = document.getElementById('right-side-arrow');
+const ReftArrowSvg = document.getElementById('ReftArrowSvg');
 const totalSlides = reviews.length;
 
 leftArrow.addEventListener('click', removeImgBorder);
@@ -701,70 +701,84 @@ function removeImgBorder() {
     customerImg5Border.classList.remove('border-[#FF9800]', 'border-4');
     customerImg6Border.classList.remove('border-[#FF9800]', 'border-4');
     customerImg7Border.classList.remove('border-[#FF9800]', 'border-4');
-    console.log('remove-border');
-
 }
 
-
 function showSlide(index) {
-    // Hide all reviews
     reviews.forEach(review => {
         review.classList.remove('active');
         review.classList.add('inactive');
     });
 
-    // Update dots
     dots.forEach(dot => {
         dot.classList.remove('active');
         dot.classList.remove('border-[#FF9800]', 'border-4');
     });
 
-    // Show current review
     reviews[index].classList.remove('inactive');
     reviews[index].classList.add('active');
 
-    // Update active dot
     dots[index].classList.add('active');
     dots[index].classList.add('border-[#FF9800]', 'border-4', 'rounded-full', 'absolute', 'colg:-top-[9.5px]', 'colg:-left-[9.5px]', 'colg:size-[110px]', 'size-[85px]', '-left-[7.5px]', '-top-[7.5px]');
 
-
-    // // Update dots2
     dots2.forEach(dot => {
         dot.classList.remove('active');
     });
 
-    // Update active dot2
     dots2[index].classList.add('active');
+
+    checkArrowState();
 }
 
 function nextSlide() {
     if (currentSlide < totalSlides - 1) {
         currentSlide++;
-        showSlide(currentSlide, 'right');
-        checkArrowState();
+        showSlide(currentSlide);
     }
 }
 
 function prevSlide() {
     if (currentSlide > 0) {
         currentSlide--;
-        showSlide(currentSlide, 'left');
-        checkArrowState();
+        showSlide(currentSlide);
     }
 }
 
-// Arrow click events
+function checkArrowState() {
+    if (currentSlide === 0) {
+        leftArrow.classList.add('pointer-events-none', 'bg-[#F1F1F1]');
+        leftArrow.classList.remove('cursor-pointer');
+        LeftArrowSvg.classList.remove('text-black');
+        LeftArrowSvg.classList.add('text-[#D9D9D9]');
+    } else {
+        leftArrow.classList.remove('pointer-events-none', 'bg-[#F1F1F1]');
+        leftArrow.classList.add('cursor-pointer');
+        LeftArrowSvg.classList.remove('text-[#D9D9D9]');
+        LeftArrowSvg.classList.add('text-black');
+    }
+
+    if (currentSlide === totalSlides - 1) {
+        rightArrow.classList.add('pointer-events-none', 'bg-[#F1F1F1]');
+        rightArrow.classList.remove('cursor-pointer');
+        RightArrowSvg.classList.remove('text-black');
+        RightArrowSvg.classList.add('text-[#D9D9D9]');
+    } else {
+        rightArrow.classList.remove('pointer-events-none', 'bg-[#F1F1F1]');
+        rightArrow.classList.add('cursor-pointer');
+        RightArrowSvg.classList.remove('text-[#D9D9D9]');
+        RightArrowSvg.classList.add('text-black');
+    }
+}
+
 rightArrow.addEventListener('click', nextSlide);
 leftArrow.addEventListener('click', prevSlide);
 
-// Dot click events
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         currentSlide = index;
         showSlide(currentSlide);
     });
 });
-// Dot click events
+
 dots2.forEach((dot2, index) => {
     dot2.addEventListener('click', () => {
         currentSlide = index;
@@ -772,6 +786,7 @@ dots2.forEach((dot2, index) => {
     });
 });
 
-
+showSlide(currentSlide);
+checkArrowState();
 
 
