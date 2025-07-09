@@ -6,48 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scroll Reveal Text</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(5px);
-            transition: all 0.6s ease-out;
-        }
 
-        .scroll-reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 </head>
 
-<body class="bg-black text-white">
-
-    <!-- Spacer so we can scroll -->
-    <div class="h-[150vh] flex items-center justify-center">
-        <p>Scroll down to reveal text</p>
+<body class="bg-black text-white h-[900px]">
+    <div class="colg:w-113 w-full colg:min-h-185 overflow-hidden">
+        <img id="zoomImage" class="zoom-image transition scale-x-123 scale-y-134 object-cover " src="img4/1.jpg" alt="">
     </div>
-
-    <!-- Hidden text that will animate into view -->
-    <div id="scrollText" class="text-4xl font-bold scroll-reveal text-center">
-        👋 Hello, I'm revealed on scroll!
-    </div>
-
-    <div class="h-[150vh]"></div>
 
     <script>
-        const scrollText = document.getElementById('scrollText');
+        const image = document.getElementById('zoomImage');
+        let lastScrollY = window.scrollY;
+        let scale = 1;
 
         window.addEventListener('scroll', () => {
-            const rect = scrollText.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
+            const currentScrollY = window.scrollY;
 
-            // If the top of the element is within viewport
-            if (rect.top < windowHeight - 100) {
-                scrollText.classList.add('visible');
+            if (currentScrollY > lastScrollY) {
+                scale += 0.01; // zoom in
             } else {
-                scrollText.classList.remove('visible');
+                scale -= 0.01; // zoom out
             }
+
+            scale = Math.min(Math.max(scale, 1), 1.5); // clamp between 1 and 1.5
+            image.style.transform = `scale(${scale})`;
+
+            lastScrollY = currentScrollY;
         });
+
     </script>
 
 </body>

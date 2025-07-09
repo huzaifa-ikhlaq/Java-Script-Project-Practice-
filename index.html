@@ -11,7 +11,10 @@
 </head>
 
 <body class="box-border p-0 m-0 bg-black">
+    <!-- custom-cursor -->
     <div class="custom-cursor bg-gray-200"></div>
+    <!-- custom-scrollbar -->
+    <div id="progress" class="fixed top-0 right-0 w-1 z-50 hfull bg-yellow"></div>
 
     <!-- <first-page></first-page> -->
     <!-- <div id="page-1" class=" relative z-50">
@@ -329,7 +332,7 @@
                     <!-- last-div-hero  -->
                     <div class="flex justify-between items-center">
                         <!-- left-side -->
-                        <div class="max-sm:flex-col flex  justify-center items-center">
+                        <div class="max-sm:flex-col flex  justify-center sm:items-center">
                             <div class="group max-sm:mb-7.5 flex items-center">
                                 <a href="#"
                                     class=" text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
@@ -700,21 +703,15 @@
                         </h1>
                         <p
                             class="reveal-on-scroll text-[#858585] text-[15px] md:text-base colg:w-[60%] mb-7.5 font-light">
-                            At our design
-                            studio, we are a
-                            collective of talented
-                            ignited by our unwavering passion for transforming ideas into reality. With a harmonious
-                            blend
-                            of backgrounds and a vast array of skill sets, we join forces to create compelling solutions
-                            for
-                            our clients.</p>
+                            At our design studio, we are a collective of talented ignited by our unwavering passion for
+                            transforming ideas into reality. With a harmonious blend of backgrounds and a vast array of
+                            skill sets, we join forces to create compelling solutions for our clients.</p>
                         <p
                             class=" reveal-on-scroll text-[#858585] text-[15px] md:text-base colg:w-[65%] mb-15 font-light">
                             Collaboration is at the heart of what we do. Our team thrives on the synergy that arises
-                            when
-                            unique perspectives converge, environment of boundless creativity. By harnessing our
-                            collective
-                            expertise, we produce extraordinary results that consistently surpass expectations.
+                            when unique perspectives converge, environment of boundless creativity. By harnessing our
+                            collective expertise, we produce extraordinary results that consistently surpass
+                            expectations.
                         </p>
                         <div class="reveal-on-scroll flex items-center ">
                             <div class="relative shrink-0">
@@ -766,7 +763,9 @@
                     <!-- right-side -->
                     <div class="reveal-on-scroll">
                         <div class="colg:w-113 w-full colg:min-h-185 overflow-hidden">
-                            <img class=" scale-x-123 scale-y-134 " src="img4/1.jpg" alt="">
+                            <img id="zoomImage"
+                                class="zoom-image transition duration-700 scale-x-117 scale-y-126 object-cover "
+                                src="img4/1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -1512,7 +1511,7 @@
                         </h1>
                     </div>
                     <!-- customer-imgs  -->
-                    <div class="reveal-on-scroll flex justify-center transition flex-wrap gap-6 mb-15">
+                    <div class="reveal-on-scroll flex justify-center transition flex-wrap gap-6.5 mb-15">
                         <!-- img-1 -->
                         <span class="dot2">
                             <div id="customer-img1-border-div" class="group relative">
@@ -1594,7 +1593,7 @@
                     </div>
                     <div class="flex flex-col w-full  justify-center  items-center">
                         <!-- Quote Icon -->
-                        <span class="reveal-on-scroll text-center  -mb-4">
+                        <span class="reveal-on-scroll text-center  mt-4 -mb-5 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 48 48">
                                 <path fill="#FF9800"
                                     d="M 13.5 10 A 8.5 8.5 0 0 0 13.5 27 A 8.5 8.5 0 0 0 18.291016 25.519531 C 17.422273 29.222843 15.877848 31.803343 14.357422 33.589844 C 12.068414 36.279429 9.9433594 37.107422 9.9433594 37.107422 A 1.50015 1.50015 0 1 0 11.056641 39.892578 C 11.056641 39.892578 13.931586 38.720571 16.642578 35.535156 C 19.35357 32.349741 22 27.072581 22 19 A 1.50015 1.50015 0 0 0 21.984375 18.78125 A 8.5 8.5 0 0 0 13.5 10 z M 34.5 10 A 8.5 8.5 0 0 0 34.5 27 A 8.5 8.5 0 0 0 39.291016 25.519531 C 38.422273 29.222843 36.877848 31.803343 35.357422 33.589844 C 33.068414 36.279429 30.943359 37.107422 30.943359 37.107422 A 1.50015 1.50015 0 1 0 32.056641 39.892578 C 32.056641 39.892578 34.931586 38.720571 37.642578 35.535156 C 40.35357 32.349741 43 27.072581 43 19 A 1.50015 1.50015 0 0 0 42.984375 18.78125 A 8.5 8.5 0 0 0 34.5 10 z" />
@@ -1603,10 +1602,10 @@
 
                         <!-- Review + Arrows -->
                         <div
-                            class="reveal-on-scroll flex colg:items-center justify-between w-full gap-4 relative top-7.5">
+                            class="reveal-on-scroll flex colg:items-center colg:justify-between w-full colg:gap-4 relative top-7.5">
                             <!-- Left Arrow -->
                             <span id="left-side-arrow"
-                                class="reveal-on-scroll bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
+                                class="reveal-on-scroll bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20 max-colg:absolute  left-0 -top-14">
                                 <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
                                     viewBox="0 0 24 24">
                                     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
@@ -1615,7 +1614,7 @@
                             </span>
 
                             <!-- Reviews Container -->
-                            <div class="relative w-full colg:w-[70%] h-270 coxs:h-170 sm:h-80 max-sm:overflow-hidden">
+                            <div class="relative  w-full colg:w-[70%] h-145 coxs:h-110 sm:h-80 max-sm:overflow-hidden">
                                 <!-- Review 1 -->
                                 <div
                                     class="review-item active absolute inset-0 flex flex-col items-center justify-center ">
@@ -1743,7 +1742,7 @@
 
                             <!-- Right Arrow -->
                             <span id="right-side-arrow"
-                                class="reveal-on-scroll bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
+                                class="reveal-on-scroll  bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20 max-colg:absolute  right-0 -top-14">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
                                     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
@@ -1794,7 +1793,7 @@
                         <div class="overflow-hidden  mb-7.5">
                             <img class="scale-x-103 group-hover:scale-108 transition " src="img4/11.jpg" alt="">
                         </div>
-                        <div class="pt-7.5 pr-7.5">
+                        <div class="pt-7.5 pr-7.5 mb-15">
                             <h6 class="reveal-on-scroll text-xs text-[#7F7F7F] font-medium tracking-[2px] mb-7.5">
                                 <span class="mr-[15px] text-yellow">TECHNOLOGY</span>
                                 MAY 24 2023
@@ -1998,15 +1997,3 @@
 </body>
 
 </html>
-
-<div class="group">
-    <p class="group-hover:text-red-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque iure explicabo
-        consequuntur delectus
-        reiciendis, officia dolorem necessitatibus dolore, vitae eveniet blanditiis tempore adipisci debitis!
-        Accusamus blanditiis ullam distinctio adipisci rem.</p>
-    <div class="group">
-        <p class="group-hover:text-teal-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum velit
-            mollitia quae, assumenda, repellat
-            error vitae aut consequuntur modi commodi dolores dolor hic? Eos eaque culpa aliquid quidem officiis.</p>
-    </div>
-</div>

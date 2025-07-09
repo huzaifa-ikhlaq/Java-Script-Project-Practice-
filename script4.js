@@ -4,6 +4,15 @@ const cursor = document.querySelector(".custom-cursor");
 document.addEventListener("mousemove", function (e) {
     cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
+// custom scroll 
+
+window.onscroll = function () {
+    let scroll = window.pageYOffset,
+    dHeight = document.body.scrollHeight, 
+    wHeight = window.innerHeight,
+    progress = (scroll / (dHeight - wHeight) * 100);
+    document.getElementById('progress').style.height = progress + '%'
+}
 
 
 // loading functionality 
@@ -179,8 +188,8 @@ function navMeanuToggle() {
         NavIconLine1.classList.remove('rotate-45', 'translate-y-1',)
         NavIconLine2.classList.remove('-rotate-45', '-translate-y-1.5')
         NavIconLine3.classList.remove('opacity-0')
-        backToTop.classList.add('hidden')
-        leftSideText.classList.add('hidden')
+        backToTop.classList.remove('hidden')
+        leftSideText.classList.remove('hidden')
 
         NavMeanuDiv.classList.add('transition-all', 'duration-400', 'ease-[cubic-bezier(0,0,0.3642,1)]');
         NavMeanucolumn1Items.classList.add('transition-all', 'duration-400', 'ease-[cubic-bezier(0,0,0.3642,1)]');
@@ -192,8 +201,8 @@ function navMeanuToggle() {
         NavIconLine1.classList.add('rotate-45', 'translate-y-1')
         NavIconLine2.classList.add('-rotate-45', '-translate-y-1.5')
         NavIconLine3.classList.add('opacity-0')
-        backToTop.classList.remove('hidden')
-        leftSideText.classList.remove('hidden')
+        backToTop.classList.add('hidden')
+        leftSideText.classList.add('hidden')
 
         // Hide column1 items instantly
         NavMeanucolumn1Items.classList.remove('opacity-100', 'translate-x-0');
@@ -456,7 +465,27 @@ function handleScrollReveal() {
 window.addEventListener('scroll', handleScrollReveal);
 window.addEventListener('load', handleScrollReveal);
 
+// section 2 image zoom 
+document.addEventListener('DOMContentLoaded', () => {
+    const image = document.getElementById('zoomImage');
+    let lastScrollY = window.scrollY;
+    let scale = 1;
 
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY) {
+            scale += 0.01;
+        } else {
+            scale -= 0.01;
+        }
+
+        scale = Math.min(Math.max(scale, 1), 1.1);
+        image.style.transform = `scale(${scale})`;
+
+        lastScrollY = currentScrollY;
+    });
+});
 
 
 // customer-img1

@@ -470,14 +470,5 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
-}
-
-::-webkit-scrollbar-track {
-    background: #1a1a1a;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #FF9800;
-    border: none;
+    width: 0px;
 }
