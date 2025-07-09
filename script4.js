@@ -168,6 +168,7 @@ let NavIconLine2 = document.querySelector('#nav-three-line-2')
 let NavIconLine3 = document.querySelector('#nav-three-line-3')
 let NavMeanuDiv = document.querySelector('#nav-meanu-div')
 let NavMeanucolumn1Items = document.querySelector('#nav-meanu-column-1-items')
+let column2 = document.querySelector('#column2')
 let leftSideText = document.querySelector('#leftSideText')
 
 
@@ -193,6 +194,11 @@ function navMeanuToggle() {
 
         NavMeanuDiv.classList.add('transition-all', 'duration-400', 'ease-[cubic-bezier(0,0,0.3642,1)]');
         NavMeanucolumn1Items.classList.add('transition-all', 'duration-400', 'ease-[cubic-bezier(0,0,0.3642,1)]');
+
+        setTimeout(() => {
+            column2.classList.add('opacity-0', 'translate-y-10');
+            column2.classList.remove('opacity-100', 'translate-y-0');
+        }, 500);
     } else {
         NavMeanuDiv.classList.remove('opacity-0', '-z-10');
         NavMeanuDiv.classList.add('opacity-100', 'z-40');
@@ -212,6 +218,10 @@ function navMeanuToggle() {
         setTimeout(() => {
             NavMeanucolumn1Items.classList.remove('opacity-0', '-translate-x-10');
             NavMeanucolumn1Items.classList.add('opacity-100', 'translate-x-0');
+        }, 500);
+        setTimeout(() => {
+            column2.classList.remove('opacity-0', 'translate-y-10');
+            column2.classList.add('opacity-100', 'translate-y-0');
         }, 500);
     }
 }
