@@ -49,6 +49,18 @@ body {
     transition: all 0.4s cubic-bezier(0, 0, 0.3642, 1);
 }
 
+/* scroll animation  */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* dodecahdron */
 .dodecahedron-wrapper {
     perspective: 1200px;

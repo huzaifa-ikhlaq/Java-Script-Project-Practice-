@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 // side-text 
-const backToTop = document.getElementById('rightSideText');
+let backToTop = document.getElementById('rightSideText');
 const heroSection = document.getElementById('heroSection');
 
 window.addEventListener('scroll', () => {
@@ -125,8 +125,33 @@ window.addEventListener("scroll", () => {
     lastScrollY = currentScrollY;
 });
 
+// herosection text scroll Circular-Button-hover-bg
 
+let circularButtonMainBg = document.querySelector('#Circular-Button-Main-bg');
+let circularButtonSecondBg = document.querySelector('#Circular-Button-Second-bg');
+let circularButtonSvg = document.querySelector('#Circular-Button-svg');
 
+circularButtonMainBg.addEventListener('mouseover', () => {
+    circularButtonMainBg.classList.remove('bg-yellow')
+    circularButtonMainBg.classList.add('bg-[#FF9800]', 'transition-all', 'duration-400', 'ease-[cubic-bezier(0,0,0.3642,1)]');
+
+    circularButtonSecondBg.classList.add('scale-115')
+
+    circularButtonSvg.classList.add('scale-110')
+
+    console.log('hovered');
+});
+
+circularButtonMainBg.addEventListener('mouseleave', () => {
+    circularButtonMainBg.classList.add('bg-yellow', 'transition-all', 'duration-400', 'ease-[cubic-bezier(0,0,0.3642,1)]')
+    circularButtonMainBg.classList.remove('bg-[#FF9800]', 'transition-all', 'duration-400', 'ease-[cubic-bezier(0,0,0.3642,1)]');
+
+    circularButtonSecondBg.classList.remove('scale-115')
+
+    circularButtonSvg.classList.remove('scale-110')
+
+    console.log('hovered');
+});
 // nav Meanu 
 let NavIcon = document.querySelector('#nav-three-line')
 let NavIconLine1 = document.querySelector('#nav-three-line-1')
@@ -134,6 +159,8 @@ let NavIconLine2 = document.querySelector('#nav-three-line-2')
 let NavIconLine3 = document.querySelector('#nav-three-line-3')
 let NavMeanuDiv = document.querySelector('#nav-meanu-div')
 let NavMeanucolumn1Items = document.querySelector('#nav-meanu-column-1-items')
+let leftSideText = document.querySelector('#leftSideText')
+
 
 
 // nav-meanu-item
@@ -152,6 +179,8 @@ function navMeanuToggle() {
         NavIconLine1.classList.remove('rotate-45', 'translate-y-1',)
         NavIconLine2.classList.remove('-rotate-45', '-translate-y-1.5')
         NavIconLine3.classList.remove('opacity-0')
+        backToTop.classList.add('hidden')
+        leftSideText.classList.add('hidden')
 
         NavMeanuDiv.classList.add('transition-all', 'duration-400', 'ease-[cubic-bezier(0,0,0.3642,1)]');
         NavMeanucolumn1Items.classList.add('transition-all', 'duration-400', 'ease-[cubic-bezier(0,0,0.3642,1)]');
@@ -163,6 +192,9 @@ function navMeanuToggle() {
         NavIconLine1.classList.add('rotate-45', 'translate-y-1')
         NavIconLine2.classList.add('-rotate-45', '-translate-y-1.5')
         NavIconLine3.classList.add('opacity-0')
+        backToTop.classList.remove('hidden')
+        leftSideText.classList.remove('hidden')
+
         // Hide column1 items instantly
         NavMeanucolumn1Items.classList.remove('opacity-100', 'translate-x-0');
         NavMeanucolumn1Items.classList.add('opacity-0', '-translate-x-10');
@@ -401,6 +433,30 @@ function NavMeanuOtherPagesclick() {
     NavMeanuOtherPagesList.classList.add('transition-all', 'duration-300', 'ease-[cubic-bezier(0,0,0.3642,1)]', 'opacity-100', '-translate-y-0');
     NavMeanuOtherPagesList.classList.remove('translate-y-32', 'opacity-0', 'hidden');
 }
+
+// scroll animation 
+
+const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+function handleScrollReveal() {
+    const windowHeight = window.innerHeight;
+
+    revealElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+
+        if (rect.top < windowHeight - 13) {
+            el.classList.add('visible');
+        } else {
+            el.classList.remove('visible'); // Optional: remove if you want it to stay
+        }
+    });
+}
+
+// Run on scroll and on load
+window.addEventListener('scroll', handleScrollReveal);
+window.addEventListener('load', handleScrollReveal);
+
+
 
 
 // customer-img1

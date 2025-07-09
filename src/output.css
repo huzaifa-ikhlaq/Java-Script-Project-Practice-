@@ -16,6 +16,7 @@
     --color-green-400: oklch(79.2% 0.209 151.711);
     --color-green-700: oklch(52.7% 0.154 150.069);
     --color-emerald-800: oklch(43.2% 0.095 166.913);
+    --color-teal-800: oklch(43.7% 0.078 188.216);
     --color-blue-200: oklch(88.2% 0.059 254.128);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-600: oklch(54.6% 0.245 262.881);
@@ -214,9 +215,6 @@
   }
 }
 @layer utilities {
-  .pointer-events-auto {
-    pointer-events: auto;
-  }
   .pointer-events-none {
     pointer-events: none;
   }
@@ -643,6 +641,9 @@
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
   }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
   }
@@ -831,6 +832,9 @@
   }
   .h-\[44px\] {
     height: 44px;
+  }
+  .h-\[150vh\] {
+    height: 150vh;
   }
   .h-\[300px\] {
     height: 300px;
@@ -1085,6 +1089,18 @@
   .translate-y-full {
     --tw-translate-y: 100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .scale-110 {
+    --tw-scale-x: 110%;
+    --tw-scale-y: 110%;
+    --tw-scale-z: 110%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .scale-115 {
+    --tw-scale-x: 115%;
+    --tw-scale-y: 115%;
+    --tw-scale-z: 115%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .scale-x-103 {
     --tw-scale-x: 103%;
@@ -1399,6 +1415,9 @@
   .bg-\[\#F2F2F2\] {
     background-color: #F2F2F2;
   }
+  .bg-\[\#FF9800\] {
+    background-color: #FF9800;
+  }
   .bg-\[\#FFA700\] {
     background-color: #FFA700;
   }
@@ -1428,9 +1447,6 @@
   }
   .bg-emerald-800 {
     background-color: var(--color-emerald-800);
-  }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
   }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
@@ -1570,9 +1586,6 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
-  .py-15 {
-    padding-block: calc(var(--spacing) * 15);
-  }
   .py-22 {
     padding-block: calc(var(--spacing) * 22);
   }
@@ -1674,6 +1687,9 @@
   }
   .pb-22\.5 {
     padding-bottom: calc(var(--spacing) * 22.5);
+  }
+  .pb-23 {
+    padding-bottom: calc(var(--spacing) * 23);
   }
   .pb-30 {
     padding-bottom: calc(var(--spacing) * 30);
@@ -2022,9 +2038,6 @@
   .opacity-0 {
     opacity: 0%;
   }
-  .opacity-50 {
-    opacity: 50%;
-  }
   .opacity-100 {
     opacity: 100%;
   }
@@ -2133,6 +2146,13 @@
   .ease-out {
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
+  }
+  .group-hover\:ml-0 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        margin-left: calc(var(--spacing) * 0);
+      }
+    }
   }
   .group-hover\:size-11 {
     &:is(:where(.group):hover *) {
@@ -2285,6 +2305,20 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         padding-inline: calc(var(--spacing) * 4);
+      }
+    }
+  }
+  .group-hover\:text-red-600 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-red-600);
+      }
+    }
+  }
+  .group-hover\:text-teal-800 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-teal-800);
       }
     }
   }
@@ -2666,11 +2700,6 @@
   .max-xl\:flex-col {
     @media (width < 75rem) {
       flex-direction: column;
-    }
-  }
-  .max-xl\:bg-black {
-    @media (width < 75rem) {
-      background-color: var(--color-black);
     }
   }
   .max-colg\:mb-22\.5 {
@@ -3173,6 +3202,24 @@
   .md\:text-\[150px\] {
     @media (width >= 48rem) {
       font-size: 150px;
+    }
+  }
+  .md\:leading-4 {
+    @media (width >= 48rem) {
+      --tw-leading: calc(var(--spacing) * 4);
+      line-height: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:leading-6 {
+    @media (width >= 48rem) {
+      --tw-leading: calc(var(--spacing) * 6);
+      line-height: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:leading-8 {
+    @media (width >= 48rem) {
+      --tw-leading: calc(var(--spacing) * 8);
+      line-height: calc(var(--spacing) * 8);
     }
   }
   .md\:leading-9 {
@@ -3876,6 +3923,15 @@ html, body {
 }
 .transition {
   transition: all 0.4s cubic-bezier(0, 0, 0.3642, 1);
+}
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.6s ease-out;
+}
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .dodecahedron-wrapper {
   perspective: 1200px;

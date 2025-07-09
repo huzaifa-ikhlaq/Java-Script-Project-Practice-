@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Reveal Text</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(5px);
+            transition: all 0.6s ease-out;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- Spacer so we can scroll -->
+    <div class="h-[150vh] flex items-center justify-center">
+        <p>Scroll down to reveal text</p>
+    </div>
+
+    <!-- Hidden text that will animate into view -->
+    <div id="scrollText" class="text-4xl font-bold scroll-reveal text-center">
+        👋 Hello, I'm revealed on scroll!
+    </div>
+
+    <div class="h-[150vh]"></div>
+
+    <script>
+        const scrollText = document.getElementById('scrollText');
+
+        window.addEventListener('scroll', () => {
+            const rect = scrollText.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // If the top of the element is within viewport
+            if (rect.top < windowHeight - 100) {
+                scrollText.classList.add('visible');
+            } else {
+                scrollText.classList.remove('visible');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

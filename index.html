@@ -14,7 +14,7 @@
     <div class="custom-cursor bg-gray-200"></div>
 
     <!-- <first-page></first-page> -->
-    <div id="page-1" class=" relative z-50">
+    <!-- <div id="page-1" class=" relative z-50">
         <section class="bg-black h-screen  flex  justify-center items-center">
             <h1
                 class="text-white text-[35px] colg:text-[45px] font-thin flex max-colg:flex-col leading-9 text-center gap-3">
@@ -24,10 +24,10 @@
                 <span id="word-3" class="block opacity-0 transition-all duration-1000 translate-y-4">Excellence</span>
             </h1>
         </section>
-    </div>
+    </div> -->
 
     <!-- <second-page></second-page> -->
-    <div id="page-2" class="bg-black hidden relative z-50">
+    <!-- <div id="page-2" class="bg-black hidden relative z-50">
         <section class=" h-screen flex items-center justify-center">
             <div id="page2MainDiv"
                 class="relative w-65 flex justify-center items-center
@@ -40,10 +40,10 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div> -->
 
     <!-- <main-page></main-page> -->
-    <div id="main-page" class="relativ -z-50 hidden">
+    <div id="main-page" class="relativ -z-50 hidde">
         <!-- <nav></nav> -->
         <nav
             class="xl:mix-blend-difference h-22.5 xl:h-35.5 px-7.5 2xl:px-15 w-full flex justify-between items-center fixed z-60   bg-black">
@@ -68,7 +68,7 @@
         <a href="#" onclick="event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' })" id="rightSideText"
             class="flex flex-col justify-center items-center cursor-pointer group opacity-0 transition max-xl:hidden ">
             <div
-                class="bg-[#E5E5E5] fixed bottom-47 right-15 z-50 size-10 rounded-full  flex justify-center items-center group-hover:scale-110 transition">
+                class="bg-[#E5E5E5] fixed  bottom-47 right-15 z-50 size-10 rounded-full  flex justify-center items-center group-hover:scale-110 transition">
                 <svg class="-rotate-90" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
                     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
                         stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
@@ -82,8 +82,6 @@
         <!-- <hero-section></hero-section>  -->
         <section id="heroSection" class=" bg-black w-full h-screen relative z-40 overflow-hidden ">
             <div>
-                <!-- nav  -->
-
                 <!-- <nav-meanu>-->
                 <div id="nav-meanu-div"
                     class="bg-black h-screen w-full fixed opacity-0 -z-10 pointer-events-none transition overflow-hidden">
@@ -368,10 +366,10 @@
                         </div>
                         <!-- right-side -->
                         <div
-                            class="absolute right-12.5 bottom-2.5 w-[300px] h-[300px] cursor-pointer overflow-hidden max-colg:hidden group">
+                            class="absolute right-12.5 bottom-2.5 w-[300px] h-[300px] group  overflow-hidden   max-colg:hidden ">
                             <!-- Curved Text SVG -->
                             <!-- Curved Text SVG -->
-                            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 300">
+                            <svg class="absolute inset-0 w-full h-full group" viewBox="0 0 300 300">
                                 <defs>
                                     <path id="circlePath" d="M150,150 m -55,0 a55,55 0 1,1 110,0 a55,55 0 1,1 -110,0"
                                         fill="none" />
@@ -381,10 +379,10 @@
                                 <g id="rotating-group">
                                     <text
                                         class="fill-current text-[#616161] font-bold group-hover:text-white transition-all duration-300"
-                                        font-size="12" font-family="sans-serif">
-                                        <textPath href="#circlePath" startOffset="0" text-anchor="start"
+                                        font-size="11.5" font-family="sans-serif">
+                                        <textPath href="#circlePath" startOffset="-43" text-anchor="start"
                                             class="[letter-spacing:6px]">
-                                            – SCROLL DOWN – SCROLL DOWN – SCROLL DOWN – SCROLL DOWN –
+                                            – SCROLL DOWN – SCROLL DOWN –
                                         </textPath>
                                     </text>
                                 </g>
@@ -393,12 +391,13 @@
                             <!-- Center Circular Button -->
                             <div
                                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
-                                <div
-                                    class="group-hover:bg-hover-yellow bg-yellow size-17.5 rounded-full flex justify-center items-center">
-                                    <div
-                                        class="bg-black transition group-hover:scale-115 size-10 rounded-full flex justify-center items-center">
+                                <div id="Circular-Button-Main-bg"
+                                    class="bg-yellow size-17.5 rounded-full flex justify-center items-center">
+                                    <div id="Circular-Button-Second-bg"
+                                        class="bg-black transition size-10 rounded-full flex justify-center items-center">
                                         <span>
-                                            <svg class="transition-all duration-1000 ease-[cubic-bezier(0, 0, 0.3642, 1)] group-hover:scale-110 rotate-90"
+                                            <svg id="Circular-Button-svg"
+                                                class="transition-all duration-1000 ease-[cubic-bezier(0, 0, 0.3642, 1)]  rotate-90"
                                                 xmlns="http://www.w3.org/2000/svg" width="27" height="27"
                                                 viewBox="0 0 24 24">
                                                 <path fill="none" stroke="#FF9800" stroke-linecap="round"
@@ -693,13 +692,15 @@
                     <!-- left-side -->
                     <div class="flex flex-col justify-center max-colg:mb-22.5">
                         <h1
-                            class="text-black text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] font-medium mb-15 leading-12 colg:leading-14 xl:leading-18">
+                            class="reveal-on-scroll text-black text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] font-medium mb-15 leading-12 colg:leading-14 xl:leading-18">
                             Discover
                             <br class="max-md:hidden">
                             Our
                             <span class="font-thin">Studio</span>
                         </h1>
-                        <p class="text-[#858585] text-[15px] md:text-base colg:w-[60%] mb-7.5 font-light">At our design
+                        <p
+                            class="reveal-on-scroll text-[#858585] text-[15px] md:text-base colg:w-[60%] mb-7.5 font-light">
+                            At our design
                             studio, we are a
                             collective of talented
                             ignited by our unwavering passion for transforming ideas into reality. With a harmonious
@@ -707,14 +708,15 @@
                             of backgrounds and a vast array of skill sets, we join forces to create compelling solutions
                             for
                             our clients.</p>
-                        <p class="text-[#858585] text-[15px] md:text-base colg:w-[65%] mb-15 font-light">
+                        <p
+                            class=" reveal-on-scroll text-[#858585] text-[15px] md:text-base colg:w-[65%] mb-15 font-light">
                             Collaboration is at the heart of what we do. Our team thrives on the synergy that arises
                             when
                             unique perspectives converge, environment of boundless creativity. By harnessing our
                             collective
                             expertise, we produce extraordinary results that consistently surpass expectations.
                         </p>
-                        <div class="flex items-center ">
+                        <div class="reveal-on-scroll flex items-center ">
                             <div class="relative shrink-0">
                                 <img class="size-17.5 colg:size-22.5 rounded-full object-cover object-top shrink-0 "
                                     src="img4/2.jpg" alt="">
@@ -762,7 +764,7 @@
                         </span>
                     </div>
                     <!-- right-side -->
-                    <div class="">
+                    <div class="reveal-on-scroll">
                         <div class="colg:w-113 w-full colg:min-h-185 overflow-hidden">
                             <img class=" scale-x-123 scale-y-134 " src="img4/1.jpg" alt="">
                         </div>
@@ -777,7 +779,8 @@
                     <!-- first-part  -->
                     <div class="mb-22.5 colg:mb-30">
                         <div class="flex justify-center md:justify-end relative mb-12  colg:right-49 ">
-                            <h3 class="text-[#616161] text-[15px] md:text-base text-center">Professionals focused on
+                            <h3 class="reveal-on-scroll text-[#616161] text-[15px] md:text-base text-center">
+                                Professionals focused on
                                 helping
                                 your brand
                                 <hr class="text-[#3a3737] absolute w-90 -right-98 top-2.5 max-colg:hidden ">
@@ -786,9 +789,9 @@
                             </h3>
                         </div>
                         <div class="flex flex-col ">
-                            <div class="flex items-center justify-center ">
+                            <div class="reveal-on-scroll flex items-center justify-center ">
                                 <div class="h-20 w-62.5  rounded-full overflow-hidden mr-7.5 max-md:hidden">
-                                    <img class=" object-cover object-top shrink-0 transition hover:scale-105  "
+                                    <img class="object-cover object-top shrink-0 transition hover:scale-105  "
                                         src="img4/3.jpg" alt="">
                                 </div>
                                 <h1
@@ -797,7 +800,7 @@
                                     <br>
                                 </h1>
                             </div>
-                            <div class="flex max-md:flex-col items-center justify-center mt-4    ">
+                            <div class="reveal-on-scroll flex max-md:flex-col items-center justify-center mt-4    ">
                                 <h1
                                     class="text-[34px] md:text-[58px] colg:text-[72px] xl:text-[74px] 2xl:text-[86px] text-white font-medium text-center leading-10 sm:flex    ">
                                     For Your
@@ -805,7 +808,7 @@
                                 </h1>
                                 <div class="group shrink-0 flex items-center md:ml-7.5 max-md:mt-15 justify-center">
                                     <a href="#"
-                                        class=" text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
+                                        class="text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
                                         WHAT WE DO
                                         <div class="bg-black transition  group-hover:scale-115
                                 size-10 rounded-full flex justify-center items-center ml-7.5 ">
@@ -828,9 +831,10 @@
                     <div class="grid md:grid-cols-2 colg:grid-cols-4 max-colg:pb-22.5">
                         <!-- card-1  -->
                         <div
-                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] py-15 px-7.5 sm:px-8 cursor-pointer group relative">
+                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] pb-23 pt-15 px-7.5 sm:px-8 cursor-pointer group relative">
                             <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
-                            <h3 class="font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Branding and
+                            <h3 class="reveal-on-scroll font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Branding
+                                and
                                 <br class="max-md:hidden">
                                 identity Design
                             </h3>
@@ -839,7 +843,7 @@
                                 Our Creative agency is team of professionals focused on helping
                                 your brand grow.</p>
                             <div
-                                class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute">
+                                class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute ml-2 group-hover:ml-0">
                                 <span>
                                     <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
                                         xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
@@ -851,9 +855,10 @@
                         </div>
                         <!-- card-2  -->
                         <div
-                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] py-15 px-8 cursor-pointer group relative">
+                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] pb-23 pt-15 px-8 cursor-pointer group relative">
                             <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
-                            <h3 class="font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Website Design
+                            <h3 class="reveal-on-scroll font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Website
+                                Design
                                 <br class="max-md:hidden">
                                 and develompent
                             </h3>
@@ -862,7 +867,7 @@
                                 Our Creative agency is team of professionals focused on helping
                                 your brand grow.</p>
                             <div
-                                class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute">
+                                class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute ml-2 group-hover:ml-0">
                                 <span>
                                     <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
                                         xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
@@ -874,9 +879,10 @@
                         </div>
                         <!-- card-3  -->
                         <div
-                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] py-15 px-8 cursor-pointer group relative">
+                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] pb-23 pt-15 px-8 cursor-pointer group relative">
                             <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
-                            <h3 class="font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Advertising and
+                            <h3 class="reveal-on-scroll font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">
+                                Advertising and
                                 <br class="max-md:hidden">
                                 Marketing Campaigns
                             </h3>
@@ -885,7 +891,7 @@
                                 Our Creative agency is team of professionals focused on helping
                                 your brand grow.</p>
                             <div
-                                class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute">
+                                class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute ml-2 group-hover:ml-0">
                                 <span>
                                     <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
                                         xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
@@ -897,9 +903,10 @@
                         </div>
                         <!-- card-4  -->
                         <div
-                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] py-15 px-8 cursor-pointer group relative">
+                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] pb-23 pt-15 px-8 cursor-pointer group relative">
                             <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
-                            <h3 class="font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Creative Consulting
+                            <h3 class="reveal-on-scroll font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Creative
+                                Consulting
                                 <br class="max-md:hidden">
                                 and Develompent
                             </h3>
@@ -908,7 +915,7 @@
                                 Our Creative agency is team of professionals focused on helping
                                 your brand grow.</p>
                             <div
-                                class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute">
+                                class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute ml-2 group-hover:ml-0">
                                 <span>
                                     <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
                                         xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
@@ -1110,30 +1117,32 @@
                     <!-- left-side -->
                     <div class="flex flex-col  justify-center mb-22.5">
                         <h1
-                            class="text-black font-medium text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] mb-15 leading-13.5 colg:leading-19">
+                            class="reveal-on-scroll text-black font-medium text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] mb-15 leading-13.5 colg:leading-19">
                             Meet
                             <br class="">
                             Our
                             <br class="max-xl:hidden 2xl:hidden">
                             Team
                         </h1>
-                        <p class="text-[#7F7F7F] colg:w-[80%] xl:w-[65%] font-light mb-7.5">We are talented individuals
+                        <p class="reveal-on-scroll text-[#7F7F7F] colg:w-[80%] xl:w-[65%] font-light mb-7.5">We are
+                            talented individuals
                             who
                             are passionate about bringing ideas to life With a diverse range of backgrounds and skill
                             sets,
                             we collaborate to produce effective solutions for our clients.</p>
-                        <p class="text-[#7F7F7F] colg:w-[80%] xl:w-[62%] font-light mb-15">Together, our creative team
+                        <p class="reveal-on-scroll text-[#7F7F7F] colg:w-[80%] xl:w-[62%] font-light mb-15">Together,
+                            our creative team
                             is
                             committed to
                             delivering impactful work that exceeds expectations.</p>
                         <div class="group shrink-0 flex items-center  mb-15 cursor-pointer">
                             <a href="#"
-                                class=" text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
+                                class="reveal-on-scroll text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
                                 READ MORE
                                 <div class="bg-black transition  group-hover:scale-115
                                 size-10 rounded-full flex justify-center items-center ml-7.5 ">
                                     <span>
-                                        <svg class=" transition
+                                        <svg class="transition
                                 group-hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
                                             viewBox="0 0 24 24">
                                             <path fill="none" stroke="#FF9800" stroke-linecap="round"
@@ -1145,7 +1154,7 @@
                             </a>
                         </div>
                         <h3
-                            class="font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-8 max-md:flex max-md:flex-wrap gap-1">
+                            class="reveal-on-scroll font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-8 max-md:flex max-md:flex-wrap gap-1">
                             <span class="font-thin">We</span>
                             delivering
                             <br class="max-md:hidden">
@@ -1189,7 +1198,7 @@
                             <div class="flex flex-col gap-7.5">
                                 <!-- img-1  -->
                                 <div class="relative group inline-block w-fit h-fit sm:px-[15px]">
-                                    <img class="" src="img4/4.jpg" alt="">
+                                    <img class="reveal-on-scroll" src="img4/4.jpg" alt="">
                                     <div class="relative bottom-38 justify-center ">
                                         <div
                                             class="flex flex-col w-full  absolute z-10 transition opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0">
@@ -1259,7 +1268,7 @@
                                 </div>
                                 <!-- img-2  -->
                                 <div class="relative group inline-block w-fit h-fit sm:px-[15px]">
-                                    <img class="" src="img4/5.jpg" alt="">
+                                    <img class="reveal-on-scroll" src="img4/5.jpg" alt="">
                                     <div class="relative bottom-38 justify-center ">
                                         <div
                                             class="flex flex-col w-full  absolute z-10 transition opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0">
@@ -1335,7 +1344,7 @@
                                 </div>
                                 <!-- img-3  -->
                                 <div class="relative group inline-block w-fit h-fit sm:px-[15px] max-sm:mt-7.5">
-                                    <img class="" src="img4/6.jpg" alt="">
+                                    <img class="reveal-on-scroll" src="img4/6.jpg" alt="">
                                     <div class="relative bottom-38 justify-center ">
                                         <div
                                             class="flex flex-col w-full  absolute z-10 transition opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0">
@@ -1404,7 +1413,7 @@
                                 </div>
                                 <!-- img-4  -->
                                 <div class="relative group inline-block w-fit h-fit sm:px-[15px]">
-                                    <img class="" src="img4/7.jpg" alt="">
+                                    <img class="reveal-on-scroll" src="img4/7.jpg" alt="">
                                     <div class="relative bottom-38 justify-center ">
                                         <div
                                             class="flex flex-col w-full  absolute z-10 transition opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0">
@@ -1484,7 +1493,9 @@
                 <div class="py-22.5 colg:py-30 ">
                     <!-- top-heading  -->
                     <div class="relative colg:right-49 mb-15">
-                        <h3 class="text-[#868686] text-[15px] md:text-base font-light text-center md:text-end">Customer
+                        <h3
+                            class="reveal-on-scroll text-[#868686] text-[15px] md:text-base font-light text-center md:text-end">
+                            Customer
                             reviews are a valuable source
                             <hr class="text-[#E6E6E6] absolute w-90 -right-98 top-2.5 max-colg:hidden ">
                             <br>
@@ -1494,14 +1505,14 @@
                     <!-- main-heading  -->
                     <div class="flex justify-center mb-15">
                         <h1
-                            class="text-black text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] font-medium text-center leading-11 colg:leading-18 xl:leading-20">
+                            class="reveal-on-scroll text-black text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] font-medium text-center leading-11 colg:leading-18 xl:leading-20">
                             Customer <span class="font-thin">Voices:</span>
                             <br class="max-md:hidden">
                             Hear What <span class="font-thin">They Say!</span>
                         </h1>
                     </div>
                     <!-- customer-imgs  -->
-                    <div class="flex justify-center transition flex-wrap gap-6 mb-15">
+                    <div class="reveal-on-scroll flex justify-center transition flex-wrap gap-6 mb-15">
                         <!-- img-1 -->
                         <span class="dot2">
                             <div id="customer-img1-border-div" class="group relative">
@@ -1583,7 +1594,7 @@
                     </div>
                     <div class="flex flex-col w-full  justify-center  items-center">
                         <!-- Quote Icon -->
-                        <span class="text-center  -mb-4">
+                        <span class="reveal-on-scroll text-center  -mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 48 48">
                                 <path fill="#FF9800"
                                     d="M 13.5 10 A 8.5 8.5 0 0 0 13.5 27 A 8.5 8.5 0 0 0 18.291016 25.519531 C 17.422273 29.222843 15.877848 31.803343 14.357422 33.589844 C 12.068414 36.279429 9.9433594 37.107422 9.9433594 37.107422 A 1.50015 1.50015 0 1 0 11.056641 39.892578 C 11.056641 39.892578 13.931586 38.720571 16.642578 35.535156 C 19.35357 32.349741 22 27.072581 22 19 A 1.50015 1.50015 0 0 0 21.984375 18.78125 A 8.5 8.5 0 0 0 13.5 10 z M 34.5 10 A 8.5 8.5 0 0 0 34.5 27 A 8.5 8.5 0 0 0 39.291016 25.519531 C 38.422273 29.222843 36.877848 31.803343 35.357422 33.589844 C 33.068414 36.279429 30.943359 37.107422 30.943359 37.107422 A 1.50015 1.50015 0 1 0 32.056641 39.892578 C 32.056641 39.892578 34.931586 38.720571 37.642578 35.535156 C 40.35357 32.349741 43 27.072581 43 19 A 1.50015 1.50015 0 0 0 42.984375 18.78125 A 8.5 8.5 0 0 0 34.5 10 z" />
@@ -1591,10 +1602,11 @@
                         </span>
 
                         <!-- Review + Arrows -->
-                        <div class="flex colg:items-center justify-between w-full gap-4 relative top-7.5">
+                        <div
+                            class="reveal-on-scroll flex colg:items-center justify-between w-full gap-4 relative top-7.5">
                             <!-- Left Arrow -->
                             <span id="left-side-arrow"
-                                class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
+                                class="reveal-on-scroll bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
                                 <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
                                     viewBox="0 0 24 24">
                                     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
@@ -1607,10 +1619,11 @@
                                 <!-- Review 1 -->
                                 <div
                                     class="review-item active absolute inset-0 flex flex-col items-center justify-center ">
-                                    <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
-                                    <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
+                                    <h3 class=" text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
+                                    <p class=" text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
                                     </p>
-                                    <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    <p
+                                        class="reveal-on-scroll text-[22px] text-[#797979] text-center leading-10 font-light">
                                         I had the pleasure of working with this creative agency, and I must say, they
                                         truly
                                         impressed me. They consistently think outside the box, resulting in impressive
@@ -1622,11 +1635,12 @@
 
                                 <!-- Review 2 -->
                                 <div
-                                    class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
                                     <h3 class="text-xl font-medium text-center mb-2.5">Emma Trueman</h3>
                                     <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
                                     </p>
-                                    <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    <p
+                                        class="reveal-on-scroll text-[22px] text-[#797979] text-center leading-10 font-light">
                                         This creative agency stands out with their exceptional talent and expertise.
                                         Their
                                         ability to think outside the box and bring unique ideas to life is truly
@@ -1639,11 +1653,12 @@
 
                                 <!-- Review 3 -->
                                 <div
-                                    class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
                                     <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
                                     <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
                                     </p>
-                                    <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    <p
+                                        class="reveal-on-scroll text-[22px] text-[#797979] text-center leading-10 font-light">
                                         I had the pleasure of working with this creative agency, and I must say, they
                                         truly
                                         impressed me. They consistently think outside the box, resulting in impressive
@@ -1655,11 +1670,12 @@
 
                                 <!-- Review 4 -->
                                 <div
-                                    class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
                                     <h3 class="text-xl font-medium text-center mb-2.5">Emma Trueman</h3>
                                     <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
                                     </p>
-                                    <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    <p
+                                        class="reveal-on-scroll text-[22px] text-[#797979] text-center leading-10 font-light">
                                         This creative agency stands out with their exceptional talent and expertise.
                                         Their
                                         ability to think outside the box and bring unique ideas to life is truly
@@ -1672,11 +1688,12 @@
 
                                 <!-- Review 5 -->
                                 <div
-                                    class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
                                     <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
                                     <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
                                     </p>
-                                    <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    <p
+                                        class="reveal-on-scroll text-[22px] text-[#797979] text-center leading-10 font-light">
                                         I had the pleasure of working with this creative agency, and I must say, they
                                         truly
                                         impressed me. They consistently think outside the box, resulting in impressive
@@ -1688,11 +1705,12 @@
 
                                 <!-- Review 6 -->
                                 <div
-                                    class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
                                     <h3 class="text-xl font-medium text-center mb-2.5">Emma Trueman</h3>
                                     <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
                                     </p>
-                                    <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    <p
+                                        class="reveal-on-scroll text-[22px] text-[#797979] text-center leading-10 font-light">
                                         This creative agency stands out with their exceptional talent and expertise.
                                         Their
                                         ability to think outside the box and bring unique ideas to life is truly
@@ -1706,11 +1724,12 @@
 
                                 <!-- Review 7 -->
                                 <div
-                                    class="review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
+                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
                                     <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
                                     <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
                                     </p>
-                                    <p class="text-[22px] text-[#797979] text-center leading-10 font-light">
+                                    <p
+                                        class="reveal-on-scroll text-[22px] text-[#797979] text-center leading-10 font-light">
                                         I had the pleasure of working with this creative agency, and I must say, they
                                         truly
                                         impressed me. They consistently think outside the box, resulting in impressive
@@ -1724,7 +1743,7 @@
 
                             <!-- Right Arrow -->
                             <span id="right-side-arrow"
-                                class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
+                                class="reveal-on-scroll bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
                                     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
@@ -1736,7 +1755,7 @@
                 </div>
             </div>
             <!-- brands-show  -->
-            <div class="pb-22.5 colg:pb-30">
+            <div class="reveal-on-scroll pb-22.5 colg:pb-30">
                 <div class="flex justify-around">
                     <span><img src="img4/13.svg" alt=""></span>
                     <span><img src="img4/14.svg" alt=""></span>
@@ -1752,11 +1771,12 @@
                 <!-- heading  -->
                 <div class="flex max-colg:flex-col justify-between  colg:items-center mb-7.5">
                     <div>
-                        <h1 class="text-[30px] md:text-[36px] colg:text-[39px] xl:text-[42px] font-medium mb-7.5">
+                        <h1
+                            class="reveal-on-scroll text-[30px] md:text-[36px] colg:text-[39px] xl:text-[42px] font-medium mb-7.5">
                             Popular
                             Publications:</h1>
                     </div>
-                    <div class="flex items-center mb-7.5">
+                    <div class="reveal-on-scroll flex items-center mb-7.5">
                         <span class="text-xs tracking-[2px] mr-[15px]">VIEW ALL</span>
                         <span id="left-side-arrow"
                             class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
@@ -1768,26 +1788,27 @@
                     </div>
                 </div>
                 <!-- columns -->
-                <div class="flex max-colg:flex-col gap-x-7.5">
+                <div class="reveal-on-scroll flex max-colg:flex-col gap-x-7.5">
                     <!-- 1-column -->
                     <div class="cursor-pointer group">
                         <div class="overflow-hidden  mb-7.5">
                             <img class="scale-x-103 group-hover:scale-108 transition " src="img4/11.jpg" alt="">
                         </div>
                         <div class="pt-7.5 pr-7.5">
-                            <h6 class="text-xs text-[#7F7F7F] font-medium tracking-[2px] mb-7.5">
+                            <h6 class="reveal-on-scroll text-xs text-[#7F7F7F] font-medium tracking-[2px] mb-7.5">
                                 <span class="mr-[15px] text-yellow">TECHNOLOGY</span>
                                 MAY 24 2023
                             </h6>
                             <h1
-                                class="font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-6 md:leading-9 mb-7.5">
+                                class="reveal-on-scroll font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-6 md:leading-9 mb-7.5">
                                 How to Become a Graphic Designer in 10 Simple Steps</h1>
-                            <p class="text-[#818181] font-light mb-7.5">Lorem ipsum dolor sit amet, consectetur
+                            <p class="reveal-on-scroll text-[#818181] font-light mb-7.5">Lorem ipsum dolor sit amet,
+                                consectetur
                                 adipisicing
                                 elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam
                                 cupidita...
                             </p>
-                            <div class="flex items-center">
+                            <div class="reveal-on-scroll flex items-center">
                                 <span class="text-xs tracking-[2px] mr-[15px] font-medium">READ MORE</span>
                                 <span id="left-side-arrow"
                                     class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
@@ -1805,19 +1826,20 @@
                             <img class="scale-x-103 group-hover:scale-108 transition " src="img4/12.jpg" alt="">
                         </div>
                         <div class="pt-7.5 pr-7.5">
-                            <h6 class="text-xs text-[#7F7F7F] font-medium tracking-[2px] mb-7.5">
+                            <h6 class="reveal-on-scroll text-xs text-[#7F7F7F] font-medium tracking-[2px] mb-7.5">
                                 <span class="mr-[15px] text-yellow">TECHNOLOGY</span>
                                 MAY 24 2023
                             </h6>
                             <h1
-                                class="font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-9 mb-7.5">
+                                class="reveal-on-scroll font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-9 mb-7.5">
                                 16 Best Graphic Design Online and Offline Courses</h1>
-                            <p class="text-[#818181] font-light mb-7.5 leading-6 md:leading-9   ">Lorem ipsum dolor sit
+                            <p class="reveal-on-scroll text-[#818181] font-light mb-7.5 leading-6 md:leading-8   ">Lorem
+                                ipsum dolor sit
                                 amet, consectetur adipisicing
                                 elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam
                                 cupidita...
                             </p>
-                            <div class="flex items-center">
+                            <div class="reveal-on-scroll flex items-center">
                                 <span class="text-xs tracking-[2px] mr-[15px] font-medium">READ MORE</span>
                                 <span id="left-side-arrow"
                                     class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
@@ -1840,10 +1862,11 @@
                 <div class="flex max-md:flex-col md:justify-between">
                     <!-- left-side  -->
                     <div class="mb-15 md:w-[31.5%] ">
-                        <h1 class="text-[#DADADA] text-[36px] colg:text-[42px] mb-6">Ashley.</h1>
-                        <p class="text-[#555555] text-[15px] md:text-base font-medium mb-7.5">Subscribe our newsletter:
+                        <h1 class="reveal-on-scroll text-[#DADADA] text-[36px] colg:text-[42px] mb-6">Ashley.</h1>
+                        <p class="reveal-on-scroll text-[#555555] text-[15px] md:text-base font-medium mb-7.5">Subscribe
+                            our newsletter:
                         </p>
-                        <div class="relative group">
+                        <div class="reveal-on-scroll relative group">
                             <input id="footerInput"
                                 class="indent-7.5 md:indent-12.5 h-17.5 text-[#808080] bg-[#1A1A1A] transition group-hover:bg-white rounded-full text-xs md:text-sm font-semibold tracking-[2px] w-full"
                                 type="text" name="" placeholder="ENTER OUR EMAIL" id="">
@@ -1860,27 +1883,35 @@
                     <div class="flex max-md:flex-col items-start  md:w-[48%] md:mb-15  ">
                         <div
                             class="flex flex-col  text-[#E6E6E6] text-[22px] md:text-[28px] font-medium mb-7.5 md:w-[77%]">
-                            <h2 class="text-yellow mb-4  cursor-pointer shrink-0 ">Home</h2>
-                            <h2 class="mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">Portfolio
+                            <h2 class="reveal-on-scroll mb-4 text-yellow cursor-pointer shrink-0 ">Home</h2>
+                            <h2
+                                class="reveal-on-scroll mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">
+                                Portfolio
                             </h2>
-                            <h2 class="mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">Services
+                            <h2
+                                class="reveal-on-scroll mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">
+                                Services
                             </h2>
-                            <h2 class="mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">Contact
+                            <h2
+                                class="reveal-on-scroll mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">
+                                Contact
                             </h2>
-                            <h2 class="mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">Blog</h2>
+                            <h2
+                                class="reveal-on-scroll mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">
+                                Blog</h2>
                         </div>
                         <div class="flex flex-col items-start text-[15px] md:text-base mb-7.5 mt-4 md:w-[50%] ">
                             <p
-                                class="text-[#ffffff66] relative z-60 mb-4 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                class="reveal-on-scroll text-[#ffffff66] relative z-60 mb-4 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
                                 Privacy Policy</p>
                             <p
-                                class="text-[#ffffff66] mb-4  cursor-pointer shrink-0  transition hover:text-white hover:translate-x-1.5">
+                                class="reveal-on-scroll text-[#ffffff66] mb-4  cursor-pointer shrink-0  transition hover:text-white hover:translate-x-1.5">
                                 Terms and conditions</p>
                             <p
-                                class="text-[#ffffff66] mb-4 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                class="reveal-on-scroll text-[#ffffff66] mb-4 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
                                 Cookie Policy</p>
                             <p
-                                class="text-[#ffffff66] mb-4 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
+                                class="reveal-on-scroll text-[#ffffff66] mb-4 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
                                 Careers</p>
                         </div>
                     </div>
@@ -1890,7 +1921,7 @@
                     <!-- left-side  -->
                     <div class="flex flex-col justify-between">
                         <div>
-                            <span class="flex items-center  gap-2.5 mb-7.5">
+                            <span class="reveal-on-scroll flex items-center  gap-2.5 mb-7.5">
                                 <!-- icon-1  -->
                                 <span>
                                     <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
@@ -1934,24 +1965,24 @@
                                 </span>
                         </div>
                         <div>
-                            <p class="text-[#484848]">© Copyright 2023 - Mil. All Rights Reserved.</p>
+                            <p class="reveal-on-scroll text-[#484848]">© Copyright 2023 - Mil. All Rights Reserved.</p>
                         </div>
                     </div>
                     <!-- right-side  -->
                     <div class="md:w-[48%]">
                         <div class="flex max-md:flex-col justify-between">
                             <div class="max-md:mb-15">
-                                <h1 class="text-lg text-white font-medium  mb-7.5">Canada</h1>
-                                <p class="text-[#ffffff66] text-[15px] md:text-base">
+                                <h1 class="reveal-on-scroll text-lg text-white font-medium  mb-7.5">Canada</h1>
+                                <p class="reveal-on-scroll text-[#ffffff66] text-[15px] md:text-base">
                                     71 South Los Carneros Road,
                                     <br>
                                     California +51 174 705 812
                                 </p>
                             </div>
                             <div class="max-md:mb-15">
-                                <h1 class="text-lg text-white font-medium  mb-7.5">Germany</h1>
+                                <h1 class="reveal-on-scroll text-lg text-white font-medium  mb-7.5">Germany</h1>
                                 <div class="">
-                                    <p class="text-[#ffffff66] text-[15px] md:text-base">
+                                    <p class="reveal-on-scroll text-[#ffffff66] text-[15px] md:text-base">
                                         Leehove 40, 2678 MC De Lier,
                                         <br>
                                         Netherlands +31 174 705 811
@@ -1964,7 +1995,18 @@
         </section>
     </div>
     <script src="script4.js"></script>
-
 </body>
 
 </html>
+
+<div class="group">
+    <p class="group-hover:text-red-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque iure explicabo
+        consequuntur delectus
+        reiciendis, officia dolorem necessitatibus dolore, vitae eveniet blanditiis tempore adipisci debitis!
+        Accusamus blanditiis ullam distinctio adipisci rem.</p>
+    <div class="group">
+        <p class="group-hover:text-teal-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum velit
+            mollitia quae, assumenda, repellat
+            error vitae aut consequuntur modi commodi dolores dolor hic? Eos eaque culpa aliquid quidem officiis.</p>
+    </div>
+</div>
