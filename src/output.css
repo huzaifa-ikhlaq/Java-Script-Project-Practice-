@@ -11,10 +11,8 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-red-700: oklch(50.5% 0.213 27.518);
-    --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-amber-200: oklch(92.4% 0.12 95.746);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-green-400: oklch(79.2% 0.209 151.711);
     --color-green-700: oklch(52.7% 0.154 150.069);
@@ -238,18 +236,6 @@
   .inset-x-0 {
     inset-inline: calc(var(--spacing) * 0);
   }
-  .-top-0 {
-    top: calc(var(--spacing) * -0);
-  }
-  .-top-3 {
-    top: calc(var(--spacing) * -3);
-  }
-  .-top-4 {
-    top: calc(var(--spacing) * -4);
-  }
-  .-top-5 {
-    top: calc(var(--spacing) * -5);
-  }
   .-top-10 {
     top: calc(var(--spacing) * -10);
   }
@@ -262,11 +248,8 @@
   .-top-35 {
     top: calc(var(--spacing) * -35);
   }
-  .-top-40 {
-    top: calc(var(--spacing) * -40);
-  }
-  .-top-50 {
-    top: calc(var(--spacing) * -50);
+  .-top-65 {
+    top: calc(var(--spacing) * -65);
   }
   .-top-\[1px\] {
     top: calc(1px * -1);
@@ -379,20 +362,8 @@
   .right-50 {
     right: calc(var(--spacing) * 50);
   }
-  .right-80 {
-    right: calc(var(--spacing) * 80);
-  }
-  .right-90 {
-    right: calc(var(--spacing) * 90);
-  }
-  .right-110 {
-    right: calc(var(--spacing) * 110);
-  }
-  .right-120 {
-    right: calc(var(--spacing) * 120);
-  }
-  .right-130 {
-    right: calc(var(--spacing) * 130);
+  .right-140 {
+    right: calc(var(--spacing) * 140);
   }
   .right-\[109px\] {
     right: 109px;
@@ -420,6 +391,9 @@
   }
   .bottom-10 {
     bottom: calc(var(--spacing) * 10);
+  }
+  .bottom-12 {
+    bottom: calc(var(--spacing) * 12);
   }
   .bottom-23 {
     bottom: calc(var(--spacing) * 23);
@@ -880,14 +854,8 @@
   .h-\[44px\] {
     height: 44px;
   }
-  .h-\[105\%\] {
-    height: 105%;
-  }
   .h-\[300px\] {
     height: 300px;
-  }
-  .h-\[900px\] {
-    height: 900px;
   }
   .h-fit {
     height: fit-content;
@@ -952,9 +920,6 @@
   .w-62\.5 {
     width: calc(var(--spacing) * 62.5);
   }
-  .w-64 {
-    width: calc(var(--spacing) * 64);
-  }
   .w-65 {
     width: calc(var(--spacing) * 65);
   }
@@ -1017,9 +982,6 @@
   }
   .w-\[100px\] {
     width: 100px;
-  }
-  .w-\[105\%\] {
-    width: 105%;
   }
   .w-\[115px\] {
     width: 115px;
@@ -1156,24 +1118,6 @@
     --tw-translate-y: 100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .scale-1 {
-    --tw-scale-x: 1%;
-    --tw-scale-y: 1%;
-    --tw-scale-z: 1%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .scale-10 {
-    --tw-scale-x: 10%;
-    --tw-scale-y: 10%;
-    --tw-scale-z: 10%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .scale-11 {
-    --tw-scale-x: 11%;
-    --tw-scale-y: 11%;
-    --tw-scale-z: 11%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
   .scale-105 {
     --tw-scale-x: 105%;
     --tw-scale-y: 105%;
@@ -1209,15 +1153,6 @@
   }
   .-rotate-90 {
     rotate: calc(90deg * -1);
-  }
-  .rotate-0 {
-    rotate: 0deg;
-  }
-  .rotate-2 {
-    rotate: 2deg;
-  }
-  .rotate-20 {
-    rotate: 20deg;
   }
   .rotate-45 {
     rotate: 45deg;
@@ -1597,9 +1532,6 @@
   }
   .fill-\[\#020b18\] {
     fill: #020b18;
-  }
-  .fill-amber-50 {
-    fill: var(--color-amber-50);
   }
   .fill-current {
     fill: currentcolor;
@@ -2023,9 +1955,6 @@
   .text-\[\#000f4a\] {
     color: #000f4a;
   }
-  .text-\[\#0000001A\] {
-    color: #0000001A;
-  }
   .text-\[\#1A1A1A\] {
     color: #1A1A1A;
   }
@@ -2119,9 +2048,6 @@
   .text-\[\#ffffff66\] {
     color: #ffffff66;
   }
-  .text-amber-600 {
-    color: var(--color-amber-600);
-  }
   .text-black {
     color: var(--color-black);
   }
@@ -2130,9 +2056,6 @@
   }
   .text-blend-white {
     color: var(--color-blend-white);
-  }
-  .text-red-400 {
-    color: var(--color-red-400);
   }
   .text-red-500 {
     color: var(--color-red-500);
@@ -2157,12 +2080,6 @@
   }
   .opacity-0 {
     opacity: 0%;
-  }
-  .opacity-10 {
-    opacity: 10%;
-  }
-  .opacity-50 {
-    opacity: 50%;
   }
   .opacity-100 {
     opacity: 100%;
@@ -3359,12 +3276,6 @@
   .md\:text-\[150px\] {
     @media (width >= 48rem) {
       font-size: 150px;
-    }
-  }
-  .md\:leading-8 {
-    @media (width >= 48rem) {
-      --tw-leading: calc(var(--spacing) * 8);
-      line-height: calc(var(--spacing) * 8);
     }
   }
   .md\:leading-9 {
