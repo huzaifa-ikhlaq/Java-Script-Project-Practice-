@@ -236,6 +236,9 @@
   .inset-x-0 {
     inset-inline: calc(var(--spacing) * 0);
   }
+  .-top-2 {
+    top: calc(var(--spacing) * -2);
+  }
   .-top-10 {
     top: calc(var(--spacing) * -10);
   }
@@ -244,6 +247,12 @@
   }
   .-top-15 {
     top: calc(var(--spacing) * -15);
+  }
+  .-top-20 {
+    top: calc(var(--spacing) * -20);
+  }
+  .-top-25 {
+    top: calc(var(--spacing) * -25);
   }
   .-top-35 {
     top: calc(var(--spacing) * -35);
@@ -1575,6 +1584,9 @@
   .p-15 {
     padding: calc(var(--spacing) * 15);
   }
+  .p-20 {
+    padding: calc(var(--spacing) * 20);
+  }
   .px-0 {
     padding-inline: calc(var(--spacing) * 0);
   }
@@ -1665,6 +1677,9 @@
   .py-\[90px\] {
     padding-block: 90px;
   }
+  .pt-0 {
+    padding-top: calc(var(--spacing) * 0);
+  }
   .pt-7 {
     padding-top: calc(var(--spacing) * 7);
   }
@@ -1679,6 +1694,9 @@
   }
   .pt-15 {
     padding-top: calc(var(--spacing) * 15);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
   }
   .pt-22 {
     padding-top: calc(var(--spacing) * 22);
@@ -1700,6 +1718,9 @@
   }
   .pt-40 {
     padding-top: calc(var(--spacing) * 40);
+  }
+  .pt-90 {
+    padding-top: calc(var(--spacing) * 90);
   }
   .pt-\[146px\] {
     padding-top: 146px;
@@ -1731,6 +1752,9 @@
   .pr-40 {
     padding-right: calc(var(--spacing) * 40);
   }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
+  }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
   }
@@ -1742,6 +1766,9 @@
   }
   .pb-17\.5 {
     padding-bottom: calc(var(--spacing) * 17.5);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
   }
   .pb-22 {
     padding-bottom: calc(var(--spacing) * 22);
