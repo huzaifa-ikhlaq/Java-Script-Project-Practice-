@@ -392,9 +392,6 @@
   .bottom-10 {
     bottom: calc(var(--spacing) * 10);
   }
-  .bottom-12 {
-    bottom: calc(var(--spacing) * 12);
-  }
   .bottom-23 {
     bottom: calc(var(--spacing) * 23);
   }
@@ -1569,6 +1566,9 @@
   .p-12\.5 {
     padding: calc(var(--spacing) * 12.5);
   }
+  .p-15 {
+    padding: calc(var(--spacing) * 15);
+  }
   .px-0 {
     padding-inline: calc(var(--spacing) * 0);
   }
@@ -1637,6 +1637,9 @@
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
+  }
+  .py-15 {
+    padding-block: calc(var(--spacing) * 15);
   }
   .py-22 {
     padding-block: calc(var(--spacing) * 22);
@@ -3499,6 +3502,21 @@
   .colg\:py-\[120px\] {
     @media (width >= 62rem) {
       padding-block: 120px;
+    }
+  }
+  .colg\:pt-0 {
+    @media (width >= 62rem) {
+      padding-top: calc(var(--spacing) * 0);
+    }
+  }
+  .colg\:pt-2 {
+    @media (width >= 62rem) {
+      padding-top: calc(var(--spacing) * 2);
+    }
+  }
+  .colg\:pt-20 {
+    @media (width >= 62rem) {
+      padding-top: calc(var(--spacing) * 20);
     }
   }
   .colg\:pt-30 {

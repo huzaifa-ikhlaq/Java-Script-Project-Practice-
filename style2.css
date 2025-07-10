@@ -447,6 +447,8 @@ body {
     }
 }
 
+/* animate-marquee */
+
 @keyframes marquee-scroll {
     0% {
         transform: translateX(0);
@@ -484,7 +486,8 @@ body {
 .review-item.slide-from-left {
     transform: translateX(-50%);
 }
- /* custom-scroll-bar */
+
+/* custom-scroll-bar */
 ::-webkit-scrollbar {
     width: 0px;
 }
