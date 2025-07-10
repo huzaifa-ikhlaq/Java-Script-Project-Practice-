@@ -3524,6 +3524,11 @@
       padding-top: calc(var(--spacing) * 30);
     }
   }
+  .colg\:pt-230 {
+    @media (width >= 62rem) {
+      padding-top: calc(var(--spacing) * 230);
+    }
+  }
   .colg\:pr-4 {
     @media (width >= 62rem) {
       padding-right: calc(var(--spacing) * 4);
