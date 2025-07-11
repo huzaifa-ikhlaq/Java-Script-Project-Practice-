@@ -4,2126 +4,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashley-h</title>
+    <title>Braxton</title>
     <link rel="stylesheet" href="src/output.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
 
 </head>
 
-<body class="box-border p-0 m-0 bg-black">
-    <!-- custom-cursor -->
-    <div class="custom-cursor bg-gray-200 max-lg:hidden"></div>
-    <!-- custom-scrollbar -->
-    <div id="progress" class="fixed top-0 right-0 w-1 z-50 hfull bg-yellow"></div>
-
-    <!-- <first-page></first-page> -->
-    <!-- <div id="page-1" class=" relative z-50">
-        <section class="bg-black h-screen  flex  justify-center items-center">
-            <h1
-                class="text-white text-[35px] colg:text-[45px] font-thin flex max-colg:flex-col leading-9 text-center gap-3">
-                <span id="word-1" class="block opacity-0 transition-all duration-1000 translate-y-4">Pioneering</span>
-                <span id="word-2"
-                    class="block font-medium opacity-0 transition-all duration-1000 translate-y-4">Creative</span>
-                <span id="word-3" class="block opacity-0 transition-all duration-1000 translate-y-4">Excellence</span>
-            </h1>
-        </section>
+<body class="box-border m-0 p-0 bg-black">
+    <!-- <loading-page></loading-page>       -->
+    <!-- <div id="first-page" class="bg-black h-screen flex justify-center items-center"> 
+        <div style="background: linear-gradient(135deg, #E4B8BF 0%, #CEC4EF 100%);"
+            class="custom-animation-box size-10 rounded-[10px] relative z-10"></div>
+        <div class="custom-animation-shadow bg-black w-10 h-[5px] rounded-[50%] mt-2 relative z-0"></div>
     </div> -->
-
-    <!-- <second-page></second-page> -->
-    <!-- <div id="page-2" class="bg-black hidden relative z-50">
-        <section class=" h-screen flex items-center justify-center">
-            <div id="page2MainDiv"
-                class="relative w-65 flex justify-center items-center
-                  group overflow-hidden transition-all duration-800 ease-[cubic-bezier(0, 0, 0.3642, 1)] -translate-x-10 ">
-                <h3 id="page-2-text"
-                    class=" text-[36px] colg:text-[39px] xl:text-[42px] text-white font-thin opacity-0 text-center translate-x-5">
-                    ashely.com</h3>
-                <div id="page-2-bg"
-                    class="bg-yellow h-11.5 xl:h-12.5 w-full transition-all duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] -translate-x-full  absolute z-10 top-3.5 left-0 ">
-                </div>
-            </div>
-        </section>
-    </div> -->
-
     <!-- <main-page></main-page> -->
-    <div id="main-page" class="relativ -z-50 hidde ">
-        <!-- <nav></nav> -->
-        <nav
-            class="xl:mix-blend-difference h-22.5 xl:h-35.5 px-7.5 2xl:px-15 w-full flex justify-between items-center fixed z-60   bg-black">
-            <!-- ✅ logo inside nav is fine now -->
-            <div id="nav-logo" class="text-white text-4xl colg:text-[42px] font-medium">
-                <a href="#" onclick="event.preventDefault()">A.</a>
+    <!-- <div id="main-page" class="hidden"> -->
+    <!-- <background-svg></background-svg> -->
+    <div id="bg-svg"
+        class="h-full w-full absolute -z-50  top-0  overflow-hidden transition-all duration-500 ease-linear  opacity0">
+        <!-- top-right-svg  -->
+        <svg class="size-80 md:size-116 xl:size-145 2xl:size-170 absolute -top-[15vh]  colg:-top-[17vh] xl:-top-[25vh] -right-[30vw] md:-right-[10vw] colg:-right-[8vw]  "
+            version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1000 1000"
+            style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+            <style type="text/css">
+                .bg01 {
+                    fill: url(#color-gradient);
+                }
+            </style>
+            <radialGradient id="color-gradient" cx="418.5665" cy="225.9685" r="499.9326" fx="866.8251" fy="4.6162"
+                gradientTransform="matrix(-0.6935 0.7207 -0.7207 -0.6935 953.1126 355.0528)"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" style="stop-color:#CEC4EF"></stop>
+                <stop offset="1" style="stop-color:#CEC4EF;stop-opacity:0"></stop>
+            </radialGradient>
+            <circle class="bg01" cx="500" cy="500" r="500"></circle>
+        </svg>
+        <!-- bottom-left-svg  -->
+        <svg class=" size-[320px] md:size-[425px] absolute top-[60vh] md:top-[70vh] 2xl:top-[60vh] left-[-40vw] md:-left-[20vw]  colg:-left-[8vw] "
+            version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="429.6px" height="429.6px"
+            viewBox="0 0 429.6 429.6" style="enable-background:new 0 0 429.6 429.6;" xml:space="preserve">
+            <style type="text/css">
+                .bg02 {
+                    fill: url(#color-gradient-2);
+                }
+            </style>
+            <g id="Layer_1-2">
+                <radialGradient id="color-gradient-2" cx="2213.9312" cy="-11537.4219" r="214.85" fx="2393.6191"
+                    fy="-11419.6494"
+                    gradientTransform="matrix(1.902285e-02 0.9998 0.9998 -1.954636e-02 11706.5303 -2223.4016)"
+                    gradientUnits="userSpaceOnUse">
+                    <stop offset="0" style="stop-color:#CEC4EF"></stop>
+                    <stop offset="1" style="stop-color:#CEC4EF;stop-opacity:0"></stop>
+                </radialGradient>
+                <path class="bg02"
+                    d="M63,63C146.9-21,282.9-21,366.8,62.9s83.8,219.9-0.1,303.8s-219.9,83.9-303.8,0.1S-20.9,146.9,63,63z">
+                </path>
+            </g>
+        </svg>
+    </div>
+
+    <section class="colg:pl-82.5 xl:pl-90 2xl:pl-120">
+        <!-- <profile-side-block></profile-side-block> -->
+        <sideblock
+            class="bg-[#161616] border border-[#303033] flex flex-col justify-between h-[80%] colg:h-[90%] rounded-[31px] 2xl:rounded-[3rem] overflow-y-scroll scroll-hidden relative colg:fixed  max-md:mx-3.5 max-md:mt-3.5 max-colg:mx-15 max-colg:mt-7.5  left-8 top-8 2xl:left-19.5 2xl:top-9 2xl:bottom-12 p-7 2xl:py-8 2xl:px-12.5 colg:gap-5  ">
+            <div class="max-md:mb-8 max-colg:mb-11">
+                <div class="flex items-center mb-5 ">
+                    <!-- logo-svg  -->
+                    <svg class="size-[55px] 2xl:size-[75px]" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="85px" height="85px" viewBox="0 0 85 85" style="enable-background:new 0 0 85 85;"
+                        xml:space="preserve" class="gradient-fill">
+                        <style type="text/css">
+                            .gradient-fill {
+                                fill: url(#gradientFill);
+                            }
+                        </style>
+                        <g>
+                            <linearGradient id="gradientFill" gradientUnits="userSpaceOnUse" x1="9.9604" y1="75.0338"
+                                x2="75.0387" y2="9.9555">
+                                <stop offset="0" style="stop-color:#E4B8BF "></stop>
+                                <stop offset="1" style="stop-color:#CEC4EF "></stop>
+                            </linearGradient>
+                            <path class="gradient-fill" d="M51,0H34C15.2,0,0,15.2,0,34v17c0,14.3,8.9,26.6,21.4,31.6c0,0,0,0,0,0l0,0C25.3,84.1,29.5,85,34,85h17
+                    c6,0,11.7-1.6,16.6-4.3c0.1-0.1,0.2-0.1,0.3-0.2C78.1,74.6,85,63.6,85,51V34C85,15.2,69.8,0,51,0z M83,51c0,10.7-5.3,20.2-13.4,26
+                    v-2.5v-3.9h3.9v-3.9h-3.9v-3.9h3.9v-3.9h-3.9H67v-3.9V51h-3.9v3.9v3.9h2.6v3.9v3.9v3.9h-3.9h-3.9v3.9h3.9h3.9v3.9v1
+                    C61.3,81.7,56.3,83,51,83H34c-4.5,0-8.7-0.9-12.6-2.6v-2v-3.9h3.9h3.9v-3.9h-3.9h-3.9v-3.9v-3.9v-3.9H24v-3.9V51h-3.9v3.9v3.9h-2.6
+                    h-3.9v3.9h3.9v3.9h-3.9v3.9h3.9v3.9v3.9C8.2,72.8,2,62.6,2,51V34C2,16.4,16.4,2,34,2h17c17.6,0,32,14.4,32,32V51z M50.1,54.9H54
+                    v3.9v3.9h-3.9v-3.9V54.9z M33.1,54.9H37v3.9v3.9h-3.9v-3.9V54.9z M27.9,51H24v-3.9v-3.9v-3.9h3.9v3.9v3.9V51z M31.8,39.3h-3.9v-3.9
+                    h3.9V39.3z M31.8,43.2v-3.9h3.9v3.9H31.8z M63.1,47.1V51h-3.9v-3.9v-3.9v-3.9h3.9v3.9V47.1z M35.7,47.1v-3.9h3.9h3.9h3.9h3.9v3.9
+                    h-3.9h-3.9h-3.9H35.7z M59.2,39.3h-3.9v-3.9h3.9V39.3z M55.3,43.2h-3.9v-3.9h3.9V43.2z"></path>
+                        </g>
+                    </svg>
+                    <!-- logo-text  -->
+                    <h1
+                        class="text-[28px] 2xl:text-[36px] font-semibold md:font-bold text-[#e9e9f1] pl-5 leading-6.5 2xl:leading-9">
+                        Alex
+                        <br>
+                        Walker
+                    </h1>
+                </div>
+                <div class="flex items-center justify-center">
+                    <img class="rounded-[31px] mb-2 colg:size-65  " src="img-5/img1.webp" alt="">
+                </div>
             </div>
 
-            <!-- ✅ hamburger menu lines -->
-            <div id="nav-three-line" class="flex flex-col gap-1.5 relative cursor-pointer group">
-                <div id="nav-three-line-1" class="bg-white w-7 h-[2.5px] origin-center transition"></div>
-                <div id="nav-three-line-2" class="bg-white w-7 h-[2.5px] origin-center transition"></div>
-                <div id="nav-three-line-3" class="bg-white w-4.5 h-[3.3px] relative -bottom-[0.5px] transition"></div>
-            </div>
-        </nav>
-        <!-- <side-text></side-text> -->
-        <!-- left-side-text -->
-        <h4 id="leftSideText"
-            class=" text-xs -rotate-90 z-50 fixed mix-blend-difference text-white left-[31px] bottom-23.5 tracking-[2px] max-xl:hidden">
-            HOMEPAGE</h4>
-        <!-- Right Side-text -->
-        <a href="#" onclick="event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' })" id="rightSideText"
-            class="flex flex-col justify-center items-center cursor-pointer group opacity-0 transition max-xl:hidden ">
-            <div
-                class="bg-[#E5E5E5] fixed mix-blend-difference bottom-47 right-15 z-50 size-10 rounded-full  flex justify-center items-center group-hover:scale-110 transition">
-                <svg class="-rotate-90  fixed text-black " xmlns="http://www.w3.org/2000/svg" width="27" height="27"
-                    viewBox="0 0 24 24">
-                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                </svg>
+            <div class="max-md:mb-5 max-colg:mb-10">
+                <h6 class="text-[12px] md:text-[13px] 2xl:text-[15px] text-[#C7C6D3]  ">Specialization:</h6>
+                <h3 class="text-[#e9e9f1] text-[15px] md:text-base 2xl:text-lg font-semibold leading-5">UI/UX designer
+                    <br>
+                    and frontend developer
+                </h3>
             </div>
 
-            <div id="leftSideText"
-                class=" text-xs -rotate-90 z-50 fixed mix-blend-difference text-white  bottom-27 right-8 tracking-[2px] max-xl:hidden">
-                BACK TO TOP</div>
-        </a>
-        <!-- <hero-section></hero-section>  -->
-        <section id="heroSection" class=" bg-black w-full h-screen relative z-40 overflow-hidden ">
+            <div class="max-md:mb-5 max-colg:mb-10">
+                <h6 class="text-[12px] md:text-[13px] 2xl:text-[15px] text-[#C7C6D3]  ">Based in:</h6>
+                <h3 class="text-[#e9e9f1] text-[15px] md:text-base 2xl:text-lg font-semibold leading-5">Odesa, Ukraine
+                </h3>
+            </div>
+
             <div>
-                <!-- <nav-meanu>-->
-                <div id="nav-meanu-div"
-                    class="bg-black h-screen w-full fixed opacity-0 -z-10 transition overflow-hidden">
-                    <div class="grid grid-cols-7  h-full container mx-auto px-7.5 xl:px-32.5">
-                        <!-- 1 column -->
-                        <div id="nav-meanu-column-1-items"
-                            class="transition -translate-x-10 opacity-0 flex flex-col col-span-3 justify-center gap-y-3 px-[15px]">
-
-                            <!-- nav-meanu-heading-1  -->
-                            <div class="">
-                                <!-- outer div -->
-                                <div class="  transition  group  cursor-pointer w-[40%]  ">
-                                    <!-- innner div  -->
-                                    <div id="nav-meanu-home-page-innner-div"
-                                        class="flex items-center translate-y-0 absolut ">
-                                        <div id="nav-meanu-home-page-dot"
-                                            class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
-                                        </div>
-                                        <h1 id="nav-meanu-home-page"
-                                            class="text-[34px] font-medium text-yellow  transition group-hover:translate-x-4 ">
-                                            Homepage</h1>
-                                    </div>
-                                </div>
-
-                                <div id="nav-meanu-home-page-list"
-                                    class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[29%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        LANDING PAGE</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[20%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        PERSONAL</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[39%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        PORTFOLIO SLIDER</p>
-                                </div>
-                            </div>
-                            <!-- nav-meanu-heading-2  -->
-                            <div class="">
-                                <!-- outer div -->
-                                <div class="  transition  group  cursor-pointer w-[40%]  ">
-                                    <!-- innner div  -->
-                                    <div id="nav-meanu-Portfolio-innner-div"
-                                        class="flex items-center translate-y-0 absolut ">
-                                        <div id="nav-meanu-Portfolio-dot"
-                                            class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
-                                        </div>
-                                        <h1 id="nav-meanu-Portfolio"
-                                            class="text-[34px] font-medium text-white  transition group-hover:translate-x-4 ">
-                                            Portfolio</h1>
-                                    </div>
-                                </div>
-
-                                <div id="nav-meanu-Portfolio-list"
-                                    class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[24%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        GRID TYPE 1</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[24%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        GRID TYPE 2</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[17%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        SLIDER</p>
-                                </div>
-                            </div>
-                            <!-- nav-meanu-heading-3  -->
-                            <div class="">
-                                <!-- outer div -->
-                                <div class="  transition  group  cursor-pointer w-[40%]  ">
-                                    <!-- innner div  -->
-                                    <div id="nav-meanu-Services-innner-div"
-                                        class="flex items-center translate-y-0 absolut ">
-                                        <div id="nav-meanu-Services-dot"
-                                            class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
-                                        </div>
-                                        <h1 id="nav-meanu-Services"
-                                            class="text-[34px] font-medium text-white  transition group-hover:translate-x-4 ">
-                                            Services</h1>
-                                    </div>
-                                </div>
-
-                                <div id="nav-meanu-Services-list"
-                                    class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        SERVICES LIST</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        SINGLE SERVICE</p>
-                                </div>
-                            </div>
-                            <!-- nav-meanu-heading-4  -->
-                            <div class="">
-                                <!-- outer div -->
-                                <div class="  transition  group  cursor-pointer w-[40%]  ">
-                                    <!-- innner div  -->
-                                    <div id="nav-meanu-Newsletter-innner-div"
-                                        class="flex items-center translate-y-0 absolut ">
-                                        <div id="nav-meanu-Newsletter-dot"
-                                            class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
-                                        </div>
-                                        <h1 id="nav-meanu-Newsletter"
-                                            class="text-[34px] font-medium text-white  transition group-hover:translate-x-4 ">
-                                            Newsletter</h1>
-                                    </div>
-                                </div>
-
-                                <div id="nav-meanu-Newsletter-list"
-                                    class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        Blog LIST</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        PUBLICATION</p>
-                                </div>
-                            </div>
-                            <!-- nav-meanu-heading-5  -->
-                            <div class="">
-                                <!-- outer div -->
-                                <div class="  transition  group  cursor-pointer w-[50%]  ">
-                                    <!-- innner div  -->
-                                    <div id="nav-meanu-Other-Pages-innner-div"
-                                        class="flex items-center translate-y-0 absolut ">
-                                        <div id="nav-meanu-Other-Pages-dot"
-                                            class="bg-[#666666] h-0 w-0 rounded-full transition  group-hover:h-2.5  group-hover:w-2.5">
-                                        </div>
-                                        <h1 id="nav-meanu-other-pages"
-                                            class="text-[34px] font-medium text-white  transition group-hover:translate-x-4 ">
-                                            Other pages</h1>
-                                    </div>
-                                </div>
-
-                                <div id="nav-meanu-Other-Pages-list"
-                                    class="pl-[27px] mb-4 translate-y-32 hidden  opacity-0">
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        TEAM</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        CONTACT</p>
-                                    <p
-                                        class="text-[#ffffff66] text-xs font-medium tracking-[2px] w-[30%] mb-[5px] mt-5 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                        404</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- 2 column -->
-                        <div id="column2"
-                            class="text-white flex flex-col col-span-4 justify-end gap-5 pl-15 pb-15 border-l border-[#1A1A1A] px-[15px] max-[1537px]:hidden transition opacity-0 translate-y-10">
-                            <!-- row-1 -->
-                            <div class="flex justify-between mb-9 ">
-                                <div>
-                                    <h2 class="text-lg text-white font-medium mb-7.5">Projects</h2>
-                                    <div class="cursor-pointer">
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            interior design studio</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Home Security Camera</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Kemia Honest Skincare</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Cascade of Lava</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Air Pro by Molekule</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Tony's Chocolonely</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h1 class="text-lg text-white font-medium  mb-7.5">Useful links</h1>
-                                    <div class="cursor-pointer">
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Privacy Policy</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Terms and conditions</p>
-                                        <p
-                                            class="text-[#ffffff66] mb-4 transition hover:text-white hover:translate-x-1.5">
-                                            Cookie Policy</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Careers</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="text-[#1A1A1A] mb-9 ">
-                            <!-- row-2 -->
-                            <div class="flex justify-between mb-15">
-                                <div>
-                                    <h1 class="text-lg text-white font-medium  mb-7.5">Canada</h1>
-                                    <div class="cursor-pointer">
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            71 South Los Carneros</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Road, Cailifornia</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            +51174 705 812</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h1 class="text-lg text-white font-medium  mb-7.5">Germany</h1>
-                                    <div class="cursor-pointer">
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Leehove 40, 2678 MC De</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            Lier, Netherlands</p>
-                                        <p class="text-[#ffffff66]  transition hover:text-white hover:translate-x-1.5">
-                                            +31 174 705 811 </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- row-end -->
+                <!-- icons  -->
+                <div class="flex items-center justify-between mb-2.5 gap-1 w-full">
+                    <!-- icon-1  -->
+                    <div
+                        class="icon-container overflow-hidden cursor-pointer size-[40px] md:size-[44px] 2xl:size-[50px]  border border-[#4B4B51] rounded-[2.2rem] flex items-center justify-center">
+                        <svg class="icon-svg size-[15px] md:size-[18px] translate-y-0 text-white"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24    ">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="9.25" />
+                                <path d="M18.54 18.54s-1.852-4.79-5.415-8.227s-8.823-3.445-8.823-3.445" />
+                                <path
+                                    d="M13.912 13.912c2.241-2.242 4.86-3.613 7.113-3.927a9.24 9.24 0 0 1-2.484 8.555a9.24 9.24 0 0 1-8.557 2.486c.315-2.254 1.686-4.873 3.928-7.114M5.46 5.459a9.24 9.24 0 0 1 8.554-2.485c-.314 2.253-1.685 4.872-3.926 7.114S5.227 13.7 2.973 14.015A9.24 9.24 0 0 1 5.46 5.459" />
+                            </g>
+                        </svg>
                     </div>
-                    <!-- small decdecahrdron  -->
-                    <div class="dodecahedron-wrapperSmall absolute -z-10 rotate-200 -top-65 right-140 max-2xl:hidden">
-                        <div class="dodecahedronSmall" id="dodecahedronSmall">
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div class="pentagonSmall">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
+                    <!-- icon-2  -->
+                    <div
+                        class="size-[40px] md:size-[44px] 2xl:size-[50px]  border border-[#4B4B51] rounded-full flex items-center justify-center">
+                        <svg class="size-[15px] md:size-[18px] text-white" xmlns="http://www.w3.org/2000/svg"
+                            viewBox=" 0 0 24 24">
+                            <path fill="currentColor"
+                                d="M7.5 11a2 2 0 1 0 0-4H3v4zm1 2H3v4h5.5a2 2 0 1 0 0-4m2.063-1.428A4 4 0 0 1 8.5 19H1V5h6.5a4 4 0 0 1 3.063 6.573M15.5 6H21v1.5h-5.5zm7.5 8.5h-7.5v.25A2.75 2.75 0 0 0 20.7 16h2.134a4.752 4.752 0 0 1-9.334-1.25v-1.5a4.75 4.75 0 1 1 9.5 0zm-2.104-2a2.751 2.751 0 0 0-5.292 0z"
+                                stroke-width="0.5" stroke="currentColor" />
+                        </svg>
                     </div>
+                    <!-- icon-3  -->
+                    <div
+                        class="size-[40px] md:size-[44px] 2xl:size-[50px]  border border-[#4B4B51] rounded-full flex items-center justify-center">
+                        <svg class="size-[15px] md:size-[18px] text-white" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M7.465 1.066C8.638 1.012 9.012 1 12 1s3.362.013 4.534.066s1.972.24 2.672.511c.733.277 1.398.71 1.948 1.27c.56.549.992 1.213 1.268 1.947c.272.7.458 1.5.512 2.67C22.988 8.639 23 9.013 23 12s-.013 3.362-.066 4.535c-.053 1.17-.24 1.97-.512 2.67a5.4 5.4 0 0 1-1.268 1.949c-.55.56-1.215.992-1.948 1.268c-.7.272-1.5.458-2.67.512c-1.174.054-1.548.066-4.536.066s-3.362-.013-4.535-.066c-1.17-.053-1.97-.24-2.67-.512a5.4 5.4 0 0 1-1.949-1.268a5.4 5.4 0 0 1-1.269-1.948c-.271-.7-.457-1.5-.511-2.67C1.012 15.361 1 14.987 1 12s.013-3.362.066-4.534s.24-1.972.511-2.672a5.4 5.4 0 0 1 1.27-1.948a5.4 5.4 0 0 1 1.947-1.269c.7-.271 1.5-.457 2.67-.511m8.98 1.98c-1.16-.053-1.508-.064-4.445-.064s-3.285.011-4.445.064c-1.073.049-1.655.228-2.043.379c-.513.2-.88.437-1.265.822a3.4 3.4 0 0 0-.822 1.265c-.151.388-.33.97-.379 2.043c-.053 1.16-.064 1.508-.064 4.445s.011 3.285.064 4.445c.049 1.073.228 1.655.379 2.043c.176.477.457.91.822 1.265c.355.365.788.646 1.265.822c.388.151.97.33 2.043.379c1.16.053 1.507.064 4.445.064s3.285-.011 4.445-.064c1.073-.049 1.655-.228 2.043-.379c.513-.2.88-.437 1.265-.822c.365-.355.646-.788.822-1.265c.151-.388.33-.97.379-2.043c.053-1.16.064-1.508.064-4.445s-.011-3.285-.064-4.445c-.049-1.073-.228-1.655-.379-2.043c-.2-.513-.437-.88-.822-1.265a3.4 3.4 0 0 0-1.265-.822c-.388-.151-.97-.33-2.043-.379m-5.85 12.345a3.669 3.669 0 0 0 4-5.986a3.67 3.67 0 1 0-4 5.986M8.002 8.002a5.654 5.654 0 1 1 7.996 7.996a5.654 5.654 0 0 1-7.996-7.996m10.906-.814a1.337 1.337 0 1 0-1.89-1.89a1.337 1.337 0 0 0 1.89 1.89"
+                                clip-rule="evenodd" stroke-width="0.5" stroke="currentColor" />
+                        </svg>
+                    </div>
+                    <!-- icon-4  -->
+                    <div
+                        class="size-[40px] md:size-[44px] 2xl:size-[50px]  border border-[#4B4B51] rounded-full flex items-center justify-center">
+                        <svg class="size-[15px] md:size-[18px] text-white" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 256 256">
+                            <path fill="currentColor"
+                                d="M208 32H48a16 16 0 0 0-16 16v144a16 16 0 0 0 16 16h16v32a8 8 0 0 0 13.12 6.15L122.9 208h42.2a16 16 0 0 0 10.25-3.71l42.89-35.75a15.93 15.93 0 0 0 5.76-12.29V48a16 16 0 0 0-16-16m0 124.25L165.1 192H120a8 8 0 0 0-5.12 1.85L80 222.92V200a8 8 0 0 0-8-8H48V48h160ZM160 136V88a8 8 0 0 1 16 0v48a8 8 0 0 1-16 0m-48 0V88a8 8 0 0 1 16 0v48a8 8 0 0 1-16 0"
+                                stroke-width="12.5" stroke="currentColor" />
+                        </svg>
+                    </div>
+                    <!-- icon-5  -->
+                    <div
+                        class="size-[40px] md:size-[44px] 2xl:size-[50px]  border border-[#4B4B51] rounded-full flex items-center justify-center">
+                        <svg class="size-[15px] md:size-[18px] text-white" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 256 256">
+                            <path fill="currentColor"
+                                d="M228 112c0 23.6-8.29 45.23-23.35 60.88C190.52 187.57 171.33 196 152 196c-15.45 0-26.78-4.18-34.89-9.31l-9.43 40.06a12 12 0 1 1-23.36-5.5l32-136a12 12 0 1 1 23.36 5.5l-16.45 69.93C126.72 164.86 135.16 172 152 172c25.56 0 52-22.45 52-60a68 68 0 1 0-126.91 34a12 12 0 0 1-20.77 12A92 92 0 1 1 228 112" />
+                        </svg>
+                    </div>
+
                 </div>
-                <!--</nav-meanu> -->
-                <!-- <main-content-in-hero-section> -->
-                <div
-                    class="xl:container xl:mx-auto px-7.5  xl:px-32.5 pb-15 colg:pb-20   xl:pb-30 absolute   -bottom-2  inset-x-0 ">
-                    <!-- first-div-hero  -->
-                    <div class="mb-10 md:mb-15">
-                        <h1
-                            class="text-blend-white text-[34px] md:text-[58px] colg:text-[72px] xl:text-[74px] 2xl:text-[86px] leading-[120%] font-medium">
-                            Designing <span class="font-thin">a Better</span>
-                            <br class="max-md:hidden">
-                            World <span class="font-thin">Today</span>
-                        </h1>
-                    </div>
-                    <!-- second-div-hero  -->
-                    <div class="w-full mb-10 md:mb-15 ">
-                        <p class="text-blend-brown md:w-[60%] colg:w-[40%]  ">
-                            Welcome to our world of endless imagination and boundless creativity. Together, let's embark
-                            on
-                            a remarkable journey where dreams become tangible realities.
-                        </p>
-                    </div>
-                    <!-- last-div-hero  -->
-                    <div class="flex justify-between items-center">
-                        <!-- left-side -->
-                        <div class="max-sm:flex-col flex  justify-center sm:items-center">
-                            <div class="group max-sm:mb-7.5 flex items-center">
-                                <a href="#"
-                                    class=" text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
-                                    WHAT WE DO
-                                    <div class="bg-black transition  group-hover:scale-115
-                                size-10 rounded-full flex justify-center items-center ml-7.5 ">
-                                        <span>
-                                            <svg class=" transition
-                                group-hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
-                                                viewBox="0 0 24 24">
-                                                <path fill="none" stroke="#FF9800" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                    d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="flex items-center sm:ml-7.5 group cursor-pointer">
-                                <a href="#" class="text-[#E1E1E1] text-xs font-medium tracking-[2px]">VIEW WORKS</a>
-                                <div
-                                    class="bg-[#1A1A1A] transition group-hover:size-11 size-10 rounded-full flex justify-center items-center ml-4 ">
-                                    <span>
-                                        <svg class=" transition group-hover:size-[30px]"
-                                            xmlns="http://www.w3.org/2000/svg" width="27" height="27"
-                                            viewBox="0 0 24 24">
-                                            <path fill="none" stroke="#fff" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- right-side -->
-                        <div
-                            class="absolute right-12.5 bottom-2.5 w-[300px] h-[300px] group  overflow-hidden   max-colg:hidden ">
-                            <!-- Curved Text SVG -->
-                            <!-- Curved Text SVG -->
-                            <svg class="absolute inset-0 w-full h-full group" viewBox="0 0 300 300">
-                                <defs>
-                                    <path id="circlePath" d="M150,150 m -55,0 a55,55 0 1,1 110,0 a55,55 0 1,1 -110,0"
-                                        fill="none" />
-                                </defs>
-
-                                <!-- 🔁 Add this group to rotate the text -->
-                                <g id="rotating-group">
-                                    <text
-                                        class="fill-current text-[#616161] font-bold group-hover:text-white transition-all duration-300"
-                                        font-size="11.5" font-family="sans-serif">
-                                        <textPath href="#circlePath" startOffset="-43" text-anchor="start"
-                                            class="[letter-spacing:6px]">
-                                            – SCROLL DOWN – SCROLL DOWN –
-                                        </textPath>
-                                    </text>
-                                </g>
-                            </svg>
-
-                            <!-- Center Circular Button -->
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
-                                <div id="Circular-Button-Main-bg"
-                                    class="bg-yellow size-17.5 rounded-full flex justify-center items-center">
-                                    <div id="Circular-Button-Second-bg"
-                                        class="bg-black transition size-10 rounded-full flex justify-center items-center">
-                                        <span>
-                                            <svg id="Circular-Button-svg"
-                                                class="transition-all duration-1000 ease-[cubic-bezier(0, 0, 0.3642, 1)]  rotate-90"
-                                                xmlns="http://www.w3.org/2000/svg" width="27" height="27"
-                                                viewBox="0 0 24 24">
-                                                <path fill="none" stroke="#FF9800" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                    d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- big-dodecahedron -->
-                <div class="dodecahedron-wrapper absolute -z-10 -top-35 right-50">
-                    <div class="dodecahedron" id="dodecahedron">
-                        <!-- 12 pentagon faces -->
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- small decdecahrdron  -->
-                <div class="dodecahedron-wrapperSmall absolute -z-10 -top-25 left-90 max-2xl:hidden">
-                    <div class="dodecahedronSmall" id="dodecahedronSmall">
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Extra small decdecahrdron  -->
-                <div class="dodecahedron-wrapperExtraSmall absolute -z-10 -bottom-35 left-200 max-2xl:hidden">
-                    <div class="dodecahedronExtraSmall" id="dodecahedronExtraSmall">
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="pentagonExtraSmall">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-
-
-        </section>
-        <!-- <section-2></section-2> -->
-        <section id="white-section" class="bg-white relative z-10   ">
-            <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5 ">
-                <div class="flex max-colg:flex-col justify-between py-22.5 colg:py-30  ">
-                    <!-- left-side -->
-                    <div class="flex flex-col justify-center max-colg:mb-22.5">
-                        <h1
-                            class="reveal-on-scroll text-black text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] font-medium mb-15 leading-9 md:leading-11 colg:leading-14 xl:leading-18">
-                            Discover
-                            <br class="max-md:hidden">
-                            Our
-                            <span class="font-thin">Studio</span>
-                        </h1>
-                        <p
-                            class="reveal-on-scroll text-[#858585] text-[15px] md:text-base colg:w-[60%] mb-7.5 font-light">
-                            At our design studio, we are a collective of talented ignited by our unwavering passion for
-                            transforming ideas into reality. With a harmonious blend of backgrounds and a vast array of
-                            skill sets, we join forces to create compelling solutions for our clients.</p>
-                        <p
-                            class=" reveal-on-scroll text-[#858585] text-[15px] md:text-base colg:w-[65%] mb-15 font-light">
-                            Collaboration is at the heart of what we do. Our team thrives on the synergy that arises
-                            when unique perspectives converge, environment of boundless creativity. By harnessing our
-                            collective expertise, we produce extraordinary results that consistently surpass
-                            expectations.
-                        </p>
-                        <div class="reveal-on-scroll flex items-center ">
-                            <div class="relative shrink-0">
-                                <img class="size-17.5 colg:size-22.5 rounded-full object-cover object-top shrink-0 "
-                                    src="img4/2.jpg" alt="">
-                                <div
-                                    class="bg-yellow size-[25px] colg:size-7.5 rounded-full flex justify-center items-center text-[23px] colg:text-[30px] absolute top-12 colg:top-16 right-0">
-                                    <span class="absolute top-[1px] tracking-[-2px]">''</span>
-                                </div>
-                            </div>
-                            <div class=" flex flex-col pl-6 colg:pl-7.5">
-                                <h4 class="colg:text-lg font-semibold">Passionately Creating <span
-                                        class="font-thin">Design
-                                        Wonders:</span></h4>
-                                <h4 class="colg:text-lg font-semibold">Unleashing <span class="font-thin">Boundless
-                                        Creativity</span></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- svg  -->
-                    <div class="relative -z-20 max-colg:hidden">
-                        <span class="absolute -top-[234px] -right-31  -z-50 ">
-                            <svg width="250" height="1400" viewBox="0 0 300 1404" fill="#F2F2F2"
-                                xmlns="http://www.w3.org/2000/svg" class="mil-lines">
-                                <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z">
-                                </path>
-                                <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z">
-                                </path>
-                                <path class=" svg2Animatio" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z">
-                                </path>
-                                <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z"></path>
-                                <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z">
-                                </path>
-                                <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M300 1175H0V1174H300V1175Z"></path>
-                                <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z">
-                                </path>
-                                <path class=" svg2Animation" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z"></path>
-                            </svg>
-                        </span>
-                    </div>
-                    <!-- right-side -->
-                    <div class="reveal-on-scroll">
-                        <div class="colg:w-113 w-full colg:min-h-185 overflow-hidden">
-                            <img id="zoomImage"
-                                class="zoom-image transition duration-700 scale-x-117 scale-y-126 object-cover "
-                                src="img4/1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
+                <!-- button  -->
+                <button
+                    class="font-bold bg-gradient-to-br from-[#E4B8BF] to-[#CEC4EF] rounded-[2.2rem] flex items-center justify-center h-12.5 w-full">Let's
+                    Work
+                    Together!</button>
             </div>
-        </section>
-        <!-- <section-3></section-3> -->
-        <section class="bg-black relative z-20 pt-22.5 colg:pt-30 overflow-hidden   ">
-            <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5  ">
-                <div>
-                    <!-- first-part  -->
-                    <div class="mb-22.5 colg:mb-30">
-                        <div class="flex justify-center md:justify-end relative mb-12  colg:right-49 ">
-                            <h3 class="reveal-on-scroll text-[#616161] text-[15px] md:text-base text-center">
-                                Professionals focused on
-                                helping
-                                your brand
-                                <hr class="text-[#3a3737] absolute w-90 -right-98 top-2.5 max-colg:hidden ">
-                                <br>
-                                <span class="flex justify-center md:justify-end">grow and move forward.</span>
-                            </h3>
-                        </div>
-                        <div class="flex flex-col ">
-                            <div class="reveal-on-scroll flex items-center justify-center ">
-                                <div class="h-20 w-62.5  rounded-full overflow-hidden mr-7.5 max-md:hidden">
-                                    <img class="object-cover object-top shrink-0 transition hover:scale-105  "
-                                        src="img4/3.jpg" alt="">
-                                </div>
-                                <h1
-                                    class="text-[34px] md:text-[58px] colg:text-[72px] xl:text-[74px] 2xl:text-[86px] text-white font-medium text-center max-md:mb-[0px]">
-                                    Unique <span class="font-thin">Ideas</span>
-                                    <br>
-                                </h1>
-                            </div>
-                            <div class="reveal-on-scroll flex max-md:flex-col items-center justify-center mt-4    ">
-                                <h1
-                                    class="text-[34px] md:text-[58px] colg:text-[72px] xl:text-[74px] 2xl:text-[86px] text-white font-medium text-center leading-10 sm:flex    ">
-                                    For Your
-                                    <span class="font-thin pl-2.5">Business.</span>
-                                </h1>
-                                <div class="group shrink-0 flex items-center md:ml-7.5 max-md:mt-15 justify-center">
-                                    <a href="#"
-                                        class="text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
-                                        WHAT WE DO
-                                        <div class="bg-black transition  group-hover:scale-115
-                                size-10 rounded-full flex justify-center items-center ml-7.5 ">
-                                            <span>
-                                                <svg class=" transition
-                                group-hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
-                                                    viewBox="0 0 24 24">
-                                                    <path fill="none" stroke="#FF9800" stroke-linecap="round"
-                                                        stroke-linejoin="round" stroke-miterlimit="10"
-                                                        stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- second-part  -->
-                    <div class="grid md:grid-cols-2 colg:grid-cols-4 max-colg:pb-22.5">
-                        <!-- card-1  -->
-                        <div
-                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] pb-23 pt-15 px-7.5 sm:px-8 cursor-pointer group relative">
-                            <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
-                            <div class="reveal-on-scroll">
-                                <h3 class="font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Branding
-                                    and
-                                    <br class="max-md:hidden">
-                                    identity Design
-                                </h3>
-                                <p
-                                    class="text-[#555555] text-[15px] md:text-base mb-7.5 transition opacity-0 translate-y-3 colg:group-hover:opacity-100 max-colg:opacity-100 colg:group-hover:-translate-y-0 max-colg:-translate-y-0">
-                                    Our Creative agency is team of professionals focused on helping
-                                    your brand grow.</p>
-                                <div
-                                    class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute ml-2 group-hover:ml-0">
-                                    <span>
-                                        <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
-                                            xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                            viewBox="0 0 24 24">
-                                            <path fill="none" stroke="#000" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card-2  -->
-                        <div
-                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] pb-23 pt-15 px-8 cursor-pointer group relative">
-                            <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
-                            <div class="reveal-on-scroll ">
-                                <h3 class=" font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Website
-                                    Design
-                                    <br class="max-md:hidden">
-                                    and develompent
-                                </h3>
-                                <p
-                                    class="text-[#555555] text-[15px] md:text-base mb-7.5 transition opacity-0 translate-y-3 colg:group-hover:opacity-100 max-colg:opacity-100 colg:group-hover:-translate-y-0 max-colg:-translate-y-0">
-                                    Our Creative agency is team of professionals focused on helping
-                                    your brand grow.</p>
-                                <div
-                                    class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute ml-2 group-hover:ml-0">
-                                    <span>
-                                        <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
-                                            xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                            viewBox="0 0 24 24">
-                                            <path fill="none" stroke="#000" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card-3  -->
-                        <div
-                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] pb-23 pt-15 px-8 cursor-pointer group relative">
-                            <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
-                            <div class="reveal-on-scroll">
-                                <h3 class=" font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">
-                                    Advertising and
-                                    <br class="max-md:hidden">
-                                    Marketing Campaigns
-                                </h3>
-                                <p
-                                    class="text-[#555555] text-[15px] md:text-base mb-7.5 transition opacity-0 translate-y-3 colg:group-hover:opacity-100 max-colg:opacity-100 colg:group-hover:-translate-y-0 max-colg:-translate-y-0">
-                                    Our Creative agency is team of professionals focused on helping
-                                    your brand grow.</p>
-                                <div
-                                    class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute ml-2 group-hover:ml-0">
-                                    <span>
-                                        <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
-                                            xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                            viewBox="0 0 24 24">
-                                            <path fill="none" stroke="#000" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- card-4  -->
-                        <div
-                            class="max-md:border-x-1 md:border-r-1 border-y-1 border-[#33333380] pb-23 pt-15 px-8 cursor-pointer group relative">
-                            <div class="absolute transition bg-yellow h-1 w-0 group-hover:w-full top-0 left-0"></div>
-                            <div class="reveal-on-scroll">
-                                <h3 class=" font-medium text-lg md:text-xl mb-7.5 text-[#E6E6E6]">Creative
-                                    Consulting
-                                    <br class="max-md:hidden">
-                                    and Develompent
-                                </h3>
-                                <p
-                                    class="text-[#555555] text-[15px] md:text-base mb-7.5 transition opacity-0 translate-y-3 colg:group-hover:opacity-100 max-colg:opacity-100 colg:group-hover:-translate-y-0 max-colg:-translate-y-0">
-                                    Our Creative agency is team of professionals focused on helping
-                                    your brand grow.</p>
-                                <div
-                                    class="bg-[#4a4a4a] transition size-3 colg:group-hover:size-10 max-colg:size-10 colg:group-hover:bg-yellow max-colg:bg-yellow rounded-full flex items-center justify-center relative colg:absolute ml-2 group-hover:ml-0">
-                                    <span>
-                                        <svg class=" transition colg:group-hover:size-7 max-colg:size-7 "
-                                            xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                            viewBox="0 0 24 24">
-                                            <path fill="none" stroke="#000" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- small decdecahrdron  -->
-            <div class="dodecahedron-wrapperSmall absolute -z-10 top-70 right-20  ">
-                <div class="dodecahedronSmall" id="dodecahedronSmall">
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Extra small decdecahrdron  -->
-            <div class="dodecahedron-wrapperExtraSmall absolute -z-10 -top-10 left-65 max-colg:hidden">
-                <div class="dodecahedronExtraSmall" id="dodecahedronExtraSmall">
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="pentagonExtraSmall">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!-- <section-4></section-4> -->
-        <section id="white-section" class="bg-white relative z-0  ">
-            <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5">
-                <div class="flex max-colg:flex-col justify-between pt-22.5 pb-22.5 colg:pt-30 colg:pb-30">
-                    <!-- left-side -->
-                    <div class="flex flex-col  justify-center mb-22.5">
-                        <h1
-                            class="reveal-on-scroll text-black font-medium text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] mb-15 leading-9 md:leading-13.5 colg:leading-19">
-                            Meet
-                            <br class="max-colg:hidden">
-                            Our Team
-                        </h1>
-                        <p class="reveal-on-scroll text-[#7F7F7F] colg:w-[80%] xl:w-[65%] font-light mb-7.5">We are
-                            talented individuals who are passionate about bringing ideas to life With a diverse range of
-                            backgrounds and skill
-                            sets, we collaborate to produce effective solutions for our clients.</p>
-                        <p class="reveal-on-scroll text-[#7F7F7F] colg:w-[80%] xl:w-[62%] font-light mb-15">Together,
-                            our creative team is committed to delivering impactful work that exceeds expectations.</p>
-                        <div class="group shrink-0 flex items-center  mb-15 cursor-pointer">
-                            <a href="#"
-                                class="reveal-on-scroll text-xs font-medium tracking-[2px] h-15  colg:h-17.5 pl-10 colg:pl-12.5 pr-2.5 colg:pr-4  transition  group-hover:scale-101 group-hover:bg-hover-yellow bg-yellow rounded-full flex items-center ">
-                                READ MORE
-                                <div class="bg-black transition  group-hover:scale-115
-                                size-10 rounded-full flex justify-center items-center ml-7.5 ">
-                                    <span>
-                                        <svg class="transition
-                                group-hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="27" height="27"
-                                            viewBox="0 0 24 24">
-                                            <path fill="none" stroke="#FF9800" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                                d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                        </svg>
-                                    </span>
-                                </div>
+        </sideblock>
+        <!-- <main-content></main-content> -->
+        <section>
+            <!-- <nav></nav> -->
+            <nav class="px-7.5 xl:pl-7.5 xl:pr-15 2xl:pl-12.5 2xl:pr-20 pl20 colg:w-[100%]  fixe colg:right-0 bg-white">
+                <div class="flex items-center justify-between mt-10 ">
+                    <!-- left-side  -->
+                    <div class="flex items-center justify-between ">
+                        <!-- nav-item-1  -->
+                        <div id="nav-item-1"
+                            class="border border-transparent backdrop-blur-[10px] transition-all duration-400 ease-linear rounded-full px-4 coxl:px-5 h-12.5 flex items-center justify-center  2xl:mr-2.5 shrink-0">
+                            <a class="text-[#8B8A91] transition-all duration-400 ease-linear hover:text-[#e9e9f1] font-bold max-xl:hidden"
+                                href="#">Home</a>
+                            <a href="#" class="xl:hidden"><svg class="text-[#8B8A91] hover:text-[#e9e9f1] "
+                                    xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M21 19v-6.733a4 4 0 0 0-1.245-2.9L13.378 3.31a2 2 0 0 0-2.755 0L4.245 9.367A4 4 0 0 0 3 12.267V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2" />
+                                </svg>
                             </a>
                         </div>
-                        <h3
-                            class="reveal-on-scroll font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-8 max-md:flex max-md:flex-wrap gap-1">
-                            <span class="font-thin">We</span>
-                            delivering
-                            <br class="hidden md:block">
-                            <span class="font-thin">exceptional</span>
-                            results.
-                        </h3>
-                    </div>
-                    <!-- svg  -->
-                    <div class="relative right-[109px] -z-5 -top[100px] bottom-[115px] max-colg:hidden">
-                        <span class="absolute svg2Animation ">
-                            <svg width="250" viewBox="0 0 300 1404" fill="#F2F2F2" xmlns="http://www.w3.org/2000/svg"
-                                class="mil-lines">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
-                                    class="mil-move"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
-                                    class="mil-move"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z">
-                                </path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
-                                    class="mil-move"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z"
-                                    class="mil-move">
-                                </path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
-                                    class="mil-move"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="mil-move"></path>
-                            </svg>
-                        </span>
-                    </div>
-                    <!-- right-side  -->
-                    <div class="colg:w-[135%] xl:w-[114%]">
-                        <div class="flex max-sm:flex-col">
-                            <div class="flex flex-col gap-7.5">
-                                <!-- img-1  -->
-                                <div class="relative group  w-fit h-fit sm:px-[15px]">
-                                    <div class="overflow-hidden ">
-                                        <img class="reveal-on-scroll scale-105  group-hover:scale-100" src="img4/4.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="relative bottom-38 justify-center ">
-                                        <div
-                                            class="flex flex-col w-full  absolute z-10 transition opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0">
-                                            <span
-                                                class="text-center text-white mb-[5px] text-xl font-medium transition hover:text-yellow cursor-pointer">Anna
-                                                Oldman</span>
-                                            <span
-                                                class="text-center text-[#6A6867] text-xs tracking-[2px] font-semibold mb-2.5">ART
-                                                DIRECTOR</span>
-                                            <span class="flex items-center justify-center gap-2">
-                                                <!-- icon-1  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill="currentColor"
-                                                            d="M8.072 9.301s1.892-.147 1.892-2.459c0-2.315-1.548-3.441-3.51-3.441H0v12.926h6.454s3.941.129 3.941-3.816c-.001-.001.171-3.21-2.323-3.21M2.844 5.697h3.61s.878 0 .878 1.344c0 1.346-.516 1.541-1.102 1.541H2.844zm3.427 8.332H2.844v-3.455h3.61s1.308-.018 1.308 1.775c0 1.512-.977 1.669-1.491 1.68m9.378-7.341c-4.771 0-4.767 4.967-4.767 4.967s-.326 4.941 4.767 4.941c0 0 4.243.254 4.243-3.437H17.71s.072 1.391-1.988 1.391c0 0-2.184.152-2.184-2.25h6.423c.001-.001.709-5.612-4.312-5.612m1.941 3.886h-4.074s.266-1.992 2.182-1.992s1.892 1.992 1.892 1.992m.507-6.414H12.98v1.594h5.117z"
-                                                            stroke-width="0.5" stroke="currentColor" />
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-2  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                        viewBox="0 0 24 24">
-                                                        <g fill="none" stroke="currentColor" stroke-linecap="round"
-                                                            stroke-linejoin="round" stroke-width="1.5">
-                                                            <circle cx="12" cy="12" r="9.25" />
-                                                            <path
-                                                                d="M18.54 18.54s-1.852-4.79-5.415-8.227s-8.823-3.445-8.823-3.445" />
-                                                            <path
-                                                                d="M13.912 13.912c2.241-2.242 4.86-3.613 7.113-3.927a9.24 9.24 0 0 1-2.484 8.555a9.24 9.24 0 0 1-8.557 2.486c.315-2.254 1.686-4.873 3.928-7.114M5.46 5.459a9.24 9.24 0 0 1 8.554-2.485c-.314 2.253-1.685 4.872-3.926 7.114S5.227 13.7 2.973 14.015A9.24 9.24 0 0 1 5.46 5.459" />
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-3  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                        viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                            d="M21.81 6.227c.058-.08-.028-.185-.12-.149a8.5 8.5 0 0 1-2.05.513a4.13 4.13 0 0 0 1.72-2.02c.034-.086-.06-.163-.14-.118c-.727.401-1.51.69-2.325.857a.1.1 0 0 1-.093-.03a4.1 4.1 0 0 0-6.991 3.65a.102.102 0 0 1-.104.123a11.64 11.64 0 0 1-8.224-4.17a.098.098 0 0 0-.163.015a4.16 4.16 0 0 0-.48 1.943a4.09 4.09 0 0 0 1.82 3.41a4.05 4.05 0 0 1-1.709-.43c-.068-.035-.15.014-.147.09a4.23 4.23 0 0 0 .933 2.468A4.1 4.1 0 0 0 6.1 13.79a4 4 0 0 1-1.1.17a5 5 0 0 1-.606-.045c-.075-.01-.136.06-.11.13A4.11 4.11 0 0 0 8.06 16.73a8.22 8.22 0 0 1-5.625 1.741c-.106-.007-.155.134-.064.188a11.57 11.57 0 0 0 5.919 1.62A11.59 11.59 0 0 0 20 8.6v-.48a.1.1 0 0 1 .04-.08a8.4 8.4 0 0 0 1.77-1.813"
-                                                            stroke-width="0.5" stroke="currentColor" />
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-4  -->
-                                                <span class="relative flex justify-center items-center ">
-                                                    <svg class=" text-white transition hover:text-yellow cursor-pointer "
-                                                        xmlns="http://www.w3.org/2000/svg" width="31" height="31"
-                                                        viewBox="0 0 50 50">
-                                                        <path fill="currentColor" fill-rule="evenodd"
-                                                            d="M25 10c-8.3 0-15 6.7-15 15c0 6.6 4.3 12.2 10.3 14.2c.8.1 1-.3 1-.7v-2.6c-4.2.9-5.1-2-5.1-2c-.7-1.7-1.7-2.2-1.7-2.2c-1.4-.9.1-.9.1-.9c1.5.1 2.3 1.5 2.3 1.5c1.3 2.3 3.5 1.6 4.4 1.2c.1-1 .5-1.6 1-2c-3.3-.4-6.8-1.7-6.8-7.4c0-1.6.6-3 1.5-4c-.2-.4-.7-1.9.1-4c0 0 1.3-.4 4.1 1.5c1.2-.3 2.5-.5 3.8-.5s2.6.2 3.8.5c2.9-1.9 4.1-1.5 4.1-1.5c.8 2.1.3 3.6.1 4c1 1 1.5 2.4 1.5 4c0 5.8-3.5 7-6.8 7.4c.5.5 1 1.4 1 2.8v4.1c0 .4.3.9 1 .7c6-2 10.2-7.6 10.2-14.2C40 16.7 33.3 10 25 10"
-                                                            clip-rule="evenodd" stroke-width="1.5"
-                                                            stroke="currentColor" />
-                                                    </svg>
-                                                    <div class="bg-black size-[18px] rounded-full absolute -z-10"></div>
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="absolute inset-0 transition group-hover:bg-black/80 mx-4"></div>
-                                    <div class="relative">
-                                        <div
-                                            class=" px-0 w-0 h-[4px] group-hover:w-full transition bg-yellow absolute bottom-[0.3px] group-hover:px-4">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- img-2  -->
-                                <div class="relative group inline-block w-fit h-fit sm:px-[15px]">
-                                    <div class="overflow-hidden ">
-                                        <img class="reveal-on-scroll scale-105  group-hover:scale-100" src="img4/5.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="relative bottom-38 justify-center ">
-                                        <div
-                                            class="flex flex-col w-full  absolute z-10 transition opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0">
-                                            <span
-                                                class="text-center text-white mb-[5px] text-xl font-medium transition hover:text-yellow cursor-pointer">Oscar
-                                                Freeman</span>
-                                            <span
-                                                class="text-center text-[#6A6867] text-xs tracking-[2px] font-semibold mb-2.5">FRONTEND
-                                                DEV</span>
-                                            <span class="flex items-center justify-center gap-2">
-                                                <!-- icon-1  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill="currentColor"
-                                                            d="M8.072 9.301s1.892-.147 1.892-2.459c0-2.315-1.548-3.441-3.51-3.441H0v12.926h6.454s3.941.129 3.941-3.816c-.001-.001.171-3.21-2.323-3.21M2.844 5.697h3.61s.878 0 .878 1.344c0 1.346-.516 1.541-1.102 1.541H2.844zm3.427 8.332H2.844v-3.455h3.61s1.308-.018 1.308 1.775c0 1.512-.977 1.669-1.491 1.68m9.378-7.341c-4.771 0-4.767 4.967-4.767 4.967s-.326 4.941 4.767 4.941c0 0 4.243.254 4.243-3.437H17.71s.072 1.391-1.988 1.391c0 0-2.184.152-2.184-2.25h6.423c.001-.001.709-5.612-4.312-5.612m1.941 3.886h-4.074s.266-1.992 2.182-1.992s1.892 1.992 1.892 1.992m.507-6.414H12.98v1.594h5.117z"
-                                                            stroke-width="0.5" stroke="currentColor" />
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-2  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                        viewBox="0 0 24 24">
-                                                        <g fill="none" stroke="currentColor" stroke-linecap="round"
-                                                            stroke-linejoin="round" stroke-width="1.5">
-                                                            <circle cx="12" cy="12" r="9.25" />
-                                                            <path
-                                                                d="M18.54 18.54s-1.852-4.79-5.415-8.227s-8.823-3.445-8.823-3.445" />
-                                                            <path
-                                                                d="M13.912 13.912c2.241-2.242 4.86-3.613 7.113-3.927a9.24 9.24 0 0 1-2.484 8.555a9.24 9.24 0 0 1-8.557 2.486c.315-2.254 1.686-4.873 3.928-7.114M5.46 5.459a9.24 9.24 0 0 1 8.554-2.485c-.314 2.253-1.685 4.872-3.926 7.114S5.227 13.7 2.973 14.015A9.24 9.24 0 0 1 5.46 5.459" />
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-3  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                        viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                            d="M21.81 6.227c.058-.08-.028-.185-.12-.149a8.5 8.5 0 0 1-2.05.513a4.13 4.13 0 0 0 1.72-2.02c.034-.086-.06-.163-.14-.118c-.727.401-1.51.69-2.325.857a.1.1 0 0 1-.093-.03a4.1 4.1 0 0 0-6.991 3.65a.102.102 0 0 1-.104.123a11.64 11.64 0 0 1-8.224-4.17a.098.098 0 0 0-.163.015a4.16 4.16 0 0 0-.48 1.943a4.09 4.09 0 0 0 1.82 3.41a4.05 4.05 0 0 1-1.709-.43c-.068-.035-.15.014-.147.09a4.23 4.23 0 0 0 .933 2.468A4.1 4.1 0 0 0 6.1 13.79a4 4 0 0 1-1.1.17a5 5 0 0 1-.606-.045c-.075-.01-.136.06-.11.13A4.11 4.11 0 0 0 8.06 16.73a8.22 8.22 0 0 1-5.625 1.741c-.106-.007-.155.134-.064.188a11.57 11.57 0 0 0 5.919 1.62A11.59 11.59 0 0 0 20 8.6v-.48a.1.1 0 0 1 .04-.08a8.4 8.4 0 0 0 1.77-1.813"
-                                                            stroke-width="0.5" stroke="currentColor" />
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-4  -->
-                                                <span class="relative flex justify-center items-center ">
-                                                    <svg class=" text-white transition hover:text-yellow cursor-pointer "
-                                                        xmlns="http://www.w3.org/2000/svg" width="31" height="31"
-                                                        viewBox="0 0 50 50">
-                                                        <path fill="currentColor" fill-rule="evenodd"
-                                                            d="M25 10c-8.3 0-15 6.7-15 15c0 6.6 4.3 12.2 10.3 14.2c.8.1 1-.3 1-.7v-2.6c-4.2.9-5.1-2-5.1-2c-.7-1.7-1.7-2.2-1.7-2.2c-1.4-.9.1-.9.1-.9c1.5.1 2.3 1.5 2.3 1.5c1.3 2.3 3.5 1.6 4.4 1.2c.1-1 .5-1.6 1-2c-3.3-.4-6.8-1.7-6.8-7.4c0-1.6.6-3 1.5-4c-.2-.4-.7-1.9.1-4c0 0 1.3-.4 4.1 1.5c1.2-.3 2.5-.5 3.8-.5s2.6.2 3.8.5c2.9-1.9 4.1-1.5 4.1-1.5c.8 2.1.3 3.6.1 4c1 1 1.5 2.4 1.5 4c0 5.8-3.5 7-6.8 7.4c.5.5 1 1.4 1 2.8v4.1c0 .4.3.9 1 .7c6-2 10.2-7.6 10.2-14.2C40 16.7 33.3 10 25 10"
-                                                            clip-rule="evenodd" stroke-width="1.5"
-                                                            stroke="currentColor" />
-                                                    </svg>
-                                                    <div class="bg-black size-[18px] rounded-full absolute -z-10"></div>
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="absolute inset-0 transition group-hover:bg-black/80 mx-4"></div>
-                                    <div class="relative">
-                                        <div
-                                            class=" px-0 w-0 h-[4px] group-hover:w-full transition bg-yellow absolute bottom-[0.3px] group-hover:px-4">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-7.5">
-                                <div class="text-[15px] text-[#9F9F9F] font-light pl-3 max-colg:hidden">
-                                    <span class="text-yellow">*</span>
-                                    The founders of our agency
-                                </div>
-                                <!-- img-3  -->
-                                <div class="relative group  inline-block w-fit h-fit sm:px-[15px] max-sm:mt-7.5">
-                                    <div class="overflow-hidden">
-                                        <img class="reveal-on-scroll transition scale-105 group-hover:scale-100"
-                                            src="img4/6.jpg" alt="">
-                                    </div>
-                                    <div class="relative bottom-38 justify-center ">
-                                        <div
-                                            class="flex flex-col w-full  absolute z-10 transition opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0">
-                                            <span
-                                                class="text-center text-white mb-[5px] text-xl font-medium transition hover:text-yellow cursor-pointer">Emma
-                                                Newman</span>
-                                            <span
-                                                class="text-center text-[#6A6867] text-xs tracking-[2px] font-semibold mb-2.5">FOUNDER</span>
-                                            <span class="flex items-center justify-center gap-2">
-                                                <!-- icon-1  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill="currentColor"
-                                                            d="M8.072 9.301s1.892-.147 1.892-2.459c0-2.315-1.548-3.441-3.51-3.441H0v12.926h6.454s3.941.129 3.941-3.816c-.001-.001.171-3.21-2.323-3.21M2.844 5.697h3.61s.878 0 .878 1.344c0 1.346-.516 1.541-1.102 1.541H2.844zm3.427 8.332H2.844v-3.455h3.61s1.308-.018 1.308 1.775c0 1.512-.977 1.669-1.491 1.68m9.378-7.341c-4.771 0-4.767 4.967-4.767 4.967s-.326 4.941 4.767 4.941c0 0 4.243.254 4.243-3.437H17.71s.072 1.391-1.988 1.391c0 0-2.184.152-2.184-2.25h6.423c.001-.001.709-5.612-4.312-5.612m1.941 3.886h-4.074s.266-1.992 2.182-1.992s1.892 1.992 1.892 1.992m.507-6.414H12.98v1.594h5.117z"
-                                                            stroke-width="0.5" stroke="currentColor" />
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-2  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                        viewBox="0 0 24 24">
-                                                        <g fill="none" stroke="currentColor" stroke-linecap="round"
-                                                            stroke-linejoin="round" stroke-width="1.5">
-                                                            <circle cx="12" cy="12" r="9.25" />
-                                                            <path
-                                                                d="M18.54 18.54s-1.852-4.79-5.415-8.227s-8.823-3.445-8.823-3.445" />
-                                                            <path
-                                                                d="M13.912 13.912c2.241-2.242 4.86-3.613 7.113-3.927a9.24 9.24 0 0 1-2.484 8.555a9.24 9.24 0 0 1-8.557 2.486c.315-2.254 1.686-4.873 3.928-7.114M5.46 5.459a9.24 9.24 0 0 1 8.554-2.485c-.314 2.253-1.685 4.872-3.926 7.114S5.227 13.7 2.973 14.015A9.24 9.24 0 0 1 5.46 5.459" />
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-3  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                        viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                            d="M21.81 6.227c.058-.08-.028-.185-.12-.149a8.5 8.5 0 0 1-2.05.513a4.13 4.13 0 0 0 1.72-2.02c.034-.086-.06-.163-.14-.118c-.727.401-1.51.69-2.325.857a.1.1 0 0 1-.093-.03a4.1 4.1 0 0 0-6.991 3.65a.102.102 0 0 1-.104.123a11.64 11.64 0 0 1-8.224-4.17a.098.098 0 0 0-.163.015a4.16 4.16 0 0 0-.48 1.943a4.09 4.09 0 0 0 1.82 3.41a4.05 4.05 0 0 1-1.709-.43c-.068-.035-.15.014-.147.09a4.23 4.23 0 0 0 .933 2.468A4.1 4.1 0 0 0 6.1 13.79a4 4 0 0 1-1.1.17a5 5 0 0 1-.606-.045c-.075-.01-.136.06-.11.13A4.11 4.11 0 0 0 8.06 16.73a8.22 8.22 0 0 1-5.625 1.741c-.106-.007-.155.134-.064.188a11.57 11.57 0 0 0 5.919 1.62A11.59 11.59 0 0 0 20 8.6v-.48a.1.1 0 0 1 .04-.08a8.4 8.4 0 0 0 1.77-1.813"
-                                                            stroke-width="0.5" stroke="currentColor" />
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-4  -->
-                                                <span class="relative flex justify-center items-center ">
-                                                    <svg class=" text-white transition hover:text-yellow cursor-pointer "
-                                                        xmlns="http://www.w3.org/2000/svg" width="31" height="31"
-                                                        viewBox="0 0 50 50">
-                                                        <path fill="currentColor" fill-rule="evenodd"
-                                                            d="M25 10c-8.3 0-15 6.7-15 15c0 6.6 4.3 12.2 10.3 14.2c.8.1 1-.3 1-.7v-2.6c-4.2.9-5.1-2-5.1-2c-.7-1.7-1.7-2.2-1.7-2.2c-1.4-.9.1-.9.1-.9c1.5.1 2.3 1.5 2.3 1.5c1.3 2.3 3.5 1.6 4.4 1.2c.1-1 .5-1.6 1-2c-3.3-.4-6.8-1.7-6.8-7.4c0-1.6.6-3 1.5-4c-.2-.4-.7-1.9.1-4c0 0 1.3-.4 4.1 1.5c1.2-.3 2.5-.5 3.8-.5s2.6.2 3.8.5c2.9-1.9 4.1-1.5 4.1-1.5c.8 2.1.3 3.6.1 4c1 1 1.5 2.4 1.5 4c0 5.8-3.5 7-6.8 7.4c.5.5 1 1.4 1 2.8v4.1c0 .4.3.9 1 .7c6-2 10.2-7.6 10.2-14.2C40 16.7 33.3 10 25 10"
-                                                            clip-rule="evenodd" stroke-width="1.5"
-                                                            stroke="currentColor" />
-                                                    </svg>
-                                                    <div class="bg-black size-[18px] rounded-full absolute -z-10"></div>
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="absolute inset-0 transition group-hover:bg-black/80 mx-4"></div>
-                                    <div class="relative">
-                                        <div
-                                            class=" px-0 w-0 h-[4px] group-hover:w-full transition bg-yellow absolute bottom-[0.3px] group-hover:px-4">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- img-4  -->
-                                <div class="relative group inline-block w-fit h-fit sm:px-[15px]">
-                                    <div class="overflow-hidden ">
-                                        <img class="reveal-on-scroll scale-105  group-hover:scale-100" src="img4/7.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="relative bottom-38 justify-center ">
-                                        <div
-                                            class="flex flex-col w-full  absolute z-10 transition opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0">
-                                            <span
-                                                class="text-center text-white mb-[5px] text-xl font-medium transition hover:text-yellow cursor-pointer">Lisa
-                                                Trueman</span>
-                                            <span
-                                                class="text-center text-[#6A6867] text-xs tracking-[2px] font-semibold mb-2.5">UI/UX
-                                                DESIGNER</span>
-                                            <span class="flex items-center justify-center gap-2">
-                                                <!-- icon-1  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                        viewBox="0 0 20 20">
-                                                        <path fill="currentColor"
-                                                            d="M8.072 9.301s1.892-.147 1.892-2.459c0-2.315-1.548-3.441-3.51-3.441H0v12.926h6.454s3.941.129 3.941-3.816c-.001-.001.171-3.21-2.323-3.21M2.844 5.697h3.61s.878 0 .878 1.344c0 1.346-.516 1.541-1.102 1.541H2.844zm3.427 8.332H2.844v-3.455h3.61s1.308-.018 1.308 1.775c0 1.512-.977 1.669-1.491 1.68m9.378-7.341c-4.771 0-4.767 4.967-4.767 4.967s-.326 4.941 4.767 4.941c0 0 4.243.254 4.243-3.437H17.71s.072 1.391-1.988 1.391c0 0-2.184.152-2.184-2.25h6.423c.001-.001.709-5.612-4.312-5.612m1.941 3.886h-4.074s.266-1.992 2.182-1.992s1.892 1.992 1.892 1.992m.507-6.414H12.98v1.594h5.117z"
-                                                            stroke-width="0.5" stroke="currentColor" />
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-2  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                        viewBox="0 0 24 24">
-                                                        <g fill="none" stroke="currentColor" stroke-linecap="round"
-                                                            stroke-linejoin="round" stroke-width="1.5">
-                                                            <circle cx="12" cy="12" r="9.25" />
-                                                            <path
-                                                                d="M18.54 18.54s-1.852-4.79-5.415-8.227s-8.823-3.445-8.823-3.445" />
-                                                            <path
-                                                                d="M13.912 13.912c2.241-2.242 4.86-3.613 7.113-3.927a9.24 9.24 0 0 1-2.484 8.555a9.24 9.24 0 0 1-8.557 2.486c.315-2.254 1.686-4.873 3.928-7.114M5.46 5.459a9.24 9.24 0 0 1 8.554-2.485c-.314 2.253-1.685 4.872-3.926 7.114S5.227 13.7 2.973 14.015A9.24 9.24 0 0 1 5.46 5.459" />
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-3  -->
-                                                <span>
-                                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                                        viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                            d="M21.81 6.227c.058-.08-.028-.185-.12-.149a8.5 8.5 0 0 1-2.05.513a4.13 4.13 0 0 0 1.72-2.02c.034-.086-.06-.163-.14-.118c-.727.401-1.51.69-2.325.857a.1.1 0 0 1-.093-.03a4.1 4.1 0 0 0-6.991 3.65a.102.102 0 0 1-.104.123a11.64 11.64 0 0 1-8.224-4.17a.098.098 0 0 0-.163.015a4.16 4.16 0 0 0-.48 1.943a4.09 4.09 0 0 0 1.82 3.41a4.05 4.05 0 0 1-1.709-.43c-.068-.035-.15.014-.147.09a4.23 4.23 0 0 0 .933 2.468A4.1 4.1 0 0 0 6.1 13.79a4 4 0 0 1-1.1.17a5 5 0 0 1-.606-.045c-.075-.01-.136.06-.11.13A4.11 4.11 0 0 0 8.06 16.73a8.22 8.22 0 0 1-5.625 1.741c-.106-.007-.155.134-.064.188a11.57 11.57 0 0 0 5.919 1.62A11.59 11.59 0 0 0 20 8.6v-.48a.1.1 0 0 1 .04-.08a8.4 8.4 0 0 0 1.77-1.813"
-                                                            stroke-width="0.5" stroke="currentColor" />
-                                                    </svg>
-                                                </span>
-                                                <!-- icon-4  -->
-                                                <span class="relative flex justify-center items-center ">
-                                                    <svg class=" text-white transition hover:text-yellow cursor-pointer "
-                                                        xmlns="http://www.w3.org/2000/svg" width="31" height="31"
-                                                        viewBox="0 0 50 50">
-                                                        <path fill="currentColor" fill-rule="evenodd"
-                                                            d="M25 10c-8.3 0-15 6.7-15 15c0 6.6 4.3 12.2 10.3 14.2c.8.1 1-.3 1-.7v-2.6c-4.2.9-5.1-2-5.1-2c-.7-1.7-1.7-2.2-1.7-2.2c-1.4-.9.1-.9.1-.9c1.5.1 2.3 1.5 2.3 1.5c1.3 2.3 3.5 1.6 4.4 1.2c.1-1 .5-1.6 1-2c-3.3-.4-6.8-1.7-6.8-7.4c0-1.6.6-3 1.5-4c-.2-.4-.7-1.9.1-4c0 0 1.3-.4 4.1 1.5c1.2-.3 2.5-.5 3.8-.5s2.6.2 3.8.5c2.9-1.9 4.1-1.5 4.1-1.5c.8 2.1.3 3.6.1 4c1 1 1.5 2.4 1.5 4c0 5.8-3.5 7-6.8 7.4c.5.5 1 1.4 1 2.8v4.1c0 .4.3.9 1 .7c6-2 10.2-7.6 10.2-14.2C40 16.7 33.3 10 25 10"
-                                                            clip-rule="evenodd" stroke-width="1.5"
-                                                            stroke="currentColor" />
-                                                    </svg>
-                                                    <div class="bg-black size-[18px] rounded-full absolute -z-10"></div>
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="absolute inset-0 transition group-hover:bg-black/80 mx-4"></div>
-                                    <div class="relative">
-                                        <div
-                                            class=" px-0 w-0 h-[4px] group-hover:w-full transition bg-yellow absolute bottom-[0.3px] group-hover:px-4">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- nav-item-2  -->
+                        <div id="nav-item-2"
+                            class="border border-transparent backdrop-blur-[10px]  transition-all duration-400 ease-linear rounded-full  px-4 coxl:px-5 h-12.5 flex items-center justify-center  2xl:mr-2.5 shrink-0">
+                            <a class="text-[#8B8A91]  transition-all duration-400 ease-linear hover:text-[#e9e9f1] font-bold max-xl:hidden"
+                                href="#">Portfolio</a>
+                            <a href="#" class="xl:hidden"><svg class="text-[#8B8A91] hover:text-[#e9e9f1] "
+                                    xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M10 13H3a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1m-1 7H4v-5h5ZM21 2h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1m-1 7h-5V4h5Zm1 4h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1m-1 7h-5v-5h5ZM10 2H3a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1M9 9H4V4h5Z" />
+                                </svg>
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- <section-5></section-5> -->
-        <section id="white-section" class="bg-[#F2F2F2] overflow-hidden relative z-20  ">
-            <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5">
-                <div class="py-22.5 colg:py-30 ">
-                    <!-- top-heading  -->
-                    <div class="relative colg:right-49 mb-15">
-                        <h3
-                            class="reveal-on-scroll text-[#868686] text-[15px] md:text-base font-light text-center md:text-end">
-                            Customer
-                            reviews are a valuable source
-                            <hr class="text-[#E6E6E6] absolute w-90 -right-98 top-2.5 max-colg:hidden ">
-                            <br>
-                            of information for both businesses and cunsumers.
-                        </h3>
-                    </div>
-                    <!-- main-heading  -->
-                    <div class="flex justify-center mb-15">
-                        <h1
-                            class="reveal-on-scroll text-black text-[36px] md:text-[44px] colg:text-[56px] xl:text-[68px] font-medium text-center leading-11 colg:leading-18 xl:leading-20">
-                            Customer <span class="font-thin">Voices:</span>
-                            <br class="max-md:hidden">
-                            Hear What <span class="font-thin">They Say!</span>
-                        </h1>
-                    </div>
-                    <!-- customer-imgs  -->
-                    <div class="reveal-on-scroll flex justify-center transition flex-wrap gap-6.5 mb-15">
-                        <!-- img-1 -->
-                        <span class="dot2">
-                            <div id="customer-img1-border-div" class="group relative">
-                                <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  "
-                                    src="img4/4.jpg" alt="">
-                                <div class="dot "></div>
-                                <div id="customer-img1-border"
-                                    class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white   size-[85px] colg:size-[110px] rounded-full">
-                                </div>
-                            </div>
-                        </span>
-                        <!-- img-2  -->
-                        <span class="dot2">
-                            <div id="customer-img2-border-div" class="group relative">
-                                <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  colg:mt-7.5 "
-                                    src="img4/6.jpg" alt="">
-                                <div class="dot "></div>
-                                <div id="customer-img2-border"
-                                    class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
-                                </div>
-                            </div>
-                        </span>
-                        <!-- img-3  -->
-                        <span class="dot2">
-                            <div id="customer-img3-border-div" class="group relative">
-                                <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  "
-                                    src="img4/5.jpg" alt="">
-                                <div class="dot "></div>
-                                <div id="customer-img3-border"
-                                    class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
-                                </div>
-                            </div>
-                        </span>
-                        <!-- img-4  -->
-                        <span class="dot2">
-                            <div id="customer-img4-border-div" class="group relative">
-                                <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  colg:mt-7.5 "
-                                    src="img4/7.jpg" alt="">
-                                <div class="dot "></div>
-                                <div id="customer-img4-border"
-                                    class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
-                                </div>
-                            </div>
-                        </span>
-                        <!-- img-5  -->
-                        <span class="dot2">
-                            <div id="customer-img5-border-div" class="group relative">
-                                <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0   "
-                                    src="img4/8.jpg" alt="">
-                                <div class="dot "></div>
-                                <div id="customer-img5-border"
-                                    class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
-                                </div>
-                            </div>
-                        </span>
-                        <!-- img-6  -->
-                        <span class="dot2">
-                            <div id="customer-img6-border-div" class="group relative">
-                                <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0  colg:mt-7.5"
-                                    src="img4/9.jpg" alt="">
-                                <div class="dot "></div>
-                                <div id="customer-img6-border"
-                                    class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
-                                </div>
-                            </div>
-                        </span>
-                        <!-- img-7  -->
-                        <span class="dot2">
-                            <div id="customer-img7-border-div" class="group relative">
-                                <img class="size-17.5 colg:size-22.5  rounded-full object-cover object-top shrink-0   "
-                                    src="img4/10.jpg" alt="">
-                                <div class="dot "></div>
-                                <div id="customer-img7-border"
-                                    class="absolute -top-[7.5px] -left-[7.5px] colg:-top-[10px] colg:-left-[10px] transition group-hover:border-4 border-white size-[85px] colg:size-[110px] rounded-full">
-                                </div>
-                            </div>
-                        </span>
-                        <!-- img-end  -->
-                    </div>
-                    <div class="flex flex-col w-full  justify-center  items-center">
-                        <!-- Quote Icon -->
-                        <span class="reveal-on-scroll text-center  mt-4 -mb-5 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 48 48">
-                                <path fill="#FF9800"
-                                    d="M 13.5 10 A 8.5 8.5 0 0 0 13.5 27 A 8.5 8.5 0 0 0 18.291016 25.519531 C 17.422273 29.222843 15.877848 31.803343 14.357422 33.589844 C 12.068414 36.279429 9.9433594 37.107422 9.9433594 37.107422 A 1.50015 1.50015 0 1 0 11.056641 39.892578 C 11.056641 39.892578 13.931586 38.720571 16.642578 35.535156 C 19.35357 32.349741 22 27.072581 22 19 A 1.50015 1.50015 0 0 0 21.984375 18.78125 A 8.5 8.5 0 0 0 13.5 10 z M 34.5 10 A 8.5 8.5 0 0 0 34.5 27 A 8.5 8.5 0 0 0 39.291016 25.519531 C 38.422273 29.222843 36.877848 31.803343 35.357422 33.589844 C 33.068414 36.279429 30.943359 37.107422 30.943359 37.107422 A 1.50015 1.50015 0 1 0 32.056641 39.892578 C 32.056641 39.892578 34.931586 38.720571 37.642578 35.535156 C 40.35357 32.349741 43 27.072581 43 19 A 1.50015 1.50015 0 0 0 42.984375 18.78125 A 8.5 8.5 0 0 0 34.5 10 z" />
-                            </svg>
-                        </span>
-
-                        <!-- Review + Arrows -->
-                        <div
-                            class="reveal-on-scroll flex colg:items-center colg:justify-between w-full colg:gap-4 relative top-7.5">
-                            <!-- Left Arrow -->
-                            <span id="left-side-arrow"
-                                class="reveal-on-scroll bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20 max-colg:absolute  left-0 -top-14">
-                                <svg id="LeftArrowSvg" class="rotate-180 text-black" xmlns="http://www.w3.org/2000/svg"
-                                    width="27" height="27" viewBox="0 0 24 24">
+                        <!-- nav-item-3 -->
+                        <div id="nav-item-3"
+                            class="border border-transparent backdrop-blur-[10px]  transition-all duration-400 ease-linear rounded-full  px-4 coxl:px-5 h-12.5 flex items-center justify-center  2xl:mr-2.5 shrink-0">
+                            <a class="text-[#8B8A91]  transition-all duration-400 ease-linear hover:text-[#e9e9f1] font-bold max-xl:hidden"
+                                href="#">About Me</a>
+                            <a href="#" class="xl:hidden">
+                                <svg class="text-[#8B8A91] hover:text-[#e9e9f1] " xmlns="http://www.w3.org/2000/svg"
+                                    width="18px" height="18px" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19M12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4" />
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- nav-item-4  -->
+                        <div id="nav-item-4"
+                            class="border border-transparent backdrop-blur-[10px]  transition-all duration-400 ease-linear rounded-full  px-4 coxl:px-5 h-12.5 flex items-center justify-center  2xl:mr-2.5 shrink-0">
+                            <a class="text-[#8B8A91]  transition-all duration-400 ease-linear hover:text-[#e9e9f1] font-bold max-xl:hidden"
+                                href="#">Resume</a>
+                            <a href="#" class="xl:hidden">
+                                <svg class="text-[#8B8A91] hover:text-[#e9e9f1] " xmlns="http://www.w3.org/2000/svg"
+                                    width="18px" height="18px" viewBox="0 0 24 24">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                        d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M20.002 11v-1c0-3.771 0-5.657-1.24-6.828C17.52 2 15.524 2 11.532 2h-1.06c-3.993 0-5.99 0-7.23 1.172S2.002 6.229 2.002 10v4c0 3.771 0 5.657 1.24 6.828S6.48 22 10.472 22h.53m-4-15h8m-8 5h8m5.86 2.44l.695.692a1.497 1.497 0 0 1 0 2.121l-3.638 3.696a2 2 0 0 1-1.05.551l-2.254.488a.5.5 0 0 1-.597-.593l.48-2.235c.074-.397.267-.762.554-1.047l3.683-3.674a1.507 1.507 0 0 1 2.127 0"
+                                        color="currentColor" />
                                 </svg>
-                            </span>
-
-                            <!-- Reviews Container -->
-                            <div class="relative  w-full colg:w-[70%] h-145 coxs:h-110 sm:h-80 max-sm:overflow-hidden">
-                                <!-- Review 1 -->
-                                <div
-                                    class="review-item active absolute inset-0 flex flex-col items-center justify-center ">
-                                    <h3 class=" text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
-                                    <p class=" text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
-                                    </p>
-                                    <p
-                                        class="reveal-on-scroll text-xl md:text-[22px] text-[#797979] text-center leading-10 font-light">
-                                        I had the pleasure of working with this creative agency, and I must say, they
-                                        truly
-                                        impressed me. They consistently think outside the box, resulting in impressive
-                                        and
-                                        impactful work. I highly recommend this agency for their consistent delivery of
-                                        exceptional creative solutions.
-                                    </p>
-                                </div>
-
-                                <!-- Review 2 -->
-                                <div
-                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
-                                    <h3 class="text-xl font-medium text-center mb-2.5">Emma Trueman</h3>
-                                    <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
-                                    </p>
-                                    <p
-                                        class="reveal-on-scroll text-xl md:text-[22px]text-[#797979] text-center leading-10 font-light">
-                                        This creative agency stands out with their exceptional talent and expertise.
-                                        Their
-                                        ability to think outside the box and bring unique ideas to life is truly
-                                        impressive.
-                                        With meticulous attention to detail, they consistently deliver visually stunning
-                                        and
-                                        impactful work.
-                                    </p>
-                                </div>
-
-                                <!-- Review 3 -->
-                                <div
-                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
-                                    <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
-                                    <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
-                                    </p>
-                                    <p
-                                        class="reveal-on-scroll text-xl md:text-[22px] text-[#797979] text-center leading-10 font-light">
-                                        I had the pleasure of working with this creative agency, and I must say, they
-                                        truly
-                                        impressed me. They consistently think outside the box, resulting in impressive
-                                        and
-                                        impactful work. I highly recommend this agency for their consistent delivery of
-                                        exceptional creative solutions.
-                                    </p>
-                                </div>
-
-                                <!-- Review 4 -->
-                                <div
-                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
-                                    <h3 class="text-xl font-medium text-center mb-2.5">Emma Trueman</h3>
-                                    <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
-                                    </p>
-                                    <p
-                                        class="reveal-on-scroll text-xl md:text-[22px] text-[#797979] text-center leading-10 font-light">
-                                        This creative agency stands out with their exceptional talent and expertise.
-                                        Their
-                                        ability to think outside the box and bring unique ideas to life is truly
-                                        impressive.
-                                        With meticulous attention to detail, they consistently deliver visually stunning
-                                        and
-                                        impactful work.
-                                    </p>
-                                </div>
-
-                                <!-- Review 5 -->
-                                <div
-                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
-                                    <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
-                                    <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
-                                    </p>
-                                    <p
-                                        class="reveal-on-scroll text-xl md:text-[22px] text-[#797979] text-center leading-10 font-light">
-                                        I had the pleasure of working with this creative agency, and I must say, they
-                                        truly
-                                        impressed me. They consistently think outside the box, resulting in impressive
-                                        and
-                                        impactful work. I highly recommend this agency for their consistent delivery of
-                                        exceptional creative solutions.
-                                    </p>
-                                </div>
-
-                                <!-- Review 6 -->
-                                <div
-                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
-                                    <h3 class="text-xl font-medium text-center mb-2.5">Emma Trueman</h3>
-                                    <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
-                                    </p>
-                                    <p
-                                        class="reveal-on-scroll text-xl md:text-[22px] text-[#797979] text-center leading-10 font-light">
-                                        This creative agency stands out with their exceptional talent and expertise.
-                                        Their
-                                        ability to think outside the box and bring unique ideas to life is truly
-                                        impressive.
-                                        With meticulous attention to detail, they consistently deliver visually stunning
-                                        and
-                                        impactful work.
-                                    </p>
-                                </div>
-
-
-                                <!-- Review 7 -->
-                                <div
-                                    class="reveal-on-scroll review-item inactive absolute inset-0 flex flex-col items-center justify-center ">
-                                    <h3 class="text-xl font-medium text-center mb-2.5">Sarah Newman</h3>
-                                    <p class="text-xs font-medium text-[#7d7d7d] tracking-[2px] mb-7.5">ENVATO MARKET
-                                    </p>
-                                    <p
-                                        class="reveal-on-scroll text-xl md:text-[22px] text-[#797979] text-center leading-10 font-light">
-                                        I had the pleasure of working with this creative agency, and I must say, they
-                                        truly
-                                        impressed me. They consistently think outside the box, resulting in impressive
-                                        and
-                                        impactful work. I highly recommend this agency for their consistent delivery of
-                                        exceptional creative solutions.
-                                    </p>
-                                </div>
-
-                            </div>
-
-                            <!-- Right Arrow -->
-                            <span id="right-side-arrow"
-                                class="reveal-on-scroll  bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20 max-colg:absolute  right-0 -top-14">
-                                <svg id="RightArrowSvg" class="text-black" xmlns="http://www.w3.org/2000/svg" width="27"
-                                    height="27" viewBox="0 0 24 24">
-                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
-                                        d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                </svg>
-                            </span>
+                            </a>
                         </div>
-
+                        <!-- nav-item-5 -->
+                        <div id="nav-item-5"
+                            class="border border-transparent backdrop-blur-[10px]  transition-all duration-400 ease-linear rounded-full  px-5 h-12.5 flex items-center justify-center shrink-0">
+                            <a class="text-[#8B8A91]  transition-all duration-400 ease-linear hover:text-[#e9e9f1] font-bold max-xl:hidden"
+                                href="#">Contact</a>
+                            <a href="#" class="xl:hidden">
+                                <svg class="text-[#8B8A91] hover:text-[#e9e9f1] " xmlns="http://www.w3.org/2000/svg"
+                                    width="18px" height="18px" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M19 7H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m-9.684 7.316l1.602 1.4c.305.266.691.398 1.082.398s.777-.133 1.082-.398l1.602-1.4l-.037.037l3.646 3.646H5.707l3.646-3.646zM5 17.293V10.54l3.602 3.151zm10.398-3.602L19 10.54v6.75zM19 9v.21l-6.576 5.754a.68.68 0 0 1-.848 0L5 9.21V9z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- brands-show  -->
-            <div class="overflow-hidden w-full pb-22.5 colg:pb-30">
-                <div class="animate-marquee flex w-max">
-                    <div class="flex gap-x-20 md:gap-x-37 colg:gap-x-45 w-max mr-2 md:mr-32 colg:mr-37.5">
-                        <!-- Set 1 -->
-                        <img class="w-[100px] h-[19px] shrink-0" src="img4/13.svg" alt="">
-                        <img class="w-[60px] h-[22px] shrink-0" src="img4/14.svg" alt="">
-                        <img class="w-[100px] h-[19px] shrink-0" src="img4/13.svg" alt="">
-                        <img class="w-[60px] h-[22px] shrink-0" src="img4/14.svg" alt="">
-                        <img class="w-[100px] h-[19px] shrink-0" src="img4/13.svg" alt="">
-                        <img class="w-[60px] h-[22px] shrink-0" src="img4/14.svg" alt="">
-                    </div>
-                    <div class="flex gap-x-45 w-max">
-                        <!-- Set 2 (exact copy) -->
-                        <img class="w-[100px] h-[19px] shrink-0" src="img4/13.svg" alt="">
-                        <img class="w-[60px] h-[22px] shrink-0" src="img4/14.svg" alt="">
-                        <img class="w-[100px] h-[19px] shrink-0" src="img4/13.svg" alt="">
-                        <img class="w-[60px] h-[22px] shrink-0" src="img4/14.svg" alt="">
-                        <img class="w-[100px] h-[19px] shrink-0" src="img4/13.svg" alt="">
-                        <img class="w-[60px] h-[22px] shrink-0 " src="img4/14.svg" alt="">
-                    </div>
-                </div>
-            </div>
-
-
-        </section>
-        <!-- <section-6></section-6> -->
-        <section id="white-section" class="bg-white">
-            <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5 py-22.5 colg:py-30">
-                <!-- heading  -->
-                <div class="flex max-colg:flex-col justify-between  colg:items-center mb-7.5">
-                    <div>
-                        <h1
-                            class="reveal-on-scroll text-[30px] md:text-[36px] colg:text-[39px] xl:text-[42px] font-medium mb-7.5 leading-9">
-                            Popular
-                            Publications:</h1>
-                    </div>
-                    <div class="reveal-on-scroll flex items-center mb-7.5">
-                        <span class="text-xs tracking-[2px] mr-[15px]">VIEW ALL</span>
-                        <span id="left-side-arrow"
-                            class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
-                                <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
+                    <!-- right-side  -->
+                    <div class="flex items-center   gap-2 relative shrink-0 ">
+                        <div id="containerOfSunMoon"
+                            class="backdrop-blur-[10px] size-12.5 rounded-full flex justify-center items-center">
+                            <!-- <sun-svg> -->
+                            <svg id="sun"
+                                class="text-[#8B8A91] cursor-pointer  transition-all duration-400 ease-linear hover:text-white "
+                                xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 16 16">
+                                <path fill="currentColor"
+                                    d="M8 12a4 4 0 1 1 0-8a4 4 0 0 1 0 8m0-1.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5m5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326a.75.75 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0M8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0M3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8m13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8m-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13m3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061M2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.75.75 0 0 1-.018 1.042a.75.75 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z" />
                             </svg>
-                        </span>
+                            <!-- <moon-svg> -->
+                            <svg id="moon" class="hidden cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="18px"
+                                height="18px" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-dasharray="4" stroke-dashoffset="4"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+                                    <path d="M13 4h1.5M13 4h-1.5M13 4v1.5M13 4v-1.5">
+                                        <animate id="lineMdMoonAltLoop0" fill="freeze" attributeName="stroke-dashoffset"
+                                            begin="0.7s;lineMdMoonAltLoop0.begin+6s" dur="0.4s" values="4;0" />
+                                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                                            begin="lineMdMoonAltLoop0.begin+2s;lineMdMoonAltLoop0.begin+4s" dur="0.4s"
+                                            values="4;0" />
+                                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                                            begin="lineMdMoonAltLoop0.begin+1.2s;lineMdMoonAltLoop0.begin+3.2s;lineMdMoonAltLoop0.begin+5.2s"
+                                            dur="0.4s" values="0;4" />
+                                        <set fill="freeze" attributeName="d" begin="lineMdMoonAltLoop0.begin+1.8s"
+                                            to="M12 5h1.5M12 5h-1.5M12 5v1.5M12 5v-1.5" />
+                                        <set fill="freeze" attributeName="d" begin="lineMdMoonAltLoop0.begin+3.8s"
+                                            to="M12 4h1.5M12 4h-1.5M12 4v1.5M12 4v-1.5" />
+                                        <set fill="freeze" attributeName="d" begin="lineMdMoonAltLoop0.begin+5.8s"
+                                            to="M13 4h1.5M13 4h-1.5M13 4v1.5M13 4v-1.5" />
+                                    </path>
+                                    <path d="M19 11h1.5M19 11h-1.5M19 11v1.5M19 11v-1.5">
+                                        <animate id="lineMdMoonAltLoop1" fill="freeze" attributeName="stroke-dashoffset"
+                                            begin="1.1s;lineMdMoonAltLoop1.begin+6s" dur="0.4s" values="4;0" />
+                                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                                            begin="lineMdMoonAltLoop1.begin+2s;lineMdMoonAltLoop1.begin+4s" dur="0.4s"
+                                            values="4;0" />
+                                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                                            begin="lineMdMoonAltLoop1.begin+1.2s;lineMdMoonAltLoop1.begin+3.2s;lineMdMoonAltLoop1.begin+5.2s"
+                                            dur="0.4s" values="0;4" />
+                                        <set fill="freeze" attributeName="d" begin="lineMdMoonAltLoop1.begin+1.8s"
+                                            to="M17 11h1.5M17 11h-1.5M17 11v1.5M17 11v-1.5" />
+                                        <set fill="freeze" attributeName="d" begin="lineMdMoonAltLoop1.begin+3.8s"
+                                            to="M18 12h1.5M18 12h-1.5M18 12v1.5M18 12v-1.5" />
+                                        <set fill="freeze" attributeName="d" begin="lineMdMoonAltLoop1.begin+5.8s"
+                                            to="M19 11h1.5M19 11h-1.5M19 11v1.5M19 11v-1.5" />
+                                    </path>
+                                    <path d="M19 4h1.5M19 4h-1.5M19 4v1.5M19 4v-1.5">
+                                        <animate id="lineMdMoonAltLoop2" fill="freeze" attributeName="stroke-dashoffset"
+                                            begin="2s;lineMdMoonAltLoop2.begin+6s" dur="0.4s" values="4;0" />
+                                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                                            begin="lineMdMoonAltLoop2.begin+2s" dur="0.4s" values="4;0" />
+                                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                                            begin="lineMdMoonAltLoop2.begin+1.2s;lineMdMoonAltLoop2.begin+3.2s"
+                                            dur="0.4s" values="0;4" />
+                                        <set fill="freeze" attributeName="d" begin="lineMdMoonAltLoop2.begin+1.8s"
+                                            to="M20 5h1.5M20 5h-1.5M20 5v1.5M20 5v-1.5" />
+                                        <set fill="freeze" attributeName="d" begin="lineMdMoonAltLoop2.begin+5.8s"
+                                            to="M19 4h1.5M19 4h-1.5M19 4v1.5M19 4v-1.5" />
+                                    </path>
+                                </g>
+                                <path fill="none" stroke="currentColor" stroke-dasharray="56" stroke-dashoffset="56"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 6 C7 12.08 11.92 17 18 17 C18.53 17 19.05 16.96 19.56 16.89 C17.95 19.36 15.17 21 12 21 C7.03 21 3 16.97 3 12 C3 8.83 4.64 6.05 7.11 4.44 C7.04 4.95 7 5.47 7 6 Z">
+                                    <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="56;0" />
+                                </path>
+                            </svg>
+                        </div>
+                        <div style="background: linear-gradient(135deg, #E4B8BF 0%, #CEC4EF 100%);"
+                            class="h-12.5 flex justify-center items-center rounded-full w-[145px]">
+                            <a class="flex items-center justify-center font-bold" href="#">Let's Talk <svg
+                                    class="ml-1.5 text-black" xmlns="http://www.w3.org/2000/svg" width="18px"
+                                    height="18px" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M1.5 22.704V2h21v16H6.876zm2-4.408L6.124 16H20.5V4h-17zM13.004 11H11V8.996h2.004zm-5 0H6V8.996h2.004zm10 0H16V8.996h2.004z" />
+                                </svg></a>
+                        </div>
                     </div>
                 </div>
-                <!-- columns -->
-                <div class="reveal-on-scroll flex max-colg:flex-col gap-x-7.5">
-                    <!-- 1-column -->
-                    <div class="cursor-pointer group">
-                        <div class="overflow-hidden  mb-7.5">
-                            <img class="scale-x-103 group-hover:scale-108 transition " src="img4/11.jpg" alt="">
-                        </div>
-                        <div class="pt-7.5 pr-7.5 mb-15">
-                            <h6 class="reveal-on-scroll text-xs text-[#7F7F7F] font-medium tracking-[2px] mb-7.5">
-                                <span class="mr-[15px] text-yellow">TECHNOLOGY</span>
-                                MAY 24 2023
-                            </h6>
-                            <h1
-                                class="reveal-on-scroll font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-6 md:leading-9 mb-7.5">
-                                How to Become a Graphic Designer in 10 Simple Steps</h1>
-                            <p class="reveal-on-scroll text-[#818181] font-light mb-7.5">Lorem ipsum dolor sit amet,
-                                consectetur
-                                adipisicing
-                                elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam
-                                cupidita...
-                            </p>
-                            <div class="reveal-on-scroll flex items-center">
-                                <span class="text-xs tracking-[2px] mr-[15px] font-medium">READ MORE</span>
-                                <span id="left-side-arrow"
-                                    class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
-                                        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 2-column -->
-                    <div class="cursor-pointer group">
-                        <div class="overflow-hidden  mb-7.5">
-                            <img class="reveal-on-scroll scale-x-103 group-hover:scale-108 transition "
-                                src="img4/12.jpg" alt="">
-                        </div>
-                        <div class="pt-7.5 pr-7.5">
-                            <h6 class="reveal-on-scroll text-xs text-[#7F7F7F] font-medium tracking-[2px] mb-7.5">
-                                <span class="mr-[15px] text-yellow">TECHNOLOGY</span>
-                                MAY 24 2023
-                            </h6>
-                            <h1
-                                class="reveal-on-scroll font-medium text-[22px] md:text-[24px] colg:text-[26px] xl:text-[28px] leading-9 mb-7.5">
-                                16 Best Graphic Design Online and Offline Courses</h1>
-                            <p class="reveal-on-scroll text-[#818181] font-light mb-7.5   ">Lorem
-                                ipsum dolor sit
-                                amet, consectetur adipisicing
-                                elit. Eius sequi commodi dignissimos optio, beatae, eos necessitatibus nisi. Nam
-                                cupidita...
-                            </p>
-                            <div class="reveal-on-scroll flex items-center">
-                                <span class="text-xs tracking-[2px] mr-[15px] font-medium">READ MORE</span>
-                                <span id="left-side-arrow"
-                                    class="bg-[#E5E5E5] shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full cursor-pointer z-20">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
-                                        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </nav>
         </section>
-        <!-- <footer></footer> -->
-        <section class="bg-black relative z-20 ">
+    </section>
 
-            <div class="xl:container xl:mx-auto px-7.5 xl:px-32.5 py-[90px] colg:py-[120px]">
-                <!-- upper-part -->
-                <div class="flex max-md:flex-col md:justify-between">
-                    <!-- left-side  -->
-                    <div class="mb-15 md:w-[31.5%] ">
-                        <h1 class="reveal-on-scroll text-[#DADADA] text-[36px] colg:text-[42px] mb-6">Ashley.</h1>
-                        <p class="reveal-on-scroll text-[#555555] text-[15px] md:text-base font-medium mb-7.5">Subscribe
-                            our newsletter:
-                        </p>
-                        <div class="reveal-on-scroll relative group">
-                            <input id="footerInput"
-                                class="indent-7.5 md:indent-12.5 h-17.5 text-[#808080] bg-[#1A1A1A] transition group-hover:bg-white rounded-full text-xs md:text-sm font-semibold tracking-[2px] w-full"
-                                type="text" name="" placeholder="ENTER OUR EMAIL" id="">
-                            <span id="left-side-arrow"
-                                class="bg-yellow shrink-0 transition size-10 hover:scale-110 group flex justify-center items-center rounded-full absolute top-3.5 right-4 cursor-pointer z-20">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
-                                    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-miterlimit="10" stroke-width="1.5" d="m14 16l4-4m0 0l-4-4m4 4H6" />
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- right-side  -->
-                    <div class="flex max-md:flex-col items-start  md:w-[48%] md:mb-15  ">
-                        <div
-                            class="flex flex-col  text-[#E6E6E6] text-[22px] md:text-[28px] font-medium mb-7.5 md:w-[77%]">
-                            <h2 class="reveal-on-scroll mb-4 text-yellow cursor-pointer shrink-0 ">Home</h2>
-                            <h2
-                                class="reveal-on-scroll mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">
-                                Portfolio
-                            </h2>
-                            <h2
-                                class="reveal-on-scroll mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">
-                                Services
-                            </h2>
-                            <h2
-                                class="reveal-on-scroll mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">
-                                Contact
-                            </h2>
-                            <h2
-                                class="reveal-on-scroll mb-4 transition cursor-pointer hover:translate-x-3 hover:text-yellow">
-                                Blog</h2>
-                        </div>
-                        <div class="flex flex-col items-start text-[15px] md:text-base mb-7.5 mt-4 md:w-[50%] ">
-                            <p
-                                class="reveal-on-scroll text-[#ffffff66] relative z-60 mb-4 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                Privacy Policy</p>
-                            <p
-                                class="reveal-on-scroll text-[#ffffff66] mb-4  cursor-pointer shrink-0  transition hover:text-white hover:translate-x-1.5">
-                                Terms and conditions</p>
-                            <p
-                                class="reveal-on-scroll text-[#ffffff66] mb-4 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                Cookie Policy</p>
-                            <p
-                                class="reveal-on-scroll text-[#ffffff66] mb-4 cursor-pointer  transition hover:text-white hover:translate-x-1.5">
-                                Careers</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- lower-part  -->
-                <div class="flex  max-md:flex-col-reverse justify-between">
-                    <!-- left-side  -->
-                    <div class="flex flex-col justify-between">
-                        <div>
-                            <span class="reveal-on-scroll flex items-center  gap-2.5 mb-7.5">
-                                <!-- icon-1  -->
-                                <span>
-                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 20 20">
-                                        <path fill="currentColor"
-                                            d="M8.072 9.301s1.892-.147 1.892-2.459c0-2.315-1.548-3.441-3.51-3.441H0v12.926h6.454s3.941.129 3.941-3.816c-.001-.001.171-3.21-2.323-3.21M2.844 5.697h3.61s.878 0 .878 1.344c0 1.346-.516 1.541-1.102 1.541H2.844zm3.427 8.332H2.844v-3.455h3.61s1.308-.018 1.308 1.775c0 1.512-.977 1.669-1.491 1.68m9.378-7.341c-4.771 0-4.767 4.967-4.767 4.967s-.326 4.941 4.767 4.941c0 0 4.243.254 4.243-3.437H17.71s.072 1.391-1.988 1.391c0 0-2.184.152-2.184-2.25h6.423c.001-.001.709-5.612-4.312-5.612m1.941 3.886h-4.074s.266-1.992 2.182-1.992s1.892 1.992 1.892 1.992m.507-6.414H12.98v1.594h5.117z"
-                                            stroke-width="0.5" stroke="currentColor" />
-                                    </svg>
-                                </span>
-                                <!-- icon-2  -->
-                                <span>
-                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                        <g fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="1.5">
-                                            <circle cx="12" cy="12" r="9.25" />
-                                            <path d="M18.54 18.54s-1.852-4.79-5.415-8.227s-8.823-3.445-8.823-3.445" />
-                                            <path
-                                                d="M13.912 13.912c2.241-2.242 4.86-3.613 7.113-3.927a9.24 9.24 0 0 1-2.484 8.555a9.24 9.24 0 0 1-8.557 2.486c.315-2.254 1.686-4.873 3.928-7.114M5.46 5.459a9.24 9.24 0 0 1 8.554-2.485c-.314 2.253-1.685 4.872-3.926 7.114S5.227 13.7 2.973 14.015A9.24 9.24 0 0 1 5.46 5.459" />
-                                        </g>
-                                    </svg>
-                                </span>
-                                <!-- icon-3  -->
-                                <span>
-                                    <svg class="text-white transition cursor-pointer hover:scale-95 hover:text-yellow"
-                                        xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-                                        <path fill="currentColor"
-                                            d="M21.81 6.227c.058-.08-.028-.185-.12-.149a8.5 8.5 0 0 1-2.05.513a4.13 4.13 0 0 0 1.72-2.02c.034-.086-.06-.163-.14-.118c-.727.401-1.51.69-2.325.857a.1.1 0 0 1-.093-.03a4.1 4.1 0 0 0-6.991 3.65a.102.102 0 0 1-.104.123a11.64 11.64 0 0 1-8.224-4.17a.098.098 0 0 0-.163.015a4.16 4.16 0 0 0-.48 1.943a4.09 4.09 0 0 0 1.82 3.41a4.05 4.05 0 0 1-1.709-.43c-.068-.035-.15.014-.147.09a4.23 4.23 0 0 0 .933 2.468A4.1 4.1 0 0 0 6.1 13.79a4 4 0 0 1-1.1.17a5 5 0 0 1-.606-.045c-.075-.01-.136.06-.11.13A4.11 4.11 0 0 0 8.06 16.73a8.22 8.22 0 0 1-5.625 1.741c-.106-.007-.155.134-.064.188a11.57 11.57 0 0 0 5.919 1.62A11.59 11.59 0 0 0 20 8.6v-.48a.1.1 0 0 1 .04-.08a8.4 8.4 0 0 0 1.77-1.813"
-                                            stroke-width="0.5" stroke="currentColor" />
-                                    </svg>
-                                </span>
-                                <!-- icon-4  -->
-                                <span class="relative flex justify-center items-center ">
-                                    <svg class=" text-white transition hover:text-yellow cursor-pointer "
-                                        xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 50 50">
-                                        <path fill="currentColor" fill-rule="evenodd"
-                                            d="M25 10c-8.3 0-15 6.7-15 15c0 6.6 4.3 12.2 10.3 14.2c.8.1 1-.3 1-.7v-2.6c-4.2.9-5.1-2-5.1-2c-.7-1.7-1.7-2.2-1.7-2.2c-1.4-.9.1-.9.1-.9c1.5.1 2.3 1.5 2.3 1.5c1.3 2.3 3.5 1.6 4.4 1.2c.1-1 .5-1.6 1-2c-3.3-.4-6.8-1.7-6.8-7.4c0-1.6.6-3 1.5-4c-.2-.4-.7-1.9.1-4c0 0 1.3-.4 4.1 1.5c1.2-.3 2.5-.5 3.8-.5s2.6.2 3.8.5c2.9-1.9 4.1-1.5 4.1-1.5c.8 2.1.3 3.6.1 4c1 1 1.5 2.4 1.5 4c0 5.8-3.5 7-6.8 7.4c.5.5 1 1.4 1 2.8v4.1c0 .4.3.9 1 .7c6-2 10.2-7.6 10.2-14.2C40 16.7 33.3 10 25 10"
-                                            clip-rule="evenodd" stroke-width="1.5" stroke="currentColor" />
-                                    </svg>
-                                    <div class="bg-black size-[18px] rounded-full absolute -z-10"></div>
-                                </span>
-                        </div>
-                        <div>
-                            <p class="reveal-on-scroll text-[#484848]">© Copyright 2023 - Mil. All Rights Reserved.</p>
-                        </div>
-                    </div>
-                    <!-- right-side  -->
-                    <div class="md:w-[48%]">
-                        <div class="flex max-md:flex-col justify-between">
-                            <div class="max-md:mb-15">
-                                <h1 class="reveal-on-scroll text-lg text-white font-medium  mb-7.5">Canada</h1>
-                                <p class="reveal-on-scroll text-[#ffffff66] text-[15px] md:text-base">
-                                    71 South Los Carneros Road,
-                                    <br>
-                                    California +51 174 705 812
-                                </p>
-                            </div>
-                            <div class="max-md:mb-15">
-                                <h1 class="reveal-on-scroll text-lg text-white font-medium  mb-7.5">Germany</h1>
-                                <div class="">
-                                    <p class="reveal-on-scroll text-[#ffffff66] text-[15px] md:text-base">
-                                        Leehove 40, 2678 MC De Lier,
-                                        <br>
-                                        Netherlands +31 174 705 811
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-    </div>
-    <script src="script4.js"></script>
+    <!-- </div> -->
+    <script src="script5.js"></script>
 </body>
 
 </html>
